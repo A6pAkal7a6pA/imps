@@ -1,0 +1,114 @@
+.token {
+	padding: 29px 165px 120px 165px;
+	width: 100%;
+	height: 100%;
+	&__inner {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__slider {
+		max-width: 1059px;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// overflow: hidden;
+		position: relative;
+	}
+
+	&__item {
+	}
+	.slick-arrow {
+		background: linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		border-radius: 6px;
+		width: 52px;
+		height: 238px;
+		font-size: 0;
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.slick-prev {
+		background: url("../img/icons/arrow-left.svg") center no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
+		transform: translate(50%, -50%);
+		background: url("../img/icons/arrow-right.svg") center no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
+	}
+	.slick-dots {
+		position: absolute;
+		bottom: -50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		li {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+		li button {
+			width: 168px;
+			height: 6px;
+			background: #ffffff;
+			border-radius: 3px;
+			font-size: 0;
+		}
+		li.slick-active button {
+			background: #f02214;
+		}
+	}
+}
+.token-item {
+	&__inner {
+		display: flex;
+		background: linear-gradient(180deg, #f32114 0%, #610e08 100%);
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 60px 90px;
+	}
+	&__image {
+		margin-right: 24px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		text-align: left;
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 38px;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		font-family: $fontfamilyRoboto;
+		font-size: 26px;
+		line-height: 30px;
+		color: #fff;
+	}
+}

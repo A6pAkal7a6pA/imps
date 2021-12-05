@@ -1,0 +1,23 @@
+@import "_zeroing.scss";
+@import "_main-page.scss";
+@import "_trade.scss";
+@import "_game.scss";
+@import "_token.scss";
+@import "_distribution.scss";
+@import "_road.scss";
+@import "_follow.scss";
+
+.wrapper {
+	min-height: 100vh;
+	width: 100%;
+	background: linear-gradient(102.28deg, #e3ddfc 19.32%, #d8cfff 77.53%);
+}
+.title {
+	background: linear-gradient(90deg, #110f75 37.31%, #e465a3 62.15%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 800;
+	font-size: 38px;
+	line-height: 52px;
+	text-align: center;
+}
