@@ -1,6 +1,8 @@
 .road {
 	width: 100%;
 	height: 100%;
+	padding-top: 66px;
+	background: url("../img/roadmap-bg.svg") center/ cover no-repeat;
 	&__inner {
 		max-width: 950px;
 		margin: 0 auto;
@@ -20,6 +22,30 @@
 
 	&__item {
 	}
+	&__row {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 44px;
+		}
+
+		&:nth-child(odd) {
+			display: flex;
+			justify-content: flex-end;
+			.road-item__image {
+				position: absolute;
+				right: -96px;
+			}
+		}
+		&:nth-child(even) {
+			.road-item {
+				padding: 25px 100px;
+			}
+			.road-item__image {
+				position: absolute;
+				left: -96px;
+			}
+		}
+	}
 }
 
 .road-item {
@@ -35,9 +61,7 @@
 	align-items: flex-start;
 	justify-content: center;
 	padding: 36px 60px;
-	&:not(:last-child) {
-		margin-bottom: 44px;
-	}
+
 	&__image {
 		position: absolute;
 		top: -65px;
@@ -56,19 +80,6 @@
 		line-height: 28px;
 		color: #010038;
 	}
-	&:nth-child(odd) {
-		.road-item__image {
-			position: absolute;
-			right: -96px;
-		}
-	}
-	&:nth-child(even) {
-		padding: 25px 100px;
-		.road-item__image {
-			position: absolute;
-			left: -96px;
-		}
-	}
 }
 .road-item.important {
 	background: linear-gradient(90deg, #110f75 -54.3%, #e465a3 97.35%);
@@ -86,5 +97,49 @@
 		font-size: 24px;
 		line-height: 28px;
 		color: #fff;
+	}
+}
+@media (max-width: 1131px) {
+	.road__content {
+		padding: 0 90px;
+	}
+}
+
+@media (max-width: 768px) {
+	.road-item {
+		max-width: 100%;
+		padding: 15px 80px 15px 15px;
+		&__image img{
+			max-width: 136px;
+		}
+		&__image {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.road__row:nth-child(even) .road-item__image {
+		left: -60px;
+	}
+	.road__row:nth-child(odd) .road-item__image {
+		right: -60px;
+	}
+	.road__row:nth-child(even) {
+		padding-left: 20px;
+	}
+	.road__row:nth-child(odd) {
+		padding-right: 20px;
+	}
+	.road__row:nth-child(even) .road-item {
+		padding: 15px 15px 15px 80px;
+	}
+	.road-item__text {
+		font-size: 18px;
+		line-height: 21px;
+	}
+	.road__content {
+		padding: 0 20px;
+	}
+	.road__title {
+		margin-bottom: 20px;
 	}
 }

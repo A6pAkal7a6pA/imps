@@ -4,6 +4,8 @@
 	padding: 154px 0 145px 190px;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	z-index: 3;
 	&__inner {
 		max-width: 730px;
 		padding: 0 15px;
@@ -64,6 +66,9 @@
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
+	&:hover {
+		background: linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+	}
 	&__image {
 		margin-right: 15px;
 	}
@@ -101,6 +106,8 @@
 
 	&__image {
 		margin-bottom: 10px;
+		img {
+		}
 	}
 
 	&__name {
@@ -108,5 +115,50 @@
 		line-height: 14px;
 		text-align: center;
 		color: #010038;
+	}
+}
+@media (max-width: 1454px) {
+	.trade {
+		&__image {
+			position: absolute;
+			right: 0;
+			z-index: -1;
+		}
+	}
+}
+
+@media (max-width: 918px) {
+	.trade {
+		padding: 120px 10px 145px 10px;
+		justify-content: center;
+		&__inner {
+		}
+	}
+}
+@media (max-width: 768px) {
+	.trade {
+		&__inner {
+			max-width: none;
+		}
+	}
+	.trade-row__content {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.trade-row__item {
+		margin-bottom: 20px;
+
+		&:not(:last-child) {
+			margin-right: 0;
+		}
+	}
+}
+@media(max-width: 442px) {
+	.trade-row__content {
+		justify-content: center;
+	}
+	.trade {
+		padding-top: 80px;
+		padding-bottom: 60px;
 	}
 }
