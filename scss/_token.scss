@@ -149,6 +149,9 @@
 }
 
 @media (max-width: 768px) {
+	.token-item__image {
+		margin-right: 0;
+	}
 	.token-item {
 		padding-top: 100px;
 	}

@@ -786,6 +786,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .game-item__image {
+    margin-right: 0;
+  }
   .game-item {
     padding-top: 100px;
   }
@@ -1017,6 +1020,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .token-item__image {
+    margin-right: 0;
+  }
   .token-item {
     padding-top: 100px;
   }

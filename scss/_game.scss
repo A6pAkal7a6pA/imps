@@ -194,6 +194,9 @@
 }
 
 @media (max-width: 768px) {
+	.game-item__image {
+		margin-right: 0;
+	}
 	.game-item {
 		padding-top: 100px;
 	}
