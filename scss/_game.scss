@@ -49,11 +49,17 @@
 	.slick-prev {
 		background: url("../img/icons/arrow-left.svg") center no-repeat, #e465a3;
 		left: 0;
+		&:hover {
+			background: url("../img/icons/arrow-left.svg") center no-repeat, #010038;
+		}
 	}
 	.slick-next {
 		right: 0;
 		transform: translate(50%, -50%);
 		background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
+		&:hover {
+			background: url("../img/icons/arrow-right.svg") center no-repeat, #010038;
+		}
 	}
 	.slick-dots {
 		position: absolute;
@@ -72,6 +78,13 @@
 			background: #ffffff;
 			border-radius: 3px;
 			font-size: 0;
+
+		}
+		li:not(.slick-active) button {
+			&:hover {
+				height: 14px;
+				border-radius: 13px;
+			}
 		}
 		li.slick-active button {
 			background: #e465a3;
@@ -137,7 +150,7 @@
 	transform: translate(50%, -50%);
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
-.slick-dots {
+.game .slick-dots {
 	position: absolute;
 	bottom: -50px;
 	display: flex;
@@ -151,12 +164,16 @@
 	li button {
 		width: 168px;
 		height: 6px;
-		background: #ffffff;
-		border-radius: 3px;
-		font-size: 0;
+		background-position:right bottom;
+
 	}
 	li.slick-active button {
-		background: #e465a3;
+		background: linear-gradient(to left, #fff 50%, #e465a3 50%);
+		border-radius: 3px;
+		font-size: 0;
+		transition: all 5.5s linear;
+		background-size: 200% 100%;
+		background-position:left bottom;
 	}
 }
 
@@ -180,7 +197,8 @@
 		height: 4px;
 	}
 	.game-item__text {
-		max-height: 210px;
+		max-height: 234px;
+		height: 100%;
 		overflow-y: auto;
 	}
 	.slick-slide img {
@@ -215,13 +233,19 @@
 		width: 40px;
 		height: 40px;
 		bottom: 0;
-		transform: translateY(260px);
+		transform: translateY(270px);
 	}
 	.game .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
+		&:hover {
+			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
+		}
 	}
 	.game .slick-next {
 		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
+		&:hover {
+			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
+		}
 	}
 	.game__arrows {
 		display: block;
@@ -233,11 +257,41 @@
 		height: 6px;
 	}
 	.game-item__inner {
-		padding: 70px 30px 50px 30px;
+		padding: 65px 30px 50px 30px;
 	}
 }
 @media (max-width: 651px) {
 	.game {
 		padding: 29px 20px 120px 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.game-item__title {
+		font-size: 28px;
+		line-height: 30px;
+		font-weight: 700;
+	}
+	.game-item__text {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.game .slick-arrow {
+		transform: translateY(270px);
+	}
+}
+
+@media (max-width: 411px) {
+	.game .slick-arrow {
+		transform: translateY(280px);
+	}
+	.game .slick-prev {
+		transform: translate(-20px,280px);
+
+	}
+
+	.game .slick-next {
+		transform: translate(20px,280px);
+
 	}
 }

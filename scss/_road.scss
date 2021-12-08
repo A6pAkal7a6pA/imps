@@ -94,9 +94,9 @@
 
 	.road-item__text {
 		font-family: $fontfamilyRoboto;
-		font-size: 24px;
-		line-height: 28px;
 		color: #fff;
+		font-size: 18px;
+    line-height: 21px;
 	}
 }
 @media (max-width: 1131px) {
@@ -141,5 +141,12 @@
 	}
 	.road__title {
 		margin-bottom: 20px;
+	}
+}
+@media (max-width: 460px) {
+	.road-item__text {
+		max-height: 84px;
+		overflow-y: auto;
+		
 	}
 }

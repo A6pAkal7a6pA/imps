@@ -3,6 +3,8 @@
 	height: 100%;
 	margin-top: -77px;
 	background: url('../img/follow-bg.png') center / cover no-repeat;
+	position: relative;
+	z-index: 2;
 	&__inner {
 		width: 100%;
 		height: 100%;
@@ -24,6 +26,11 @@
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
+		padding: 0 10px;
+	}
+
+	&__item {
+		
 	}
 
 }
@@ -38,12 +45,32 @@
 	background: #ede9ff;
 	border-radius: 10px;
 	border: 3px solid #fff;
-
-	&:hover {
-		border: 3px solid;
-		border-image-source: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
-		border-image-slice: 1;
+	position: relative;
+	padding: 8px 18px;
+	background-clip: padding-box;
+	// z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -3px;
+		left: -3px;
+		bottom: -3px;
+		right: -3px;
+		background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
+		border-radius: 10px;
+		z-index: -1;
 	}
+	
+	
+	&:hover {
+		border: 3px solid transparent;
+	}
+
+	// &:hover {
+	// 	border: 3px solid;
+	// 	border-image-source: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
+	// 	border-image-slice: 1;
+	// }
 	&__image {
 		margin-bottom: 12px;
 	}
@@ -54,5 +81,11 @@
 		line-height: 14px;
 		text-align: center;
 		color: #010038;
+	}
+}
+
+@media (max-width: 768px) {
+	.follow__content {
+		justify-content: flex-start;
 	}
 }

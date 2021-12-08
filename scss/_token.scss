@@ -47,11 +47,17 @@
 	.slick-prev {
 		background: url("../img/icons/arrow-left.svg") center no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
 		left: 0;
+		&:hover {
+			background: url("../img/icons/black-arrow-left.svg") center no-repeat, #fff;
+		}
 	}
 	.slick-next {
 		right: 0;
 		transform: translate(50%, -50%);
 		background: url("../img/icons/arrow-right.svg") center no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		&:hover {
+			background: url("../img/icons/black-arrow-right.svg") center no-repeat, #fff;
+		}
 	}
 	.slick-dots {
 		position: absolute;
@@ -71,8 +77,28 @@
 			border-radius: 3px;
 			font-size: 0;
 		}
+		li:not(.slick-active) button {
+			&:hover {
+				height: 14px;
+				border-radius: 13px;
+			}
+		}
 		li.slick-active button {
 			background: #f02214;
+		}
+		li button {
+			width: 168px;
+			height: 6px;
+			background-position:right bottom;
+	
+		}
+		li.slick-active button {
+			background: linear-gradient(to left, #fff 50%, #f02214 50%);
+			border-radius: 3px;
+			font-size: 0;
+			transition: all 5.5s linear;
+			background-size: 200% 100%;
+			background-position:left bottom;
 		}
 	}
 }
@@ -114,7 +140,6 @@
 	}
 }
 
-
 @media (max-width: 1360px) {
 	.token {
 		padding: 29px 140px 120px 140px;
@@ -135,7 +160,8 @@
 		height: 4px;
 	}
 	.token-item__text {
-		max-height: 210px;
+		max-height: 234px;
+		height: 100%;
 		overflow-y: auto;
 	}
 	.slick-slide img {
@@ -170,14 +196,25 @@
 		width: 40px;
 		height: 40px;
 		bottom: 0;
-		transform: translateY(260px);
+		transform: translateY(270px);
 	}
 	.token .slick-prev {
-		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat,
+			linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		&:hover {
+			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat,
+				linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		}
 	}
 	.token .slick-next {
-		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat,
+			linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		&:hover {
+			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat,
+				linear-gradient(180deg, #fce752 0%, #e79500 100%);
+		}
 	}
+
 	.token__arrows {
 		display: block;
 		width: 100%;
@@ -188,10 +225,9 @@
 		height: 6px;
 	}
 	.token-item__inner {
-		padding: 70px 30px 50px 30px;
+		padding: 65px 30px 50px 30px;
 	}
 	.token {
-
 	}
 }
 @media (max-width: 651px) {
@@ -200,3 +236,30 @@
 	}
 }
 
+@media (max-width: 550px) {
+	.token-item__title {
+		font-size: 28px;
+		line-height: 30px;
+		font-weight: 700;
+	}
+	.token-item__text {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.token .slick-arrow {
+		transform: translateY(270px);
+	}
+}
+
+@media (max-width: 411px) {
+	.token .slick-arrow {
+		transform: translateY(280px);
+	}
+	.token .slick-prev {
+		transform: translate(-20px, 280px);
+	}
+
+	.token .slick-next {
+		transform: translate(20px, 280px);
+	}
+}
