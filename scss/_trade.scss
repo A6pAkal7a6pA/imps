@@ -1,4 +1,6 @@
+
 .trade {
+	transition: all 350ms ease-in-out;
 	width: 100%;
 	height: 100%;
 	padding: 154px 15px 145px 15px;
@@ -28,6 +30,9 @@
 	}
 
 	&__image {
+		img {
+			height: 100%;
+		}
 	}
 }
 .trade-row {
@@ -36,7 +41,7 @@
 	text-align: center;
 	width: 100%;
 	padding: 15px 20px;
-	&:not(:last-child) {
+	&:first-child {
 		margin-bottom: 20px;
 	}
 	&__title {
@@ -101,19 +106,20 @@
 		height: 80px;
 		position: relative;
 		background-clip: padding-box;
-		&::after {
-			content: "";
-			position: absolute;
-			top: -3px;
-			left: -3px;
-			bottom: -3px;
-			right: -3px;
-			background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
-			border-radius: 10px;
-			z-index: -1;
-		}
+
 		&:hover {
 			border: 3px solid transparent;
+			&::after {
+				content: "";
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				bottom: -3px;
+				right: -3px;
+				background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
+				border-radius: 10px;
+				z-index: -1;
+			}
 		}
 	}
 
@@ -135,6 +141,8 @@
 		&__image {
 			position: absolute;
 			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
 			z-index: -1;
 		}
 	}
@@ -150,6 +158,9 @@
 }
 @media (max-width: 768px) {
 	.trade {
+		&__image {
+			display: none;
+		}
 		&__inner {
 			max-width: none;
 		}
@@ -173,5 +184,8 @@
 	.trade {
 		padding-top: 80px;
 		padding-bottom: 60px;
+	}
+	.trade-soc {
+
 	}
 }

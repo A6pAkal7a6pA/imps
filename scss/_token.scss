@@ -160,6 +160,7 @@
 		height: 4px;
 	}
 	.token-item__text {
+		min-height: 234px;
 		max-height: 234px;
 		height: 100%;
 		overflow-y: auto;
@@ -238,7 +239,7 @@
 
 @media (max-width: 550px) {
 	.token-item__title {
-		font-size: 28px;
+		font-size: 25px;
 		line-height: 30px;
 		font-weight: 700;
 	}
@@ -256,10 +257,10 @@
 		transform: translateY(280px);
 	}
 	.token .slick-prev {
-		transform: translate(-20px, 280px);
+		transform: translate(-20px, 270px);
 	}
 
 	.token .slick-next {
-		transform: translate(20px, 280px);
+		transform: translate(20px, 270px);
 	}
 }

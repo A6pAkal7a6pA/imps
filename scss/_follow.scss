@@ -49,21 +49,22 @@
 	padding: 8px 18px;
 	background-clip: padding-box;
 	// z-index: 1;
-	&::before {
-		content: "";
-		position: absolute;
-		top: -3px;
-		left: -3px;
-		bottom: -3px;
-		right: -3px;
-		background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
-		border-radius: 10px;
-		z-index: -1;
-	}
+
 	
 	
 	&:hover {
 		border: 3px solid transparent;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -3px;
+			left: -3px;
+			bottom: -3px;
+			right: -3px;
+			background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
+			border-radius: 10px;
+			z-index: -1;
+		}
 	}
 
 	// &:hover {

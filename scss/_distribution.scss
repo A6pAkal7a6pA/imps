@@ -92,6 +92,10 @@
 }
 @media (max-width: 555px) {
 	.distr__item {
-		max-width: 184px;
+		max-width: 175px;
+	}
+	.distr__content {
+		padding: 0;
+		gap: 45px 5px;
 	}
 }

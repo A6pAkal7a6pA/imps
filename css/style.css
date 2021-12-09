@@ -217,6 +217,16 @@ a {
   margin-right: 50px;
 }
 
+@media (min-width: 1920px) {
+  .main-page__image,
+  .main-page__head,
+  .main-page__content,
+  .main-more {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
 .main-read {
   position: absolute;
   right: 0;
@@ -287,6 +297,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
 .main-more__text {
@@ -360,6 +372,8 @@ a {
 }
 
 .trade {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
   width: 100%;
   height: 100%;
   padding: 154px 15px 145px 15px;
@@ -397,6 +411,10 @@ a {
   margin: 50px 0;
 }
 
+.trade__image img {
+  height: 100%;
+}
+
 .trade-row {
   background: #ede9ff;
   border-radius: 10px;
@@ -405,7 +423,7 @@ a {
   padding: 15px 20px;
 }
 
-.trade-row:not(:last-child) {
+.trade-row:first-child {
   margin-bottom: 20px;
 }
 
@@ -505,7 +523,11 @@ a {
   background-clip: padding-box;
 }
 
-.trade-soc__item::after {
+.trade-soc__item:hover {
+  border: 3px solid transparent;
+}
+
+.trade-soc__item:hover::after {
   content: "";
   position: absolute;
   top: -3px;
@@ -516,10 +538,6 @@ a {
   background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
   border-radius: 10px;
   z-index: -1;
-}
-
-.trade-soc__item:hover {
-  border: 3px solid transparent;
 }
 
 .trade-soc__image {
@@ -537,6 +555,9 @@ a {
   .trade__image {
     position: absolute;
     right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: -1;
   }
 }
@@ -551,6 +572,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .trade__image {
+    display: none;
+  }
   .trade__inner {
     max-width: none;
   }
@@ -824,6 +848,7 @@ a {
     height: 4px;
   }
   .game-item__text {
+    min-height: 234px;
     max-height: 234px;
     height: 100%;
     overflow-y: auto;
@@ -845,6 +870,7 @@ a {
   }
   .game-item {
     padding-top: 100px;
+    height: 100%;
   }
   .game-item__image {
     position: absolute;
@@ -855,6 +881,7 @@ a {
   }
   .game-item__inner {
     padding-top: 70px;
+    height: 100%;
   }
   .game .slick-arrow {
     width: 40px;
@@ -897,7 +924,7 @@ a {
 
 @media (max-width: 550px) {
   .game-item__title {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 30px;
     font-weight: 700;
   }
@@ -917,12 +944,12 @@ a {
             transform: translateY(280px);
   }
   .game .slick-prev {
-    -webkit-transform: translate(-20px, 280px);
-            transform: translate(-20px, 280px);
+    -webkit-transform: translate(-20px, 270px);
+            transform: translate(-20px, 270px);
   }
   .game .slick-next {
-    -webkit-transform: translate(20px, 280px);
-            transform: translate(20px, 280px);
+    -webkit-transform: translate(20px, 270px);
+            transform: translate(20px, 270px);
   }
 }
 
@@ -1126,6 +1153,7 @@ a {
     height: 4px;
   }
   .token-item__text {
+    min-height: 234px;
     max-height: 234px;
     height: 100%;
     overflow-y: auto;
@@ -1203,7 +1231,7 @@ a {
 
 @media (max-width: 550px) {
   .token-item__title {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 30px;
     font-weight: 700;
   }
@@ -1223,12 +1251,12 @@ a {
             transform: translateY(280px);
   }
   .token .slick-prev {
-    -webkit-transform: translate(-20px, 280px);
-            transform: translate(-20px, 280px);
+    -webkit-transform: translate(-20px, 270px);
+            transform: translate(-20px, 270px);
   }
   .token .slick-next {
-    -webkit-transform: translate(20px, 280px);
-            transform: translate(20px, 280px);
+    -webkit-transform: translate(20px, 270px);
+            transform: translate(20px, 270px);
   }
 }
 
@@ -1329,7 +1357,11 @@ a {
 
 @media (max-width: 555px) {
   .distr__item {
-    max-width: 184px;
+    max-width: 175px;
+  }
+  .distr__content {
+    padding: 0;
+    gap: 45px 5px;
   }
 }
 
@@ -1587,7 +1619,11 @@ a {
   background-clip: padding-box;
 }
 
-.foll-item::before {
+.foll-item:hover {
+  border: 3px solid transparent;
+}
+
+.foll-item:hover::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -1598,10 +1634,6 @@ a {
   background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
   border-radius: 10px;
   z-index: -1;
-}
-
-.foll-item:hover {
-  border: 3px solid transparent;
 }
 
 .foll-item__image {
