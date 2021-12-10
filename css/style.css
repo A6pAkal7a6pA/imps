@@ -1786,15 +1786,21 @@ a {
   .team-item {
     max-width: 175px;
     padding: 5px;
+    height: 100px;
   }
   .team-item__image img {
     max-width: 60px;
   }
+  .team-item__image {
+    margin-right: 5px;
+  }
   .team-item__title {
     font-size: 17px;
+    line-height: 17px;
   }
   .team-item__text {
     font-size: 13px;
+    line-height: 13px;
   }
 }
 
