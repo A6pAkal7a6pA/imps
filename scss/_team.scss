@@ -69,7 +69,7 @@
 		}
 	}
 	&__image {
-		margin-right: 18px;
+		margin-right: 15px;
 	}
 
 	&__content {
@@ -81,7 +81,7 @@
 		line-height: 23px;
 		color: #e465a3;
 		margin-bottom: 10px;
-		max-width: 124px;
+		max-width: 130px;
 	}
 
 
@@ -101,19 +101,20 @@
 		gap: 10px 5px;
 	}
 	.team-item {
-		max-width: 175px;
-		padding: 5px;
+		max-width: 183px;
+		padding: 7px;
 		height: 100px;
 		&__image img {
-			max-width: 60px;
+			max-width: 50px;
 		}
 	}
 	.team-item__image {
-		margin-right: 5px;
+		margin-right: 8px;
 	}
 	.team-item__title {
 		font-size: 17px;
-		line-height: 17px;
+		line-height: 20px;
+		margin-bottom: 5px;
 	}
 	.team-item__text {
 		font-size: 13px;

@@ -1756,7 +1756,7 @@ a {
 }
 
 .team-item__image {
-  margin-right: 18px;
+  margin-right: 15px;
 }
 
 .team-item__title {
@@ -1765,7 +1765,7 @@ a {
   line-height: 23px;
   color: #e465a3;
   margin-bottom: 10px;
-  max-width: 124px;
+  max-width: 130px;
 }
 
 .team-item__text {
@@ -1784,19 +1784,20 @@ a {
     gap: 10px 5px;
   }
   .team-item {
-    max-width: 175px;
-    padding: 5px;
+    max-width: 183px;
+    padding: 7px;
     height: 100px;
   }
   .team-item__image img {
-    max-width: 60px;
+    max-width: 50px;
   }
   .team-item__image {
-    margin-right: 5px;
+    margin-right: 8px;
   }
   .team-item__title {
     font-size: 17px;
-    line-height: 17px;
+    line-height: 20px;
+    margin-bottom: 5px;
   }
   .team-item__text {
     font-size: 13px;
