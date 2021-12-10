@@ -1,14 +1,14 @@
 .follow {
 	width: 100%;
 	height: 100%;
-	margin-top: -77px;
-	background: url('../img/follow-bg.png') center / cover repeat-x;
+	// margin-top: -77px;
+	// background: url('../img/follow-bg.png') center / cover repeat-x;
 	position: relative;
 	z-index: 2;
 	&__inner {
 		width: 100%;
 		height: 100%;
-		padding: 200px 0 150px 0;
+		padding: 50px 0 150px 0;
 	}
 
 	&__title {
@@ -86,10 +86,10 @@
 }
 
 @media (min-width: 1920px) {
-	.follow {
-	background: url('../img/pattern-big.png') top / cover no-repeat;
-	padding-top: 300px;
-	}
+	// .follow {
+	// background: url('../img/pattern-big.png') top / cover no-repeat;
+	// padding-top: 300px;
+	// }
 	.follow__inner {
 		padding: 50px 0 150px 0;
 	}
