@@ -91,6 +91,9 @@
 	.main-more {
 		transform: scale(1.5);
 	}
+	.main-page__row:not(:last-child) {
+		margin-bottom: 10px;
+	}
 }
 .main-read {
 	position: absolute;

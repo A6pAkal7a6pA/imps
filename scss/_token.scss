@@ -266,15 +266,15 @@
 	}
 }
 
-@media (max-width: 411px) {
+@media (max-width: 425px) {
 	.token .slick-arrow {
 		transform: translateY(280px);
 	}
 	.token .slick-prev {
-		transform: translate(-20px, 260px);
+		transform: translate(-17px, 260px);
 	}
 
 	.token .slick-next {
-		transform: translate(20px, 260px);
+		transform: translate(17px, 260px);
 	}
 }

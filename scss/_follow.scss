@@ -12,12 +12,15 @@
 	}
 
 	&__title {
-		font-weight: 700;
-		font-size: 28px;
-		line-height: 38px;
 		text-align: center;
-		color: #010038;
+		// color: #010038;
 		margin-bottom: 40px;
+		background: linear-gradient(90deg, #110f75 46.93%, #e465a3 56.14%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 52px;
 	}
 
 	&__content {
@@ -99,7 +102,7 @@
 	}
 }
 
-@media (max-width: 411px) {
+@media (max-width: 425px) {
 	.follow__content {
 		justify-content: center;
 		gap: 10px;
