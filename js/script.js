@@ -5,7 +5,9 @@ var gameSlider = $('.game__slider').slick({
 	fade: true,
 	dots: true,
 	autoplay: true,
-	autoplaySpeed: 5000
+	autoplaySpeed: 5000,
+	pauseOnFocus: false,
+	pauseOnHover: false
 });
 
 var tokenSlider = $('.token__slider').slick({
@@ -14,7 +16,9 @@ var tokenSlider = $('.token__slider').slick({
 	fade: true,
 	dots: true,
 	autoplay: true,
-	autoplaySpeed: 5000
+	autoplaySpeed: 5000,
+	pauseOnFocus: false,
+	pauseOnHover: false
 });
 
 $(document).ready(function () {
