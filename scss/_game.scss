@@ -162,7 +162,7 @@
 		}
 	}
 	li button {
-		width: 168px;
+		width: 105px;
 		height: 6px;
 		background-position:right bottom;
 
@@ -236,16 +236,18 @@
 		width: 40px;
 		height: 40px;
 		bottom: 0;
-		transform: translateY(270px);
+		transform: translateY(260px);
 	}
 	.game .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
+		transform: translate(-30px, 260px);
 		&:hover {
 			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
 		}
 	}
 	.game .slick-next {
 		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
+		transform: translate(30px, 260px);
 		&:hover {
 			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
 		}
@@ -260,7 +262,11 @@
 		height: 6px;
 	}
 	.game-item__inner {
-		padding: 65px 30px 50px 30px;
+		padding: 65px 30px 22px 30px;
+	}
+	.game-item__text{
+		font-size: 22px;
+		line-height: 26px;
 	}
 }
 @media (max-width: 651px) {
@@ -289,12 +295,12 @@
 		transform: translateY(280px);
 	}
 	.game .slick-prev {
-		transform: translate(-20px,270px);
+		transform: translate(-20px,260px);
 
 	}
 
 	.game .slick-next {
-		transform: translate(20px,270px);
+		transform: translate(20px,260px);
 
 	}
 }

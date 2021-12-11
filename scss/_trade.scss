@@ -185,7 +185,22 @@
 		padding-top: 80px;
 		padding-bottom: 60px;
 	}
-	.trade-soc {
-
+	.trade__inner {
+		padding: 0;
+	}
+	.trade__soc {
+		gap: 10px;
+	}
+	.trade-soc__item {
+		width: 80px;
+		height: 68.08px;
+		padding: 10px 5px;
+	}
+	.trade-soc__image {
+		margin-bottom: 8px;
+	}
+	.trade-soc__name {
+		font-size: 10px;
+		line-height: 12px;
 	}
 }
