@@ -1,4 +1,3 @@
-
 var gameSlider = $('.game__slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -7,7 +6,19 @@ var gameSlider = $('.game__slider').slick({
 	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
-	pauseOnHover: false
+	pauseOnHover: false,
+	swipeToSlide: true,
+	responsive: [
+		{
+			breakpoint: 769,
+			settings: {
+				dots: false
+			}
+		}
+	]
+});
+gameSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+	document.querySelector('.game__digit-min').innerText = currentSlide + 1;
 });
 
 var tokenSlider = $('.token__slider').slick({
@@ -18,8 +29,22 @@ var tokenSlider = $('.token__slider').slick({
 	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
-	pauseOnHover: false
+	pauseOnHover: false,
+	swipeToSlide: true,
+	responsive: [
+		{
+			breakpoint: 769,
+			settings: {
+				dots: false
+			}
+		}
+	]
 });
+
+tokenSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+	document.querySelector('.token__digit-min').innerText = currentSlide + 1;
+});
+
 
 $(document).ready(function () {
 	$('a[href^="#"]').click(function(){ // #1
@@ -30,8 +55,8 @@ $(document).ready(function () {
 		});
 });
 
-window.addEventListener("resize", function () {
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-}, true);
+			window.addEventListener("resize", function () {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}, true);
 startConfetti();
