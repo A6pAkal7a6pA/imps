@@ -6,8 +6,17 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	// position: relative;
-
+	position: relative;
+	#confetti-canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display:block;
+		z-index:999999;
+		pointer-events:none
+	}
 	padding-bottom: 28px;
 	// z-index: 9999;
 	&__inner {
@@ -164,7 +173,7 @@
 @media (max-width: 768px) {
 
 	.main-read {
-		top: 50px;
+		top: 5px;
 		background: none;
 		height: auto;
 		&__link {

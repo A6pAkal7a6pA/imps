@@ -29,3 +29,9 @@ $(document).ready(function () {
 		}, 600);                            // #5
 		});
 });
+
+window.addEventListener("resize", function () {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+}, true);
+startConfetti();

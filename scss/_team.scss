@@ -2,8 +2,9 @@
 	position: relative;
 	z-index: 6;
 	background: url("../img/token-bg.png") top / contain repeat-x;
+	margin-top: 75px;
 	&__inner {
-		padding-top: 150px;
+		padding-top: 75px;
 		padding-bottom: 200px;
 		max-width: 1090px;
 		margin: 0 auto;

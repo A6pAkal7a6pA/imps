@@ -114,7 +114,19 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   padding-bottom: 28px;
+}
+
+.main-page #confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 999999;
+  pointer-events: none;
 }
 
 .main-page__inner {
@@ -343,7 +355,7 @@ a {
 
 @media (max-width: 768px) {
   .main-read {
-    top: 50px;
+    top: 5px;
     background: none;
     height: auto;
   }
@@ -1745,10 +1757,11 @@ a {
   position: relative;
   z-index: 6;
   background: url("../img/token-bg.png") top/contain repeat-x;
+  margin-top: 75px;
 }
 
 .team__inner {
-  padding-top: 150px;
+  padding-top: 75px;
   padding-bottom: 200px;
   max-width: 1090px;
   margin: 0 auto;
