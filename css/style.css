@@ -229,6 +229,10 @@ a {
   margin-right: 50px;
 }
 
+.amonica {
+  max-width: 155px;
+}
+
 @media (min-width: 1920px) {
   .main-page__image,
   .main-page__head,
