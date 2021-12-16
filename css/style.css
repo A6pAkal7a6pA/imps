@@ -987,10 +987,10 @@ a {
   }
   .game__digit-sep {
     margin: 0 5px;
-    -webkit-text-stroke: 0.5px #D6C7F4;
+    color: #b8a6df;
   }
   .game__digit-max {
-    -webkit-text-stroke: 0.5px #D6C7F4;
+    color: #b8a6df;
   }
 }
 
@@ -1321,10 +1321,14 @@ a {
     margin-top: 35px;
   }
   .token__digit-min {
-    color: #D05D9E;
+    color: #E79500;
   }
   .token__digit-sep {
     margin: 0 5px;
+    color: #beade4;
+  }
+  .token__digit-max {
+    color: #beade4;
   }
 }
 
