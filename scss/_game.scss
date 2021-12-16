@@ -279,6 +279,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 35px;
+
 	}
 	.game__digit-min {
 		color: #D05D9E;
@@ -286,9 +287,10 @@
 	}
 	.game__digit-sep {
 		margin: 0 5px;
+		-webkit-text-stroke: 0.5px #D6C7F4;
 	}
 	.game__digit-max {
-
+		-webkit-text-stroke: 0.5px #D6C7F4;
 	}
 }
 @media (max-width: 651px) {
@@ -306,23 +308,5 @@
 	.game-item__text {
 		font-size: 22px;
 		line-height: 26px;
-	}
-	.game .slick-arrow {
-		// transform: translateY(270px);
-	}
-}
-
-@media (max-width: 425px) {
-	.game .slick-arrow {
-		// transform: translateY(280px);
-	}
-	.game .slick-prev {
-		// transform: translate(-17px,260px);
-
-	}
-
-	.game .slick-next {
-		// transform: translate(17px,260px);
-
 	}
 }

@@ -121,12 +121,12 @@ a {
 
 .main-page #confetti-canvas {
   position: absolute;
-  top: 430px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: block;
-  z-index: 999999;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -150,6 +150,8 @@ a {
   max-width: 1000px;
   padding: 0 10px 60px 10px;
   margin: 0 auto;
+  position: relative;
+  z-index: 5;
 }
 
 .main-page__read {
@@ -265,6 +267,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 4;
 }
 
 .main-read__link {
@@ -388,9 +391,6 @@ a {
 @media (max-width: 470px) {
   .main-page__head {
     margin: -64px auto 20px auto;
-  }
-  .main-page #confetti-canvas {
-    top: 315px;
   }
 }
 
@@ -987,6 +987,10 @@ a {
   }
   .game__digit-sep {
     margin: 0 5px;
+    -webkit-text-stroke: 0.5px #D6C7F4;
+  }
+  .game__digit-max {
+    -webkit-text-stroke: 0.5px #D6C7F4;
   }
 }
 
