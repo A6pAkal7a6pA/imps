@@ -138,7 +138,9 @@
 }
 @media (max-width: 1454px) {
 	.trade {
+		justify-content: center;
 		&__image {
+			display: none;
 			position: absolute;
 			right: 0;
 			top: 50%;

@@ -575,7 +575,13 @@ a {
 }
 
 @media (max-width: 1454px) {
+  .trade {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .trade__image {
+    display: none;
     position: absolute;
     right: 0;
     top: 50%;
