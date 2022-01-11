@@ -181,6 +181,8 @@ a {
 
 .main-page__title {
   font-weight: 400;
+  line-height: 38px;
+  font-size: 28px;
 }
 
 .main-page__subtitle {
@@ -203,6 +205,10 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+.main-page__content .main-page__title {
+  margin-bottom: 10px;
 }
 
 .main-page__row {
@@ -391,6 +397,9 @@ a {
 @media (max-width: 470px) {
   .main-page__head {
     margin: -64px auto 20px auto;
+  }
+  .main-page__content {
+    display: none;
   }
 }
 
