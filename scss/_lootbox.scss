@@ -1,4 +1,4 @@
-.game {
+.lootbox {
 	padding: 29px 165px 120px 165px;
 	width: 100%;
 	height: 100%;
@@ -78,6 +78,7 @@
 			background: #ffffff;
 			border-radius: 3px;
 			font-size: 0;
+
 		}
 		li:not(.slick-active) button {
 			&:hover {
@@ -91,10 +92,11 @@
 	}
 }
 
-.game__digits {
+
+.lootbox__digits {
 	display: none;
 }
-.game-item {
+.lootbox-item {
 	&__inner {
 		display: flex;
 		background: #ede9ff;
@@ -129,6 +131,25 @@
 		font-size: 26px;
 		line-height: 30px;
 		color: #010038;
+		margin-bottom: 15px;
+		max-height: 224px;
+		height: 224px;
+	}
+	&__subtitle{
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 38px;
+		color: #010038;
+		margin: 0 auto;
+	}
+	&__subtext{
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 38px;	
+		background: linear-gradient(90deg, #110f75 37.31%, #e465a3 62.15%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin: 0 auto;
 	}
 }
 
@@ -153,7 +174,7 @@
 	transform: translate(50%, -50%);
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
-.game .slick-dots {
+.lootbox .slick-dots {
 	position: absolute;
 	bottom: -50px;
 	display: flex;
@@ -167,7 +188,8 @@
 	li button {
 		width: 105px;
 		height: 6px;
-		background-position: right bottom;
+		background-position:right bottom;
+
 	}
 	li.slick-active button {
 		background: linear-gradient(to left, #fff 50%, #e465a3 50%);
@@ -175,61 +197,30 @@
 		font-size: 0;
 		transition: all 5.5s linear;
 		background-size: 200% 100%;
-		background-position: left bottom;
-	}
-}
-
-.game-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 100px;
-	&__body {
-		max-width: 340px;
-		width: 100%;
-		background: #010038;
-		border-radius: 14px;
-		padding: 22px 80px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		img {
-			margin-right: 10px;
-		}
-	}
-
-
-
-	&__text {
-		font-family: $fontfamilyNunito;
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 29px;
-		color: #ffffff;
+		background-position:left bottom;
 	}
 }
 
 @media (max-width: 1360px) {
-	.game {
+	.lootbox {
 		padding: 29px 140px 120px 140px;
 	}
-	.game-item__inner {
+	.lootbox-item__inner {
 		padding: 60px 70px;
 	}
-	.game .slick-dots li button {
+	.lootbox .slick-dots li button {
 		width: 140px;
 	}
 }
 @media (max-width: 1195px) {
-	.game-item__inner {
+	.lootbox-item__inner {
 		padding: 50px;
 	}
-	.game .slick-dots li button {
+	.lootbox .slick-dots li button {
 		width: 100px;
 		height: 4px;
 	}
-	.game-item__text {
+	.lootbox-item__text {
 		min-height: 234px;
 		max-height: 234px;
 		height: 100%;
@@ -246,62 +237,62 @@
 }
 
 @media (max-width: 768px) {
-	.game-item__image {
+	.lootbox-item__image {
 		margin-right: 0;
 	}
-	.game-item {
+	.lootbox-item {
 		padding-top: 100px;
 		height: 100%;
 	}
-	.game-item__image {
+	.lootbox-item__image {
 		position: absolute;
 		top: 0;
 		// transform: translateY(-50%);
 	}
-	.game__title {
+	.lootbox__title {
 		margin-bottom: 20px;
 	}
-	.game-item__inner {
+	.lootbox-item__inner {
 		padding-top: 70px;
 		height: 100%;
 	}
-	.game .slick-arrow {
+	.lootbox .slick-arrow {
 		width: 76px;
 		height: 56px;
 		bottom: 0;
 		transform: translateY(260px);
 	}
-	.game .slick-prev {
+	.lootbox .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
-		transform: translate(30px, 260px);
+		transform: translate(30px, 305px);
 		&:hover {
 			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
 		}
 	}
-	.game .slick-next {
+	.lootbox .slick-next {
 		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
-		transform: translate(-30px, 260px);
+		transform: translate(-30px, 305px);
 		&:hover {
 			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
 		}
 	}
-	.game__arrows {
+	.lootbox__arrows {
 		display: block;
 		width: 100%;
 		height: 40px;
 	}
-	.game .slick-dots li button {
+	.lootbox .slick-dots li button {
 		width: 32px;
 		height: 6px;
 	}
-	.game-item__inner {
-		padding: 65px 30px 22px 30px;
+	.lootbox-item__inner {
+		padding: 75px 30px 22px 30px;
 	}
-	.game-item__text {
+	.lootbox-item__text{
 		font-size: 22px;
 		line-height: 26px;
 	}
-	.game__digits {
+	.lootbox__digits {
 		font-weight: 800;
 		font-size: 31px;
 		line-height: 42px;
@@ -309,32 +300,47 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 35px;
+
 	}
-	.game__digit-min {
-		color: #d05d9e;
+	.lootbox__digit-min {
+		color: #D05D9E;
+
 	}
-	.game__digit-sep {
+	.lootbox__digit-sep {
 		margin: 0 5px;
 		color: #b8a6df;
 	}
-	.game__digit-max {
+	.lootbox__digit-max {
 		color: #b8a6df;
 	}
 }
 @media (max-width: 651px) {
-	.game {
-		padding: 29px 20px 120px 20px;
+	.lootbox {
+		padding: 29px 20px 50px 20px;
 	}
 }
 
 @media (max-width: 550px) {
-	.game-item__title {
+	.lootbox-item__title {
 		font-size: 25px;
 		line-height: 30px;
 		font-weight: 700;
 	}
-	.game-item__text {
+	.lootbox-item__text {
 		font-size: 22px;
 		line-height: 26px;
 	}
+	.lootbox-item__subtitle {
+		font-size: 28px;
+		line-height: 30px;
+	}
+	.lootbox-item__subtext {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+@media (max-width: 375px) {
+	.lootbox-item__inner {
+    padding: 80px 30px 22px 30px;
+}
 }

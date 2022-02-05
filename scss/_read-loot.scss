@@ -1,0 +1,40 @@
+.read-loot {
+	margin-bottom: 100px;
+	&__buttons {
+		max-width: 1090px;
+		margin: 0 auto;
+		padding: 0 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0 10px;
+	}
+
+	&__button {
+		font-family: $fontfamilyNunito;
+		max-width: 520px;
+		width: 100%;
+		display: flex;
+		padding: 25px;
+		align-items: center;
+		justify-content: space-between;
+		background: #010038;
+		border-radius: 14px;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		cursor: pointer;
+		&_blue {
+			background: #2081e2;
+		}
+	}
+
+	&__button-text {
+	}
+}
+@media (max-width: 768px ) {
+	.read-loot__buttons {
+		flex-direction: column;
+		gap: 10px 0;
+	}
+}

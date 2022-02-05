@@ -1,7 +1,11 @@
 @import "_zeroing.scss";
 @import "_main-page.scss";
-@import "_trade.scss";
+// @import "_trade.scss";
+@import "_lootbox.scss";
+@import "_read-loot.scss";
+@import "_trailer.scss";
 @import "_game.scss";
+@import "_partners.scss";
 @import "_token.scss";
 @import "_distribution.scss";
 @import "_road.scss";
@@ -28,7 +32,7 @@
 
 .token-distr__backgroud {
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 	background: url("../img/token-bg.png") center /contain repeat-x;
 	// background-size:100%;
 }

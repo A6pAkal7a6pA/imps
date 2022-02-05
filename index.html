@@ -8,9 +8,11 @@
 	<meta property="og:image" content="https://imps.me/img/meta-photo.jpg">
 	<meta property='og:site_name' content='imps.me' />
 	<meta property='og:url' content='https://imps.me/' />
-	<meta property='og:title' content='IMPS Kingdom - first cryptocurrency game with Proof Of Stake mining! Not literally POS. But literally mining!' />
+	<meta property='og:title'
+		content='IMPS Kingdom - first cryptocurrency game with Proof Of Stake mining! Not literally POS. But literally mining!' />
 	<meta property='og:type' content='article' />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<title>IMPS</title>
 </head>
@@ -18,79 +20,88 @@
 <body>
 	<div class="wrapper">
 		<section class="main-page">
-			<canvas id="confetti-canvas"></canvas>
+			<!-- <canvas id="confetti-canvas"></canvas> -->
 			<div class="main-page__read main-read">
-				<a href="https://medium.com/@imptoken" target="_blank" class="main-read__link">
-					<div class="main-read__icon">
-						<img src="img/icons/book.svg" alt="book">
-					</div>
-					<div class="main-read__text">
-						Read on Medium
-					</div>
-				</a>
 			</div>
-			<div class="main-page__inner">
-				<div class="main-page__image">
-					<img src="img/main-img.svg" alt="main-page">
-				</div>
-				<div class="main-page__head">
-					<div class="main-page__title">
-						Winner of
-					</div>
-					<div class="main-page__subtitle">
-						BINANCE SMART CHAIN GAMEFI HACKATHON
+
+			<div class="main-page__header">
+				<div class="main-page__headline">
+					<img src="img/opensea.svg" alt="">
+					<div class="main-page__headline-text">
+						Limited INO Event
 					</div>
 				</div>
-				<div class="main-page__content">
-					<div class="main-page__title">
-						Hackathon Sponsors:
-					</div>
-					<div class="main-page__row">
-						<div class="main-page__item">
-							<a href="https://www.binance.com/ru" target="_blank">
-								<img src="img/partners/binance.svg" alt="binance">
-							</a>
+				<div class="main-page__counter main-counter">
+					<div class="main-counter__body">
+						<div class="main-counter__item">
+							<div class="main-counter__time main-counter__day">
+								12
+							</div>
+							<div class="main-counter__label">
+								days
+							</div>
 						</div>
-						<div class="main-page__item">
-							<a href="https://1inch.io/ru/" target="_blank">
-								<img src="img/partners/linch.svg" alt="linch">
-							</a>
+						<div class="main-counter__separator"></div>
+						<div class="main-counter__item">
+							<div class="main-counter__time main-counter__hour">
+								12
+							</div>
+							<div class="main-counter__label">
+								hours
+							</div>
 						</div>
-						<div class="main-page__item">
-							<a href="https://www.animocabrands.com/" target="_blank">
-								<img src="img/partners/animoca.png" alt="animoca">
-							</a>
+						<div class="main-counter__separator"></div>
+						<div class="main-counter__item">
+							<div class="main-counter__time main-counter__min">
+								05
+							</div>
+							<div class="main-counter__label">
+								min
+							</div>
 						</div>
-					</div>
-					<div class="main-page__row">
-						<div class="main-page__item">
-							<a href="https://www.tiger.trade/ru">
-								<img src="img/partners/tiger-trade.svg" alt="tiger">
-							</a>
-						</div>
-						<div class="main-page__item">
-							<a href="https://bitscale.capital/" target="_blank">
-								<img src="img/partners/bitscale.svg" alt="bitscale">
-							</a>
-						</div>
-						<div class="main-page__item">
-							<a href="https://mission.xyz/" target="_blank">
-								<img src="img/partners/mission.svg" alt="mission">
-							</a>
-						</div>
-						<div class="main-page__item">
-							<a href="#" target="_blank">
-								<img src="img/partners/future.svg" alt="future">
-							</a>
-						</div>
-						<div class="main-page__item">
-							<a href="https://mercuryo.io/" target="_blank">
-								<img src="img/partners/mercuryo.svg" alt="mercuryo">
-							</a>
+						<div class="main-counter__separator"></div>
+						<div class="main-counter__item">
+							<div class="main-counter__time main-counter__sec">
+								12
+							</div>
+							<div class="main-counter__label">
+								sec
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<div class="main-page__body">
+				<div class="main-page__slider main-slider swiper-container">
+					<div class="main-slider__wrapper swiper-wrapper">
+						<div class="main-slider__slide swiper-slide">
+							<img src="img/Lootbox_1_Common.png" alt="">
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<img src="img/Lootbox_2_Rare.png" alt="">
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<img src="img/Lootbox_3_Epic.png" alt="">
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<img src="img/Lootbox_4_Mythical.png" alt="">
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<img src="img/Lootbox_5_Legendary.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="main-page__button">
+					<div class="main-page__button-inner">
+						<div class="main-page__text">
+							View collection
+						</div>
+						<img src="img/main-page-button.svg" alt="">
+					</div>
+				</div>
+			</div>
+
 			<a href="#trade" class="main-page__more main-more">
 				<div class="main-more__text">
 					Tell Me More!
@@ -101,121 +112,169 @@
 			</a>
 		</section>
 
-		<section class="trade" id="trade">
-			<div class="trade__inner">
-				<div class="trade__row trade-row">
-					<div class="trade-row__title">
-						Trade Token Soon
-					</div>
-					<div class="trade-row__content">
-						<div class="trade-row__item">
-							<a href="https://pancakeswap.finance" target="_blank">
-								<img src="img/partners/pancake.svg" alt="pancake">
-							</a>
+		<section class="lootbox">
+			<div class="lootbox__inner">
+				<div class="lootbox__title title">
+					INO Lootboxes
+				</div>
+				<div class="lootbox__content">
+					<div class="lootbox__slider">
+						<div class="lootbox__item lootbox-item">
+							<div class="lootbox-item__inner">
+								<div class="lootbox-item__image">
+									<img src="img/loot-1.png" alt="loot">
+								</div>
+								<div class="lootbox-item__content">
+									<div class="lootbox-item__title">
+										Angel lootbox
+									</div>
+									<div class="lootbox-item__text">
+										Created by the ancient magic of the Angels and cast by the best smiths in the Imp Kingdom, this
+										lootbox
+										can give you Divine loot that others can only dream of! But are you ready to handle this power?
+									</div>
+									<div class="lootbox-item__subtitle">
+										Garantee drop:
+									</div>
+									<div class="lootbox-item__subtext">
+										1 Mythic + 2 Epic items
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lootbox__item lootbox-item">
+							<div class="lootbox-item__inner">
+								<div class="lootbox-item__image">
+									<img src="img/loot-2.png" alt="loot">
+								</div>
+								<div class="lootbox-item__content">
+									<div class="lootbox-item__title">
+										Dragon lootbox
+									</div>
+									<div class="lootbox-item__text">
+										The nature of this lootbox is unknown. It is said that it was created at the time of the birth of
+										the world, in the flames of huge dragons, and those who got it receive the greatest treasures that
+										give their owner incredible power capable of conquering planets!
+									</div>
+									<div class="lootbox-item__subtitle">
+										Garantee drop:
+									</div>
+									<div class="lootbox-item__subtext">
+										1 Rare + 1 Epic items
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lootbox__item lootbox-item">
+							<div class="lootbox-item__inner">
+								<div class="lootbox-item__image">
+									<img src="img/loot-3.png" alt="loot">
+								</div>
+								<div class="lootbox-item__content">
+									<div class="lootbox-item__title">
+										Demon lootbox
+									</div>
+									<div class="lootbox-item__text">
+										This chest was stolen straight from the treasury of bloodthirsty demons. Are you ready to find out
+										what treasures they guarded? After all, inside you can find terrifying, but at the same time very
+										cool and valuable loot, from the very depths of hell!
+									</div>
+									<div class="lootbox-item__subtitle">
+										Garantee drop:
+									</div>
+									<div class="lootbox-item__subtext">
+										1 Rare + 1 Epic items
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lootbox__item lootbox-item">
+							<div class="lootbox-item__inner">
+								<div class="lootbox-item__image">
+									<img src="img/loot-4.png" alt="loot">
+								</div>
+								<div class="lootbox-item__content">
+									<div class="lootbox-item__title">
+										Crusader lootbox
+									</div>
+									<div class="lootbox-item__text">
+										Do you want to take possession of the treasures of the great warriors? Then this chest is for you!
+										Here you will find things that once belonged to the great crusader imps! Open it and get loot worthy
+										of the greatest Warlords and Generals who have ever lived in the world of the Imps!
+									</div>
+									<div class="lootbox-item__subtitle">
+										Garantee drop:
+									</div>
+									<div class="lootbox-item__subtext">
+										1 Rare item
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lootbox__item lootbox-item">
+							<div class="lootbox-item__inner">
+								<div class="lootbox-item__image">
+									<img src="img/loot-5.png" alt="loot">
+								</div>
+								<div class="lootbox-item__content">
+									<div class="lootbox-item__title">
+										Undead lootbox
+									</div>
+									<div class="lootbox-item__text">
+										This chest was found in the depths of ancient crypts, defended by the risen dead. No one knows what
+										awaits you when this lootbox opens... Will you get powerful artifacts of the kings of old or
+										worthless funerary gifts?
+									</div>
+									<!-- <div class="lootbox-item__subtitle">
+										Garantee drop:
+									</div>
+									<div class="lootbox-item__subtext">
+										1 Mythic + 2 Epic items
+									</div> -->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="trade__row trade-row">
-					<div class="trade-row__title">
-						Buy Game NFT ON
+				<div class="lootbox__digits">
+					<div class="lootbox__digit-min">
+						1
 					</div>
-					<div class="trade-row__content">
-						<div class="trade-row__item">
-							<a href="https://opensea.io" target="_blank">
-								<img src="img/partners/opensea.svg" alt="opensea">
-							</a>
-						</div>
-						<div class="trade-row__item">
-							<a href="https://nftone.games" target="_blank">
-								<img src="img/partners/nftone.svg" alt="nftone">
-							</a>
-						</div>
-						<div class="trade-row__item">
-							<a href="https://www.binance.com/ru" target="_blank">
-								<img src="img/partners/binance-yellow.svg" alt="binance">
-							</a>
-						</div>
+					<div class="lootbox__digit-sep">
+						/
+					</div>
+					<div class="lootbox__digit-max">
+						5
 					</div>
 				</div>
-				<a href="https://www.youtube.com/watch?v=rcHtqryPQ8w" target="_blank" class="trade__button trade-button">
-					<div class="trade-button__image">
-						<img src="img/icons/start-game.svg" alt="start">
-					</div>
-					<div class="trade-button__text">
-						Watch trailer
-					</div>
-				</a>
-				<div class="trade__soc trade-soc">
-					<a href="https://twitter.com/imptoken" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/twitter.svg" alt="twitter">
-						</div>
-						<div class="trade-soc__name">
-							Twitter
-						</div>
-					</a>
-					<a href="https://discord.gg/xQrdRX2" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/discord.svg" alt="discord">
-						</div>
-						<div class="trade-soc__name">
-							Discord
-						</div>
-					</a>
-					<a href="https://t.me/imptoken_ru" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/telegram.svg" alt="telegram">
-						</div>
-						<div class="trade-soc__name">
-							Telegram RU
-						</div>
-					</a>
-					<a href="https://t.me/imptoken" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/telegram.svg" alt="telegram">
-						</div>
-						<div class="trade-soc__name">
-							Telegram EN
-						</div>
-					</a>
-					<a href="https://medium.com/@imptoken" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/medium.svg" alt="medium">
-						</div>
-						<div class="trade-soc__name">
-							Medium
-						</div>
-					</a>
-					<a href="https://www.facebook.com/imptoken/" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/facebook.svg" alt="fb">
-						</div>
-						<div class="trade-soc__name">
-							Facebook
-						</div>
-					</a>
-					<a href="https://bitcointalk.org/index.php?topic=4087326.0" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/bircoin-talk.png" alt="bitcoin-talk">
-						</div>
-						<div class="trade-soc__name">
-							BitcoinTalk
-						</div>
-					</a>
-					<a href="https://www.reddit.com/r/imptoken/" target="_blank" class="trade-soc__item">
-						<div class="trade-soc__image">
-							<img src="img/icons/reddit.svg" alt="reddit">
-						</div>
-						<div class="trade-soc__name">
-							Reddit
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="trade__image">
-				<img src="img/axe.png" alt="axe">
 			</div>
 		</section>
+
+		<div class="read-loot">
+			<div class="read-loot__buttons">
+				<div class="read-loot__button">
+					<div class="read-loot__button-text">
+						Read more about lootboxes
+					</div>
+					<img src="img/read-loot-button.svg" alt="">
+				</div>
+				<div class="read-loot__button read-loot__button_blue">
+					<div class="read-loot__button-text">
+						View collection on OpenSea
+					</div>
+					<img src="img/read-loot-button.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="trailer">
+			<div class="trailer__inner">
+				<iframe class="trailer__video" src="https://www.youtube.com/embed/rcHtqryPQ8w" title="YouTube video player"
+					frameborder="0""
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</div>
 
 		<section class="game">
 			<div class="game__inner">
@@ -339,6 +398,70 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="game-button">
+			<div class="game-button__body">
+				<img src="img/gamepaper.svg" alt="">
+				<div class="game-button__text">
+					Gamepaper
+				</div>
+			</div>
+		</div>
+
+		<section class="partners">
+			<div class="partners__inner">
+				<div class="token__title title">
+					Partners
+				</div>
+				<div class="main-page__content">
+					<div class="main-page__row">
+						<div class="main-page__item">
+							<a href="https://www.binance.com/ru" target="_blank">
+								<img src="img/partners/binance.svg" alt="binance">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="https://1inch.io/ru/" target="_blank">
+								<img src="img/partners/linch.svg" alt="linch">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="https://www.animocabrands.com/" target="_blank">
+								<img src="img/partners/animoca-black.png" alt="animoca">
+							</a>
+						</div>
+					</div>
+					<div class="main-page__row">
+						<div class="main-page__item">
+							<a href="https://www.tiger.trade/ru">
+								<img src="img/partners/tiger-trade.svg" alt="tiger">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="https://bitscale.capital/" target="_blank">
+								<img src="img/partners/bitscale.svg" alt="bitscale">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="https://mission.xyz/" target="_blank">
+								<img src="img/partners/mission.svg" alt="mission">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="#" target="_blank">
+								<img src="img/partners/future.svg" alt="future">
+							</a>
+						</div>
+						<div class="main-page__item">
+							<a href="https://mercuryo.io/" target="_blank">
+								<img src="img/partners/mercuryo.svg" alt="mercuryo">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<div class="token-distr__backgroud">
 			<section class="token">
 				<div class="token__inner">
@@ -995,6 +1118,7 @@
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 	<script src="js/confeti.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
