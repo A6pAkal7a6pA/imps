@@ -420,6 +420,25 @@ a {
   .main-page__row:not(:last-child) {
     margin-bottom: 10px;
   }
+  .swiper-slide-prev.swiper-slide-visible img,
+  .swiper-slide-next.swiper-slide-visible img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .main-slider__wrapper {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .swiper-slide-visible.swiper-slide-active img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .main-page .main-slider {
+    margin-bottom: 120px;
+  }
+  .main-page__header {
+    margin-bottom: 50px;
+  }
 }
 
 .main-read {
@@ -534,17 +553,20 @@ a {
   }
 }
 
-@media (min-device-width: 2800px) {
-  .main-page .swiper-slide {
-    max-width: 600px;
-    width: 100%;
-  }
-  .main-page .swiper-slide img {
-    width: 100%;
-  }
+.swiper-slide-prev.swiper-slide-visible img,
+.swiper-slide-next.swiper-slide-visible img {
+  opacity: 0.85;
 }
 
-@media (min-device-width: 2600px) and (max-device-width: 2800px) {
+.swiper-slide-visible img {
+  opacity: 0.7;
+}
+
+.swiper-slide-visible.swiper-slide-active img {
+  opacity: 1;
+}
+
+@media (min-device-width: 2800px) {
   .main-page .swiper-slide {
     max-width: 550px;
     width: 100%;
@@ -554,9 +576,9 @@ a {
   }
 }
 
-@media (min-device-width: 2400px) and (max-device-width: 2600px) {
+@media (min-device-width: 2600px) and (max-device-width: 2800px) {
   .main-page .swiper-slide {
-    max-width: 500px;
+    max-width: 530px;
     width: 100%;
   }
   .main-page .swiper-slide img {
@@ -564,7 +586,7 @@ a {
   }
 }
 
-@media (min-device-width: 2180px) and (max-device-width: 2400px) {
+@media (min-device-width: 2400px) and (max-device-width: 2600px) {
   .main-page .swiper-slide {
     max-width: 450px;
     width: 100%;
@@ -574,7 +596,7 @@ a {
   }
 }
 
-@media (min-device-width: 1950px) and (max-device-width: 2180px) {
+@media (min-device-width: 2180px) and (max-device-width: 2400px) {
   .main-page .swiper-slide {
     max-width: 400px;
     width: 100%;
@@ -584,7 +606,7 @@ a {
   }
 }
 
-@media (min-device-width: 1750px) and (max-device-width: 1950px) {
+@media (min-device-width: 1950px) and (max-device-width: 2180px) {
   .main-page .swiper-slide {
     max-width: 350px;
     width: 100%;
@@ -594,7 +616,7 @@ a {
   }
 }
 
-@media (min-device-width: 1550px) and (max-device-width: 1750px) {
+@media (min-device-width: 1750px) and (max-device-width: 1950px) {
   .main-page .swiper-slide {
     max-width: 300px;
     width: 100%;
