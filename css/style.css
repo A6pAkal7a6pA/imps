@@ -534,7 +534,7 @@ a {
   }
 }
 
-@media (min-device-width: 2180px) and (max-device-width: 2400px) {
+@media (min-device-width: 2180px) {
   .main-page .swiper-slide {
     max-width: 450px;
     width: 100%;
