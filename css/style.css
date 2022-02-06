@@ -228,6 +228,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 45px;
 }
 
 .main-page .main-counter__time {
