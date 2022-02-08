@@ -69,12 +69,11 @@
 	}
 	.main-counter {
 		&__body {
-			max-width: 415px;
 			width: 100%;
 			margin: 0 auto;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: space-around;
 			background: rgba(1, 0, 56, 0.15);
 			border-radius: 8px;
 			padding: 10px;

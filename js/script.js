@@ -197,12 +197,17 @@ function executeTimer() {
 			clearInterval(timer);
 		} else {
 			let res = new Date(ms_left);
-			day.innerText = `${res.getUTCDate() - 1}`;
-			hour.innerText = `${res.getUTCHours()}`;
-			minute.innerText = `${res.getUTCMinutes()}`;
-			second.innerText = `${res.getUTCSeconds()}`;
+			day.innerText = `${addZero(res.getUTCDate() - 1)}`;
+			hour.innerText = `${addZero(res.getUTCHours())}`;
+			minute.innerText = `${addZero(res.getUTCMinutes())}`;
+			second.innerText = `${addZero(res.getUTCSeconds())}`;
 		}
 	}, 1000);
 }
-
+function addZero(time) {
+	if (time < 10) {
+		return '0' + time;
+	}
+	return time;
+}
 executeTimer();
