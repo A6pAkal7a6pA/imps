@@ -153,33 +153,33 @@
 	.swiper-wrapper {
 	}
 	.swiper-slide {
-		position: relative;
+		// position: relative;
 		img {
 			width: 100%;
 		}
-		&::after {
-			content: "";
-			position: absolute;
-			width: 63%;
-			height: 23%;
-			top: 50%;
-			left: 50%;
-			animation: shadow 1s infinite alternate;
-			z-index: -1;
-			transform: translate(-50%, -50%);
-			background: transparent;
-			// transform: scale(0.5);
-		}
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	width: 63%;
+		// 	height: 23%;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	animation: shadow 1s infinite alternate;
+		// 	z-index: -1;
+		// 	transform: translate(-50%, -50%);
+		// 	background: transparent;
+		// 	// transform: scale(0.5);
+		// }
 	}
 
-	@keyframes shadow {
-		from {
-			box-shadow: 0 0 90px 30px #FCE752;
-		}
-		to {
-			box-shadow: 0 0 150px 40px #E79500;
-		}
-	}
+	// @keyframes shadow {
+	// 	from {
+	// 		box-shadow: 0 0 90px 30px #FCE752;
+	// 	}
+	// 	to {
+	// 		box-shadow: 0 0 150px 40px #E79500;
+	// 	}
+	// }
 
 	.main-page {
 		&__button {
