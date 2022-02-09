@@ -200,4 +200,4 @@ function addZero(time) {
 	}
 	return time;
 }
-executeTimer();
+// executeTimer();
