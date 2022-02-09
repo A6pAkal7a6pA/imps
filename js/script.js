@@ -86,9 +86,9 @@ $(document).ready(function () {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	autoplay: {
-		delay: 5000,
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// },
 	speed: 1000,
 	effect: 'coverflow',
 	slidesPerView: "auto",

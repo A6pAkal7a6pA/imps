@@ -551,8 +551,17 @@ a {
   }
 }
 
-.swiper-slide-visible {
-  opacity: 1 !important;
+.swiper-slide img {
+  opacity: 0.7;
+}
+
+.swiper-slide-prev.swiper-slide-visible img,
+.swiper-slide-next.swiper-slide-visible img {
+  opacity: 0.85;
+}
+
+.swiper-slide-visible.swiper-slide-active img {
+  opacity: 1;
 }
 
 @media (min-device-width: 2800px) {
