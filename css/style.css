@@ -409,18 +409,11 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  gap: 20px 50px;
 }
 
-.main-page__row:not(:last-child) {
-  margin-bottom: 25px;
-}
-
-.main-page__item {
-  margin-bottom: 20px;
-}
-
-.main-page__item:not(:last-child) {
-  margin-right: 50px;
+.main-page__item a img {
+  height: 60px;
 }
 
 .amonica {
@@ -660,9 +653,6 @@ a {
   .main-page__row:last-child {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .main-page__item:not(:last-child) {
-    margin-right: 30px;
   }
   .main-page__item img {
     max-width: 100%;
