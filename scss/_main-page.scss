@@ -9,6 +9,7 @@
 	position: relative;
 	overflow: hidden;
 	padding-top: 55px;
+	height: calc(var(--vh, 1vh) * 100);
 	#confetti-canvas {
 		position: absolute;
 		top: 0;
