@@ -6,7 +6,7 @@
 	position: relative;
 	z-index: 3;
 	&__inner {
-		max-width: 950px;
+		max-width: 1080px;
 		margin: 0 auto;
 		padding: 0 15px;
 	}
@@ -63,7 +63,7 @@
 	align-items: flex-start;
 	justify-content: center;
 	padding: 36px 60px;
-	
+
 	&__image {
 		position: absolute;
 		top: -65px;
@@ -83,6 +83,119 @@
 		color: #010038;
 	}
 }
+
+.road {
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		position: relative;
+		gap: 40px 0;
+		&::after {
+			content: "";
+			width: 7px;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			background: rgba(#685ca8, 0.5);
+		}
+	}
+
+	&__event {
+	}
+}
+.road-event {
+	width: 100%;
+	flex: 1 0 50%;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		background: #685ca8;
+		left: 100%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: calc(100% - 456px);
+		height: 5px;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 5;
+		background: url('../img/dashed.svg') center / contain repeat-x;
+	}
+
+	&__wrapper {
+		max-width: 456px;
+		height: 136px;
+		background: #ede9ff;
+		border-radius: 15px;
+		padding: 30px 40px;
+		border: 3px solid #fff;
+		width: 100%;
+	}
+	&__head {
+		font-family: $fontfamilyNunito;
+		display: flex;
+		gap: 0 15px;
+		font-size: 28px;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		font-weight: 800;
+		line-height: 38px;
+		color: #e465a3;
+	}
+
+	&__text {
+		font-family: $fontfamilyRoboto;
+		font-weight: normal;
+		font-size: 23px;
+		line-height: 28px;
+		color: #010038;
+	}
+
+	&__substitle {
+		font-weight: 800;
+		line-height: 38px;
+		color: rgba(#e465a3, 0.5);
+	}
+	&:nth-child(odd) {
+		display: flex;
+		justify-content: flex-end;
+		transform: translateY(-50%);
+		&::before {
+			left: 0;
+		}
+		&::after {
+			left: 0;
+		}
+		.road-event__head {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+	}
+	&:nth-child(even) {
+		transform: translateY(20%);
+		&::after {
+			left: 100%;
+			transform: translate(-100%, -50%);
+		}
+	}
+}
+
 .road-item.important {
 	background: linear-gradient(90deg, #110f75 -54.3%, #e465a3 97.35%);
 	border-radius: 15px;
@@ -98,13 +211,13 @@
 		font-family: $fontfamilyRoboto;
 		color: #fff;
 		font-size: 18px;
-    line-height: 21px;
+		line-height: 21px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.road{
-		background: url("../img/roadmap-bg.svg") top /contain  no-repeat;
+	.road {
+		background: url("../img/roadmap-bg.svg") top / contain no-repeat;
 	}
 }
 @media (max-width: 1131px) {
@@ -113,11 +226,30 @@
 	}
 }
 
+@media(max-width: 1000px) {
+	.road-event__wrapper {
+		width: calc(100% - 30px);
+	}
+	.road-event__text {
+		font-size: 18px;
+	}
+	.road-event__head {
+		font-size: 25px;
+	}
+}
+// @media(max-width:785px) {
+// 	.road-event__text {
+// 		font-size: 15px;
+// 	}
+// 	.road-event__head {
+//     font-size: 22px;
+// }
+// }
 @media (max-width: 768px) {
 	.road-item {
 		max-width: 100%;
 		padding: 15px 80px 15px 15px;
-		&__image img{
+		&__image img {
 			max-width: 136px;
 		}
 		&__image {
@@ -148,13 +280,12 @@
 		padding: 0 20px;
 	}
 	.road__title {
-		margin-bottom: 20px;
+		margin-bottom: 100px;
 	}
 }
 @media (max-width: 460px) {
 	.road-item__text {
 		max-height: 84px;
 		overflow-y: auto;
-		
 	}
 }
