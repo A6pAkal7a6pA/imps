@@ -2342,6 +2342,12 @@ a {
   }
 }
 
+@media (max-width: 785px) {
+  .road-event__wrapper {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .road-item {
     max-width: 100%;
@@ -2379,6 +2385,34 @@ a {
   }
   .road__title {
     margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 685px) {
+  .road-event__head {
+    font-size: 22px;
+  }
+  .road-event__wrapper {
+    width: calc(100% - 15px);
+  }
+}
+
+@media (max-width: 610px) {
+  .road__body::after {
+    display: none;
+  }
+  .road .road-event.road__event {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .road .road-event.road__event::before, .road .road-event.road__event::after {
+    display: none;
+  }
+  .road__title {
+    margin-bottom: 60px;
   }
 }
 
