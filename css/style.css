@@ -798,6 +798,8 @@ a {
 }
 
 .lootbox .slick-dots li.slick-active button {
+  height: 14px;
+  border-radius: 13px;
   background: #e465a3;
 }
 
@@ -1284,6 +1286,8 @@ a {
 }
 
 .game .slick-dots li.slick-active button {
+  height: 14px;
+  border-radius: 13px;
   background: #e465a3;
 }
 
@@ -1702,6 +1706,8 @@ a {
 }
 
 .token .slick-dots li.slick-active button {
+  height: 14px;
+  border-radius: 13px;
   background: #f02214;
 }
 
@@ -2178,6 +2184,7 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: rgba(104, 92, 168, 0.5);
+  border-radius: 30px;
 }
 
 .road-event {
@@ -2204,9 +2211,9 @@ a {
 .road-event::after {
   content: "";
   position: absolute;
-  width: calc(100% - 456px);
+  width: calc(100% - 464px);
   height: 5px;
-  left: 0;
+  left: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -2270,7 +2277,7 @@ a {
 }
 
 .road-event:nth-child(odd)::after {
-  left: 0;
+  left: 8px;
 }
 
 .road-event:nth-child(odd) .road-event__head {
@@ -2292,7 +2299,7 @@ a {
 }
 
 .road-event:nth-child(even)::after {
-  left: 100%;
+  left: calc(100% - 8px);
   -webkit-transform: translate(-100%, -50%);
           transform: translate(-100%, -50%);
 }
@@ -2393,7 +2400,7 @@ a {
     font-size: 22px;
   }
   .road-event__wrapper {
-    width: calc(100% - 15px);
+    width: 100%;
   }
 }
 
@@ -2413,6 +2420,18 @@ a {
   }
   .road__title {
     margin-bottom: 60px;
+  }
+  .road__body {
+    gap: 20px 0;
+  }
+  .road .road__body .road-event__head {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
