@@ -792,14 +792,12 @@ a {
   font-size: 0;
 }
 
-.lootbox .slick-dots li:not(.slick-active) button:hover {
+.lootbox .slick-dots li button:hover {
   height: 14px;
   border-radius: 13px;
 }
 
 .lootbox .slick-dots li.slick-active button {
-  height: 14px;
-  border-radius: 13px;
   background: #e465a3;
 }
 
@@ -935,10 +933,14 @@ a {
   background: linear-gradient(to left, #fff 50%, #e465a3 50%);
   border-radius: 3px;
   font-size: 0;
-  -webkit-transition: all 5.5s linear;
-  transition: all 5.5s linear;
+  -webkit-transition: background 5.5s linear;
+  transition: background 5.5s linear;
   background-size: 200% 100%;
   background-position: left bottom;
+}
+
+.lootbox .slick-dots li.slick-active button:hover {
+  border-radius: 13px;
 }
 
 @media (max-width: 1360px) {
@@ -1280,14 +1282,12 @@ a {
   font-size: 0;
 }
 
-.game .slick-dots li:not(.slick-active) button:hover {
+.game .slick-dots li button:hover {
   height: 14px;
   border-radius: 13px;
 }
 
 .game .slick-dots li.slick-active button {
-  height: 14px;
-  border-radius: 13px;
   background: #e465a3;
 }
 
@@ -1401,10 +1401,14 @@ a {
   background: linear-gradient(to left, #fff 50%, #e465a3 50%);
   border-radius: 3px;
   font-size: 0;
-  -webkit-transition: all 5.5s linear;
-  transition: all 5.5s linear;
+  -webkit-transition: background 5.5s linear;
+  transition: background 5.5s linear;
   background-size: 200% 100%;
   background-position: left bottom;
+}
+
+.game .slick-dots li.slick-active button:hover {
+  border-radius: 13px;
 }
 
 .game-button {
@@ -1700,14 +1704,12 @@ a {
   font-size: 0;
 }
 
-.token .slick-dots li:not(.slick-active) button:hover {
+.token .slick-dots li button:hover {
   height: 14px;
   border-radius: 13px;
 }
 
 .token .slick-dots li.slick-active button {
-  height: 14px;
-  border-radius: 13px;
   background: #f02214;
 }
 
@@ -1722,10 +1724,14 @@ a {
   background: linear-gradient(to left, #fff 50%, #f02214 50%);
   border-radius: 3px;
   font-size: 0;
-  -webkit-transition: all 5.5s linear;
-  transition: all 5.5s linear;
+  -webkit-transition: background 5.5s linear;
+  transition: background 5.5s linear;
   background-size: 200% 100%;
   background-position: left bottom;
+}
+
+.token .slick-dots li.slick-active button:hover {
+  border-radius: 13px;
 }
 
 .token__digits {

@@ -80,15 +80,13 @@
 			font-size: 0;
 
 		}
-		li:not(.slick-active) button {
+		li button {
 			&:hover {
 				height: 14px;
 				border-radius: 13px;
 			}
 		}
 		li.slick-active button {
-			height: 14px;
-			border-radius: 13px;
 			background: #e465a3;
 		}
 	}
@@ -197,9 +195,12 @@
 		background: linear-gradient(to left, #fff 50%, #e465a3 50%);
 		border-radius: 3px;
 		font-size: 0;
-		transition: all 5.5s linear;
+		transition: background 5.5s linear;
 		background-size: 200% 100%;
 		background-position:left bottom;
+		&:hover {
+			border-radius: 13px;
+		}
 	}
 }
 
