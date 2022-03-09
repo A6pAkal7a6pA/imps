@@ -95,11 +95,19 @@
 		}
 	}
 }
+@media (max-width: 970px) {
+	.distr__content {
+		max-width: 700px;
+		justify-content: flex-start;
+	}
+}
 @media (max-width: 555px) {
 	.distr__item {
 		max-width: 175px;
 	}
 	.distr__content {
+		max-width: 400px;
+		margin: 0 auto;
 		padding: 0;
 		gap: 45px 5px;
 	}
