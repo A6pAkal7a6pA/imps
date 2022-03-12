@@ -108,7 +108,8 @@
 	.distr__content {
 		max-width: 400px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 10px;
+		justify-content: space-between;
 		gap: 45px 5px;
 	}
 }

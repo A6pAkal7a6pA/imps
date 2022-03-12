@@ -2061,7 +2061,10 @@ a {
   .distr__content {
     max-width: 400px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 45px 5px;
   }
 }
@@ -2775,7 +2778,7 @@ a {
     padding-bottom: 50px;
   }
   .team__content {
-    gap: 10px 5px;
+    gap: 9px;
   }
   .team-item {
     max-width: 183px;
