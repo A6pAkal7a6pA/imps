@@ -2204,7 +2204,7 @@ a {
   top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: rgba(104, 92, 168, 0.5);
+  background: rgba(197, 188, 248, 0.5);
   border-radius: 30px;
 }
 
@@ -2221,7 +2221,7 @@ a {
   position: absolute;
   width: 18px;
   height: 18px;
-  background: #685ca8;
+  background: #C5BCF8;
   left: 100%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2244,12 +2244,32 @@ a {
 
 .road-event__wrapper {
   max-width: 456px;
-  height: 136px;
+  min-height: 120px;
+  max-height: 131px;
   background: #ede9ff;
   border-radius: 15px;
-  padding: 25px 40px 30px 40px;
+  padding: 17px 27px;
   border: 3px solid #fff;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.road-event__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .road-event__head {
@@ -2257,29 +2277,31 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0 15px;
-  font-size: 28px;
-  margin-bottom: 10px;
+  gap: 0 10px;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 800;
 }
 
 .road-event__title {
-  font-weight: 800;
-  line-height: 38px;
   color: #e465a3;
 }
 
 .road-event__text {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 28px;
+  max-width: 306px;
   color: #010038;
 }
 
 .road-event__substitle {
-  font-weight: 800;
-  line-height: 38px;
   color: rgba(228, 101, 163, 0.5);
+}
+
+.road-event__image img {
+  max-height: 81px;
 }
 
 .road-event:nth-child(odd) {
@@ -2329,13 +2351,20 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.road-event:nth-child(even) .road-event__body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.road-event:nth-child(even) .road-event__text {
+  text-align: right;
 }
 
 .road-item.important {
@@ -2374,12 +2403,6 @@ a {
 @media (max-width: 1000px) {
   .road-event__wrapper {
     width: calc(100% - 30px);
-  }
-  .road-event__text {
-    font-size: 18px;
-  }
-  .road-event__head {
-    font-size: 25px;
   }
 }
 
@@ -2429,25 +2452,6 @@ a {
   }
 }
 
-@media (max-width: 685px) {
-  .road-event__head {
-    font-size: 22px;
-  }
-  .road-event__wrapper {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 @media (max-width: 610px) {
   .road__body::after {
     display: none;
@@ -2473,9 +2477,22 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .road .road__body .road-event__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .road-event:nth-child(even) .road-event__head {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
