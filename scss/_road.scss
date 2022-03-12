@@ -256,11 +256,26 @@
 		width: calc(100% - 30px);
 	}
 }
-@media (max-width: 785px) {
-	.road-event__wrapper {
-		padding: 12px 15px 15px 15px;
+
+@media(max-width: 880px) {
+	.road .road__body .road-event__head {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.road-event__text {
+		font-size: 20px;
+	}
+	.road-event:nth-child(odd) .road-event__head {
+		align-items: flex-start;
 	}
 }
+// @media (max-width: 785px) {
+// 	.road-event__wrapper {
+// 		// padding: 12px 15px 15px 15px;
+// 	}
+// }
 
 @media (max-width: 768px) {
 	.road-item {
@@ -320,19 +335,30 @@
 		gap: 20px 0;
 	}
 	.road .road__body .road-event__head {
-		flex-direction: row;
-		justify-content: flex-start;
+		// flex-direction: row;
+		// justify-content: flex-start;
 		width: 100%;
 	}
 	.road .road__body .road-event__wrapper {
+		flex-direction: row;
 		align-items: flex-start;
 		width: 100%;
+	.road-event__head {
+		align-items: flex-start;
 	}
-	.road-event:nth-child(even) {
-		.road-event__head {
-			flex-direction: row-reverse;
-		}
+	.road-event__body {
+		align-items: flex-start;
+		height: 100%;
 	}
+	.road-event__text {
+		text-align: left;
+	}
+	}
+	// .road-event:nth-child(even) {
+	// 	.road-event__head {
+	// 		flex-direction: row-reverse;
+	// 	}
+	// }
 }
 @media (max-width: 460px) {
 	.road-item__text {
