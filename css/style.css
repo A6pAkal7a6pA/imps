@@ -969,6 +969,9 @@ a {
     height: 100%;
     overflow-y: auto;
   }
+  .lootbox-item__text::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
   .slick-slide img {
     width: 200px;
   }
@@ -1480,6 +1483,9 @@ a {
     height: 100%;
     overflow-y: auto;
   }
+  .game-item__text::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
   .slick-slide img {
     width: 200px;
   }
@@ -1817,6 +1823,9 @@ a {
     max-height: 234px;
     height: 100%;
     overflow-y: auto;
+  }
+  .token-item__text::-webkit-scrollbar-thumb {
+    background: #fff;
   }
   .slick-slide img {
     width: 200px;
@@ -2270,9 +2279,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .road-event__head {
