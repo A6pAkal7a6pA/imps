@@ -139,10 +139,10 @@
 	&__wrapper {
 		max-width: 456px;
 		min-height: 120px;
-		max-height: 131px;
+		max-height: 142px;
 		background: #ede9ff;
 		border-radius: 15px;
-		padding: 17px 27px;
+		padding: 13px 20px;
 		border: 3px solid #fff;
 		width: 100%;
 		display: flex;
@@ -153,6 +153,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		margin: auto 0;
 	}
 	&__head {
 		font-family: $fontfamilyNunito;
@@ -161,6 +162,7 @@
 		font-size: 24px;
 		line-height: 33px;
 		font-weight: 800;
+		margin-bottom: 5px;
 	}
 
 	&__title {
@@ -180,8 +182,12 @@
 		color: rgba(#e465a3, 0.5);
 	}
 	&__image {
+		max-height: 110px;
+		height: 100%;
 		img {
-			max-height: 81px;
+			width: 110px;
+
+			height: 110px;
 		}
 	}
 	&:nth-child(odd) {
@@ -199,7 +205,9 @@
 			flex-direction: row-reverse;
 			justify-content: flex-end;
 		}
-
+		// .road-event__wrapper {
+		// 	padding: 13px 20px 13px 27px;
+		// }
 	}
 	&:nth-child(even) {
 		transform: translateY(20%);
@@ -282,7 +290,7 @@
 		max-width: 100%;
 		padding: 15px 80px 15px 15px;
 		&__image img {
-			max-width: 136px;
+			max-width: 142px;
 		}
 		&__image {
 			top: 50%;
@@ -343,6 +351,7 @@
 		flex-direction: row;
 		align-items: flex-start;
 		width: 100%;
+		gap: 0 10px;
 	.road-event__head {
 		align-items: flex-start;
 	}
@@ -352,6 +361,7 @@
 	}
 	.road-event__text {
 		text-align: left;
+		line-height: 24px;
 	}
 	}
 	// .road-event:nth-child(even) {

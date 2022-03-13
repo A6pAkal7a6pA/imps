@@ -2257,10 +2257,10 @@ a {
 .road-event__wrapper {
   max-width: 456px;
   min-height: 120px;
-  max-height: 131px;
+  max-height: 142px;
   background: #ede9ff;
   border-radius: 15px;
-  padding: 17px 27px;
+  padding: 13px 20px;
   border: 3px solid #fff;
   width: 100%;
   display: -webkit-box;
@@ -2282,6 +2282,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: auto 0;
 }
 
 .road-event__head {
@@ -2293,6 +2294,7 @@ a {
   font-size: 24px;
   line-height: 33px;
   font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .road-event__title {
@@ -2312,8 +2314,14 @@ a {
   color: rgba(228, 101, 163, 0.5);
 }
 
+.road-event__image {
+  max-height: 110px;
+  height: 100%;
+}
+
 .road-event__image img {
-  max-height: 81px;
+  width: 110px;
+  height: 110px;
 }
 
 .road-event:nth-child(odd) {
@@ -2446,7 +2454,7 @@ a {
     padding: 15px 80px 15px 15px;
   }
   .road-item__image img {
-    max-width: 136px;
+    max-width: 142px;
   }
   .road-item__image {
     top: 50%;
@@ -2512,6 +2520,7 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
+    gap: 0 10px;
   }
   .road .road__body .road-event__wrapper .road-event__head {
     -webkit-box-align: start;
@@ -2526,6 +2535,7 @@ a {
   }
   .road .road__body .road-event__wrapper .road-event__text {
     text-align: left;
+    line-height: 24px;
   }
 }
 
