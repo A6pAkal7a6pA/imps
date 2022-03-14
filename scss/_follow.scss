@@ -50,8 +50,7 @@
 	position: relative;
 	padding: 8px 18px;
 	background-clip: padding-box;
-	// z-index: 1;
-
+	gap: 0 10px;
 	&:hover {
 		border: 3px solid transparent;
 		&::before {
@@ -67,13 +66,7 @@
 		}
 	}
 
-	// &:hover {
-	// 	border: 3px solid;
-	// 	border-image-source: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
-	// 	border-image-slice: 1;
-	// }
 	&__image {
-		margin-right: 20px;
 	}
 
 	&__text {
@@ -86,10 +79,6 @@
 }
 
 @media (min-width: 1920px) {
-	// .follow {
-	// background: url('../img/pattern-big.png') top / cover no-repeat;
-	// padding-top: 300px;
-	// }
 	.follow__inner {
 		padding: 50px 0 150px 0;
 	}
