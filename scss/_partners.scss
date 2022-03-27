@@ -1,8 +1,12 @@
 .partners {
-	padding-bottom: 250px;
+	padding-bottom: 0px;
+	margin-bottom: 100px;
+	&.advisors {
+		padding-bottom: 250px;
+	}
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
 	.partners {
 		padding-bottom: 100px;
 	}

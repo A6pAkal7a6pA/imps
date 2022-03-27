@@ -146,7 +146,6 @@
 		border: 3px solid #fff;
 		width: 100%;
 		display: flex;
-		// flex-direction: column;
 		justify-content: space-between;
 	}
 	&__body {
@@ -343,8 +342,6 @@
 		gap: 20px 0;
 	}
 	.road .road__body .road-event__head {
-		// flex-direction: row;
-		// justify-content: flex-start;
 		width: 100%;
 	}
 	.road .road__body .road-event__wrapper {
@@ -364,11 +361,6 @@
 		line-height: 24px;
 	}
 	}
-	// .road-event:nth-child(even) {
-	// 	.road-event__head {
-	// 		flex-direction: row-reverse;
-	// 	}
-	// }
 }
 @media (max-width: 460px) {
 	.road-item__text {
