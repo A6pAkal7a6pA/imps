@@ -94,13 +94,14 @@ const swiper = new Swiper('.main-slider', {
 	// 	disableOnInteraction: false
 	// },
 	speed: 1000,
+	effect: 'coverflow',
 	slidesPerView: "auto",
 	initialSlide: 0,
 	centeredSlides: true,
 	slideToClickedSlide: true,
 	autoHeight: true,
 	grabCursor: true,
-	spaceBetween: 20,
+	spaceBetween: 0,
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 20,
@@ -117,18 +118,21 @@ const swiper = new Swiper('.main-slider', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		1600: {
+			spaceBetween: 400,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 20,
+				depth: 120,
+				modifier: 1,
+				scale: 1,
+				slideShadows: false,
+			},
+			// effect: 'slide'
+		}
 	}
-	// breakpoints: {
-	// 	950: {
-	// 		spaceBetween: 290,
-	// 		coverflowEffect: {
-	// 			rotate: 0,
-	// 			stretch: 30,
-	// 			depth: 120,
-	// 			modifier: 1.1,
-	// 			slideShadows: false,
-	// 		}
-	// 	},
 	// 	800: {
 	// 		spaceBetween: 200,
 	// 		coverflowEffect: {

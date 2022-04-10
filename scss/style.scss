@@ -48,6 +48,13 @@
 	background-clip: text;
 	text-fill-color: transparent;
 }
+.red {
+	background: linear-gradient(90deg, #f12115 2.35%, #fce761 97.35%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
 
 .token-distr__backgroud {
 	width: 100%;
