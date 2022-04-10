@@ -89,10 +89,10 @@ $(document).ready(function () {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false
-	// },
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
 	speed: 1000,
 	effect: 'coverflow',
 	slidesPerView: "auto",
