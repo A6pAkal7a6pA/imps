@@ -132,20 +132,8 @@ const swiper = new Swiper('.main-slider', {
 				slideShadows: false,
 			},
 		},
-		2000: {
-			spaceBetween: 200,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 20,
-				depth: 120,
-				modifier: 1,
-				scale: 1,
-				slideShadows: false,
-			},
-			// effect: 'slide'
-		},
 		2500: {
-			spaceBetween: 200,
+			spaceBetween: 150,
 			coverflowEffect: {
 				rotate: 0,
 				stretch: 20,
