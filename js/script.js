@@ -89,80 +89,131 @@ $(document).ready(function () {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	autoplay: {
-		delay: 5000,
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	disableOnInteraction: false
+	// },
 	speed: 1000,
-	effect: 'coverflow',
 	slidesPerView: "auto",
-	initialSlide: 2,
+	initialSlide: 0,
 	centeredSlides: true,
 	slideToClickedSlide: true,
 	autoHeight: true,
 	grabCursor: true,
-	spaceBetween: 270,
+	spaceBetween: 20,
 	coverflowEffect: {
 		rotate: 0,
-		stretch: 30,
-		depth: 120,
-		modifier: 1.1,
+		stretch: 20,
+		depth: 180,
+		modifier: 1,
+		scale: 1,
 		slideShadows: false,
 	},
-	breakpoints: {
-		950: {
-			spaceBetween: 290,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 30,
-				depth: 120,
-				modifier: 1.1,
-				slideShadows: false,
-			}
-		},
-		800: {
-			spaceBetween: 200,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 30,
-				depth: 120,
-				modifier: 1.1,
-				slideShadows: false,
-			}
-		},
-		700: {
-			spaceBetween: 150,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 30,
-				depth: 120,
-				modifier: 1.1,
-				slideShadows: false,
-			}
-		},
-		600: {
-			spaceBetween: 100,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 30,
-				depth: 120,
-				modifier: 1.1,
-				slideShadows: false,
-			}
-		},
-		500: {
-			spaceBetween: 75,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 30,
-				depth: 120,
-				modifier: 1.1,
-				slideShadows: false,
-			}
-		},
-
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	}
+	// breakpoints: {
+	// 	950: {
+	// 		spaceBetween: 290,
+	// 		coverflowEffect: {
+	// 			rotate: 0,
+	// 			stretch: 30,
+	// 			depth: 120,
+	// 			modifier: 1.1,
+	// 			slideShadows: false,
+	// 		}
+	// 	},
+	// 	800: {
+	// 		spaceBetween: 200,
+	// 		coverflowEffect: {
+	// 			rotate: 0,
+	// 			stretch: 30,
+	// 			depth: 120,
+	// 			modifier: 1.1,
+	// 			slideShadows: false,
+	// 		}
+	// 	},
+	// 	700: {
+	// 		spaceBetween: 150,
+	// 		coverflowEffect: {
+	// 			rotate: 0,
+	// 			stretch: 30,
+	// 			depth: 120,
+	// 			modifier: 1.1,
+	// 			slideShadows: false,
+	// 		}
+	// 	},
+	// 	600: {
+	// 		spaceBetween: 100,
+	// 		coverflowEffect: {
+	// 			rotate: 0,
+	// 			stretch: 30,
+	// 			depth: 120,
+	// 			modifier: 1.1,
+	// 			slideShadows: false,
+	// 		}
+	// 	},
+	// 	500: {
+	// 		spaceBetween: 75,
+	// 		coverflowEffect: {
+	// 			rotate: 0,
+	// 			stretch: 30,
+	// 			depth: 120,
+	// 			modifier: 1.1,
+	// 			slideShadows: false,
+	// 		}
+	// 	},
+
+	// }
 
 });
+
+
+let arr = ["legendary", "mystery", "common", "epic", "rare"]
+swiper.on('slideChange', function (slider) {
+	let slides = slider.slides;
+	let currentSlide = slides[slider.activeIndex];
+	arr.forEach((element) => {
+		if (currentSlide.classList.contains(element)) {
+			let currentText = document.querySelector('.ms-content__item.' + element)
+			currentText.style.display = 'block';
+			getSiblings(currentText).forEach((text) => text.style.display = 'none')
+		}
+	});
+});
+
+let initCurrSlide = document.querySelector('.swiper-pagination-bullet.swiper-pagination-bullet-active');
+initCurrSlide.classList.remove("swiper-pagination-bullet-active");
+setTimeout(() => {
+	console.log(initCurrSlide);
+	initCurrSlide.classList.add("swiper-pagination-bullet-active");
+
+}, 0)
+
+function getSiblings(elem) {
+	var siblings = [];
+	var sibling = elem;
+	while (sibling.previousSibling) {
+		sibling = sibling.previousSibling;
+		sibling.nodeType == 1 && siblings.push(sibling);
+	}
+
+	sibling = elem;
+	while (sibling.nextSibling) {
+		sibling = sibling.nextSibling;
+		sibling.nodeType == 1 && siblings.push(sibling);
+	}
+
+	return siblings;
+}
+
+
 
 function diffSubtract(date1, date2) {
 	return date2 - date1;

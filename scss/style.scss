@@ -27,15 +27,37 @@
 	line-height: 52px;
 	text-align: center;
 }
+.purple {
+	background: linear-gradient(82.77deg, #ea6aff 5.38%, #e546ff 44.75%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.blue {
+	background: linear-gradient(82.77deg, #4da9ff 5.38%, #54e0ff 44.75%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.gold {
+	background: linear-gradient(180deg, #fce752 0%, #e79500 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
 
 .token-distr__backgroud {
 	width: 100%;
-	background: url("../img/token-bg.png") center /contain repeat-x;
+	background: url("../img/token-distrb-bg.png") center / cover no-repeat;
+	height: 100%;
+	padding: 100px 0 270px 0;
 }
 
 @media (max-width: 1171px) {
 	.token-distr__backgroud {
 		background-size: cover;
 	}
-		
 }
