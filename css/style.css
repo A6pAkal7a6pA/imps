@@ -100,8 +100,8 @@ a {
 .main-page {
   min-height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#810c8a), color-stop(46.97%, #000000));
-  background: linear-gradient(360deg, #810c8a 0%, #000000 46.97%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#810c8a), color-stop(40%, #000000));
+  background: linear-gradient(360deg, #810c8a 0%, #000000 40%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
