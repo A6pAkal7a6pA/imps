@@ -145,7 +145,7 @@ const swiper = new Swiper('.main-slider', {
 			// effect: 'slide'
 		},
 		2500: {
-			spaceBetween: 300,
+			spaceBetween: 200,
 			coverflowEffect: {
 				rotate: 0,
 				stretch: 20,
