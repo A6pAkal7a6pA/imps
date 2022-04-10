@@ -120,8 +120,32 @@ const swiper = new Swiper('.main-slider', {
 		prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
+
 		1600: {
-			spaceBetween: 400,
+			spaceBetween: 100,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 20,
+				depth: 120,
+				modifier: 1,
+				scale: 1,
+				slideShadows: false,
+			},
+		},
+		2000: {
+			spaceBetween: 200,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 20,
+				depth: 120,
+				modifier: 1,
+				scale: 1,
+				slideShadows: false,
+			},
+			// effect: 'slide'
+		},
+		2500: {
+			spaceBetween: 300,
 			coverflowEffect: {
 				rotate: 0,
 				stretch: 20,
