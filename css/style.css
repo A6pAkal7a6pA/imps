@@ -709,12 +709,18 @@ a {
 }
 
 @media (min-device-width: 2800px) {
+  .main-page__body {
+    height: 100%;
+  }
   .main-page .swiper-slide {
-    width: 100%;
+    max-width: 700px;
   }
   .main-page .swiper-slide video {
-    height: 550px;
+    height: 627px;
     width: 100%;
+  }
+  .main-slider__wrapper {
+    margin-bottom: 150px;
   }
 }
 
