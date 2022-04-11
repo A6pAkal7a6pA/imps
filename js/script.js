@@ -81,6 +81,16 @@ $(document).ready(function () {
 	});
 });
 
+window.addEventListener('load', () => {
+  const top = $(window.location.hash).offset().top
+  if (!top) return
+  setTimeout(() => {
+    window.scrollTo({
+      top
+    })
+  }, 0)
+})
+
 // window.addEventListener("resize", function () {
 // 	canvas.width = window.innerWidth;
 // 	canvas.height = window.innerHeight;
