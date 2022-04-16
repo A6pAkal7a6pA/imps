@@ -392,6 +392,7 @@ a {
   width: 100%;
   height: 6px;
   display: block;
+  border-radius: 3px;
 }
 
 .main-page .main-slider__pagination .swiper-pagination-bullet::after {
@@ -403,6 +404,7 @@ a {
   background: white;
   left: 0;
   top: 0;
+  border-radius: 3px;
 }
 
 .main-page .main-slider__pagination .swiper-pagination-bullet-active {
@@ -2897,7 +2899,7 @@ a {
 .team {
   position: relative;
   z-index: 6;
-  background: url("../img/token-bg.png") top/contain repeat-x;
+  background: url("../img/teams-bg.png") center/covergi no-repeat;
   margin-top: 75px;
 }
 
