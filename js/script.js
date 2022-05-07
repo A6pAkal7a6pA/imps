@@ -99,105 +99,38 @@ window.addEventListener('load', () => {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	disableOnInteraction: false
+	// },
 	speed: 1000,
 	effect: 'coverflow',
 	slidesPerView: "auto",
 	initialSlide: 0,
 	centeredSlides: true,
 	slideToClickedSlide: true,
-	autoHeight: true,
+	// autoHeight: true,
 	grabCursor: true,
 	spaceBetween: 0,
 	coverflowEffect: {
 		rotate: 0,
-		stretch: 20,
-		depth: 180,
+		stretch: 0,
+		depth: 120,
 		modifier: 1,
-		scale: 1,
+		scale: 0.9,
 		slideShadows: false,
 	},
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.main-slider__pagination',
 		type: 'bullets',
 		clickable: true
 	},
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.main-slider__button-next',
+		prevEl: '.main-slider__button-prev',
 	},
 	breakpoints: {
-
-		1600: {
-			spaceBetween: 100,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 20,
-				depth: 120,
-				modifier: 1,
-				scale: 1,
-				slideShadows: false,
-			},
-		},
-		2500: {
-			spaceBetween: 150,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 20,
-				depth: 120,
-				modifier: 1,
-				scale: 1,
-				slideShadows: false,
-			},
-			// effect: 'slide'
-		}
 	}
-	// 	800: {
-	// 		spaceBetween: 200,
-	// 		coverflowEffect: {
-	// 			rotate: 0,
-	// 			stretch: 30,
-	// 			depth: 120,
-	// 			modifier: 1.1,
-	// 			slideShadows: false,
-	// 		}
-	// 	},
-	// 	700: {
-	// 		spaceBetween: 150,
-	// 		coverflowEffect: {
-	// 			rotate: 0,
-	// 			stretch: 30,
-	// 			depth: 120,
-	// 			modifier: 1.1,
-	// 			slideShadows: false,
-	// 		}
-	// 	},
-	// 	600: {
-	// 		spaceBetween: 100,
-	// 		coverflowEffect: {
-	// 			rotate: 0,
-	// 			stretch: 30,
-	// 			depth: 120,
-	// 			modifier: 1.1,
-	// 			slideShadows: false,
-	// 		}
-	// 	},
-	// 	500: {
-	// 		spaceBetween: 75,
-	// 		coverflowEffect: {
-	// 			rotate: 0,
-	// 			stretch: 30,
-	// 			depth: 120,
-	// 			modifier: 1.1,
-	// 			slideShadows: false,
-	// 		}
-	// 	},
-
-	// }
-
 });
 
 
