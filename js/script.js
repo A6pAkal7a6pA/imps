@@ -11,6 +11,7 @@ var gameSlider = $('.game__slider').slick({
 	pauseOnFocus: false,
 	pauseOnHover: false,
 	swipeToSlide: true,
+	appendDots: '.game__navigation',
 	responsive: [
 		{
 			breakpoint: 769,
@@ -29,11 +30,12 @@ var lootboxSlider = $('.lootbox__slider').slick({
 	slidesToScroll: 1,
 	fade: true,
 	dots: true,
-	autoplay: true,
+	autoplay: false,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
 	pauseOnHover: false,
 	swipeToSlide: true,
+	appendDots: '.lootbox__navigation',
 	responsive: [
 		{
 			breakpoint: 769,
@@ -45,6 +47,15 @@ var lootboxSlider = $('.lootbox__slider').slick({
 });
 lootboxSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
 	document.querySelector('.lootbox__digit-min').innerText = currentSlide + 1;
+});
+let gameActive = document.querySelector('.game .slick-dots li.slick-active');
+gameActive.classList.remove('slick-active');
+
+let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
+lootboxActive.classList.remove('slick-active');
+setTimeout(() => {
+	gameActive.classList.add('slick-active');
+	lootboxActive.classList.add('slick-active');
 });
 
 var tokenSlider = $('.token__slider').slick({
@@ -80,15 +91,38 @@ $(document).ready(function () {
 		}, 600);
 	});
 });
+let elementAfter = document.querySelector('.twenty-1');
+let left = elementAfter.getBoundingClientRect().left;
+let center = elementAfter.getBoundingClientRect().width / 2;
+let line = document.querySelector('.road__line');
+line.style.marginLeft = center + left + 'px';
+
+function switchYears() {
+	let allSlides = document.querySelectorAll('.road-slider__slide');
+	for (let i = 1; i <= 5; i++) {
+		let currentElements = document.querySelectorAll('.twenty-' + i);
+		let currentElement = currentElements[0]
+		let dates = document.querySelectorAll('.road__date')
+		if (currentElement.getBoundingClientRect().left <= left) {
+			Array.from(allSlides)
+				.filter(element => !element.classList.contains('twenty-' + i))
+				.forEach((element) => element.classList.remove('active'));
+			currentElements
+				.forEach((currentElement) => currentElement.classList.add('active'));
+			getSiblings(dates[i - 1]).forEach(el => el.classList.remove('road__date_active'));
+			dates[i - 1].classList.add('road__date_active');
+		}
+	}
+}
 
 window.addEventListener('load', () => {
-  const top = $(window.location.hash).offset().top
-  if (!top) return
-  setTimeout(() => {
-    window.scrollTo({
-      top
-    })
-  }, 0)
+	const top = $(window.location.hash).offset().top
+	if (!top) return
+	setTimeout(() => {
+		window.scrollTo({
+			top
+		})
+	}, 0)
 })
 
 // window.addEventListener("resize", function () {
@@ -99,10 +133,10 @@ window.addEventListener('load', () => {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false
-	// },
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
 	speed: 1000,
 	effect: 'coverflow',
 	slidesPerView: "auto",
@@ -133,24 +167,39 @@ const swiper = new Swiper('.main-slider', {
 	}
 });
 
+const roadSwiper = new Swiper('.road-slider', {
+	speed: 1000,
+	slidesPerView: "auto",
+	initialSlide: 0,
+	centeredSlides: false,
+	slideToClickedSlide: true,
+	grabCursor: true,
+	spaceBetween: 20,
+	// pagination: {
+	// 	el: '.main-slider__pagination',
+	// 	type: 'bullets',
+	// 	clickable: true
+	// },
+	breakpoints: {
+	}
+});
 
-let arr = ["legendary", "mystery", "common", "epic", "rare"]
+roadSwiper.on('sliderMove', function (slider) {
+	switchYears()
+});
+
+
 swiper.on('slideChange', function (slider) {
-	let slides = slider.slides;
-	let currentSlide = slides[slider.activeIndex];
-	arr.forEach((element) => {
-		if (currentSlide.classList.contains(element)) {
-			let currentText = document.querySelector('.ms-content__item.' + element)
-			currentText.style.display = 'block';
-			getSiblings(currentText).forEach((text) => text.style.display = 'none')
-		}
-	});
+	let currentIndex = slider.realIndex;
+	let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
+	let currentSlide = content[currentIndex];
+	currentSlide.style.display = 'block';
+	getSiblings(currentSlide).forEach((slide) => slide.style.display = 'none');
 });
 
 let initCurrSlide = document.querySelector('.swiper-pagination-bullet.swiper-pagination-bullet-active');
 initCurrSlide.classList.remove("swiper-pagination-bullet-active");
 setTimeout(() => {
-	console.log(initCurrSlide);
 	initCurrSlide.classList.add("swiper-pagination-bullet-active");
 
 }, 0)

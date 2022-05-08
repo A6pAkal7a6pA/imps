@@ -1,10 +1,15 @@
 .lootbox {
-	padding: 29px 165px 120px 165px;
+	// padding: 29px 165px 120px 165px;
 	width: 100%;
 	height: 100%;
+	margin-top: -200px;
+	margin-bottom: 150px;
 	&__inner {
 		width: 100%;
 		height: 100%;
+		max-width: 1330px;
+		padding: 0 15px;
+		margin: 0 auto;
 		text-align: center;
 	}
 	&__arrows {
@@ -18,21 +23,59 @@
 	&__content {
 		width: 100%;
 		height: 100%;
+		margin-bottom: 54px;
 	}
 
 	&__slider {
-		max-width: 1059px;
+		background: #000000;
+		border-radius: 14px;
 		width: 100%;
 		height: 100%;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		// overflow: hidden;
 		position: relative;
+	}
+	&__navigation {
+		margin-top: 40px;
+		position: relative;
+		height: 14px;
+		width: 100%;
 	}
 
 	&__item {
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 860px;
+		margin: 0 auto;
+		flex-wrap: wrap;
+	}
+
+	&__button {
+		display: block;
+		background: #010038;
+		border-radius: 14px;
+		max-width: 420px;
+		padding: 20px;
+		width: 100%;
+		font-family: $fontfamilyMonrserrat;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		color: #ffffff;
+		&.rarible {
+			background: #feda03;
+			color: #010038;
+			span {
+				font-weight: 700;
+			}
+		}
 	}
 	.slick-arrow {
 		background: #e465a3;
@@ -50,7 +93,7 @@
 		background: url("../img/icons/arrow-left.svg") center no-repeat, #e465a3;
 		left: 0;
 		&:hover {
-			background: url("../img/icons/arrow-left.svg") center no-repeat, #010038;
+			background: url("../img/icons/arrow-left.svg") center no-repeat, #685ca8;
 		}
 	}
 	.slick-next {
@@ -58,40 +101,63 @@
 		transform: translate(50%, -50%);
 		background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 		&:hover {
-			background: url("../img/icons/arrow-right.svg") center no-repeat, #010038;
+			background: url("../img/icons/arrow-right.svg") center no-repeat, #685ca8;
 		}
 	}
 	.slick-dots {
+		width: 100%;
+		height: 100%;
 		position: absolute;
-		bottom: -50px;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
+		gap: 0 10px;
 		li {
-			&:not(:last-child) {
-				margin-right: 10px;
-			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 14px;
 		}
 		li button {
-			width: 168px;
-			height: 6px;
+			width: 100%;
+			height: 100%;
 			background: #ffffff;
 			border-radius: 3px;
 			font-size: 0;
-
-		}
-		li button {
+			position: relative;
+			height: 6px;
+			display: block;
 			&:hover {
 				height: 14px;
 				border-radius: 13px;
 			}
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0%;
+				height: 100%;
+				border-radius: 3px;
+				background: #010038;
+			}
 		}
-		li.slick-active button {
-			background: #e465a3;
+		li.slick-active {
+			button {
+				&::after {
+					transition: width 5s linear;
+					width: 100%;
+				}
+				&:hover {
+					&::after {
+						border-radius: 13px;
+					}
+				}
+			}
 		}
 	}
 }
-
 
 .lootbox__digits {
 	display: none;
@@ -99,7 +165,6 @@
 .lootbox-item {
 	&__inner {
 		display: flex;
-		background: #ede9ff;
 		border-radius: 15px;
 		display: flex;
 		align-items: center;
@@ -108,6 +173,11 @@
 	}
 	&__image {
 		margin-right: 24px;
+		video {
+			max-height: 350px;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__content {
@@ -119,6 +189,7 @@
 	}
 
 	&__title {
+		font-family: $fontfamilyNunito;
 		font-weight: 800;
 		font-size: 28px;
 		line-height: 38px;
@@ -128,27 +199,31 @@
 
 	&__text {
 		font-family: $fontfamilyRoboto;
+		font-weight: 400;
 		font-size: 26px;
 		line-height: 30px;
-		color: #010038;
-		margin-bottom: 15px;
+		color: #ffffff;
 		max-height: 224px;
 		height: 224px;
 	}
-	&__subtitle{
+	&__subtitle {
 		font-weight: bold;
+		font-weight: 700;
 		font-size: 28px;
 		line-height: 38px;
-		color: #010038;
+		text-align: center;
+		color: #ffffff;
 		margin: 0 auto;
 	}
-	&__subtext{
-		font-weight: bold;
+	&__dis-item__subtext {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0 15px;
+		width: 100%;
+		font-weight: 700;
 		font-size: 28px;
-		line-height: 38px;	
-		background: linear-gradient(90deg, #110f75 37.31%, #e465a3 62.15%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		line-height: 38px;
 		margin: 0 auto;
 	}
 }
@@ -173,35 +248,6 @@
 	right: 0;
 	transform: translate(50%, -50%);
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
-}
-.lootbox .slick-dots {
-	position: absolute;
-	bottom: -50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	li {
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-	}
-	li button {
-		width: 105px;
-		height: 6px;
-		background-position:right bottom;
-
-	}
-	li.slick-active button {
-		background: linear-gradient(to left, #fff 50%, #e465a3 50%);
-		border-radius: 3px;
-		font-size: 0;
-		transition: background 5.5s linear;
-		background-size: 200% 100%;
-		background-position:left bottom;
-		&:hover {
-			border-radius: 13px;
-		}
-	}
 }
 
 @media (max-width: 1360px) {
@@ -294,7 +340,7 @@
 	.lootbox-item__inner {
 		padding: 75px 30px 22px 30px;
 	}
-	.lootbox-item__text{
+	.lootbox-item__text {
 		font-size: 22px;
 		line-height: 26px;
 	}
@@ -306,11 +352,9 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 35px;
-
 	}
 	.lootbox__digit-min {
-		color: #D05D9E;
-
+		color: #d05d9e;
 	}
 	.lootbox__digit-sep {
 		margin: 0 5px;
@@ -347,6 +391,6 @@
 }
 @media (max-width: 375px) {
 	.lootbox-item__inner {
-    padding: 80px 30px 22px 30px;
-}
+		padding: 80px 30px 22px 30px;
+	}
 }

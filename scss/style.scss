@@ -1,6 +1,9 @@
 @import "_zeroing.scss";
 @import "_main-page.scss";
+@import "_reincarnation.scss";
 @import "_lootbox.scss";
+@import "_news.scss";
+@import "_built.scss";
 @import "_read-loot.scss";
 @import "_trailer.scss";
 @import "_game.scss";
@@ -54,6 +57,19 @@
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-fill-color: transparent;
+}
+
+.epic {
+	background: linear-gradient(82.77deg, #ea6aff 5.38%, #e546ff 44.75%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+.mystical {
+	background: linear-gradient(82.77deg, #4da9ff 5.38%, #54e0ff 44.75%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .token-distr__backgroud {
