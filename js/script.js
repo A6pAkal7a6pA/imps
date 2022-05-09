@@ -91,13 +91,6 @@ $(document).ready(function () {
 		}, 600);
 	});
 });
-let elementAfter = document.querySelector('.twenty-1');
-let left = elementAfter.getBoundingClientRect().left;
-let center = elementAfter.getBoundingClientRect().width / 2;
-let line = document.querySelector('.road__line');
-line.style.marginLeft = center + left + 'px';
-
-
 
 window.addEventListener('load', () => {
 	const top = $(window.location.hash).offset().top
@@ -151,6 +144,15 @@ const swiper = new Swiper('.main-slider', {
 	}
 });
 
+let elementAfter = document.querySelector('.twenty-2:first-child');
+let left = elementAfter.getBoundingClientRect().left;
+let center = elementAfter.getBoundingClientRect().width / 2;
+let line = document.querySelector('.road__line');
+line.style.marginLeft = center + left + 'px';
+let centerViewport = document.documentElement.clientWidth / 2;
+let lastSlide = document.getElementById('last');
+let endOfSlider = lastSlide.getBoundingClientRect().left + lastSlide.getBoundingClientRect().width + left;
+
 const roadSwiper = new Swiper('.road-slider', {
 	speed: 1000,
 	slidesPerView: "auto",
@@ -168,25 +170,47 @@ const roadSwiper = new Swiper('.road-slider', {
 	}
 });
 
+
+
+let dates = document.querySelectorAll('.road__date');
+dates.forEach(date => {
+	date.addEventListener('click', () => {
+		let currentTwenty = 'twenty-' + (+$(".road__date").index(date) + 2)
+		roadSwiper.slideTo(roadSwiper.slides.indexOf(roadSwiper.slides.filter((el) => el.classList.contains(currentTwenty))[0]), 1000, false);
+		getSiblings(date).forEach(date => date.classList.remove('road__date_active'));
+		date.classList.add('road__date_active');
+		let twentys = document.querySelectorAll('.road-slider__slide.' + currentTwenty);
+		let notTwenty = document.querySelectorAll('.road-slider__slide:not(' + currentTwenty + ')');
+		notTwenty.forEach(twenty => twenty.classList.remove('active'));
+		twentys.forEach(twenty => twenty.classList.add('active'));
+	})
+});
+
 function switchYears() {
-	for (let i = 1; i <= 5; i++) {
+	for (let i = 2; i <= 5; i++) {
 		let currentElements = document.querySelectorAll('.twenty-' + i);
 		let currentElement = currentElements[0]
-		let dates = document.querySelectorAll('.road__date')
-		if (currentElement.getBoundingClientRect().left <= left) {
+		if (currentElement.getBoundingClientRect().left <= centerViewport) {
 			document.querySelectorAll('.road-slider__slide:not(.twenty-' + i + ')')
 				.forEach((element) => element.classList.remove('active'));
 			currentElements
 				.forEach((currentElement) => currentElement.classList.add('active'));
-			getSiblings(dates[i - 1]).forEach(el => el.classList.remove('road__date_active'));
-			dates[i - 1].classList.add('road__date_active');
+			getSiblings(dates[i - 2]).forEach(el => el.classList.remove('road__date_active'));
+			dates[i - 2].classList.add('road__date_active');
 		}
 	}
 }
+
 roadSwiper.on('sliderMove', function (slider) {
 	switchYears()
 });
 
+roadSwiper.on('slideChange', function (slider) {
+	// switchYears()
+	if (slider.realIndex > 8) {
+		roadSwiper.slideTo(8, 1000, false)
+	}
+})
 
 swiper.on('slideChange', function (slider) {
 	let currentIndex = slider.realIndex;
