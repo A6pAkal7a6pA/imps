@@ -1,13 +1,13 @@
 .copy {
-	margin-bottom: 90px;
+	padding-bottom: 590px;
+	background: url('../img/copy-bg.svg') left bottom / contain no-repeat;
 	&__body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		max-width: 575px;
 		margin: 0 auto;
 		padding: 0 15px;
-		gap: 0 55px;
+		gap: 0 50px;
 	}
 
 	&__item {
@@ -18,17 +18,23 @@
 		display: flex;
 		align-items: center;
 	}
+	&__line {
+		height: 12px;
+		width: 4px;
+		background: #685CA8;
+		border-radius: 10px;
+	}
 
 	&__text {
 		margin-right: 4px;
 	}
 }
 
-@media (max-width:575px) {
-	.copy {
-		&__body {
-			flex-direction: column;
-			gap: 20px 0;
-		}
-	}
-}
+// @media (max-width:575px) {
+// 	.copy {
+// 		&__body {
+// 			flex-direction: column;
+// 			gap: 20px 0;
+// 		}
+// 	}
+// }

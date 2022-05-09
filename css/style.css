@@ -1136,6 +1136,98 @@ a {
   color: #010038;
 }
 
+.details {
+  margin-top: -175px;
+  margin-bottom: 43px;
+}
+
+.details__inner {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.details__title {
+  margin-bottom: 50px;
+}
+
+.details__content {
+  background: #ede9ff;
+  border-radius: 15px;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.details__item {
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px 0;
+}
+
+.details__item-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgba(1, 0, 56, 0.6);
+}
+
+.details__item-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  color: #010038;
+}
+
+.schema {
+  background: url("../img/schema-bg.svg") right bottom/contain no-repeat;
+}
+
+.schema__inner {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.schema__title {
+  margin-bottom: 50px;
+}
+
+.schema__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #010038;
+  margin-bottom: 50px;
+}
+
+.schema__content img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .read-loot {
   margin-bottom: 100px;
 }
@@ -1994,11 +2086,13 @@ a {
 .distr {
   width: 100%;
   height: 100%;
-  padding-bottom: 0;
+  margin-bottom: 150px;
 }
 
-.distr__title {
-  margin-bottom: 60px;
+.distr__inner {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .distr__content {
@@ -2014,14 +2108,49 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 45px 20px;
-  max-width: 1090px;
-  padding: 0 15px;
-  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .distr__item {
-  max-width: 340px;
+  max-width: 420px;
   width: 100%;
+}
+
+.distr__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 721px;
+  margin: 0 auto;
+}
+
+.distr__button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #010038;
+  max-width: 251px;
+  width: 100%;
+}
+
+.distr__button_active {
+  max-width: 420px;
+  padding: 20px;
+  background: #010038;
+  border-radius: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
 }
 
 .dis-item {
@@ -2128,8 +2257,6 @@ a {
   padding-top: 185px;
   padding-bottom: 328px;
   background: url("../img/roadmap-bg.png") center/cover no-repeat;
-  position: relative;
-  z-index: 3;
 }
 
 .road__title {
@@ -2310,6 +2437,9 @@ a {
 .follow {
   width: 100%;
   height: 100%;
+  margin-top: -114px;
+  margin-bottom: 150px;
+  background: url("../img/follow-bg.svg") right bottom/contain no-repeat;
   position: relative;
   z-index: 2;
 }
@@ -2317,19 +2447,13 @@ a {
 .follow__inner {
   width: 100%;
   height: 100%;
-  padding: 50px 0 150px 0;
+  padding: 0 15px;
+  max-width: 1330px;
+  margin: 0 auto;
 }
 
 .follow__title {
-  text-align: center;
-  margin-bottom: 40px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(46.93%, #110f75), color-stop(56.14%, #e465a3));
-  background: linear-gradient(90deg, #110f75 46.93%, #e465a3 56.14%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  font-size: 38px;
-  line-height: 52px;
+  margin-bottom: 50px;
 }
 
 .follow__content {
@@ -2345,15 +2469,12 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  padding: 0 10px;
-  max-width: 1080px;
-  margin: 0 auto;
 }
 
 .foll-item {
-  max-width: 257px;
+  max-width: 317.5px;
   width: 100%;
-  height: 80px;
+  height: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2367,9 +2488,9 @@ a {
   border-radius: 10px;
   border: 3px solid #fff;
   position: relative;
-  padding: 8px 18px;
+  padding: 20px 45px;
   background-clip: padding-box;
-  gap: 0 10px;
+  gap: 10px;
 }
 
 .foll-item:hover {
@@ -2395,12 +2516,6 @@ a {
   line-height: 14px;
   text-align: center;
   color: #010038;
-}
-
-@media (min-width: 1920px) {
-  .follow__inner {
-    padding: 50px 0 150px 0;
-  }
 }
 
 @media (max-width: 768px) {
@@ -2444,15 +2559,15 @@ a {
 .team {
   position: relative;
   z-index: 6;
-  background: url("../img/teams-bg.png") center/covergi no-repeat;
-  margin-top: 75px;
+  background: url("../img/team-bg.png") center/cover no-repeat;
+  margin-bottom: -114px;
+  padding: 210px 0 264px 0;
 }
 
 .team__inner {
-  padding-top: 75px;
-  padding-bottom: 200px;
-  max-width: 1090px;
+  max-width: 1330px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .team__title {
@@ -2503,7 +2618,7 @@ a {
 }
 
 .team-item {
-  max-width: 250px;
+  max-width: 310px;
   width: 100%;
   background: #ede9ff;
   border-radius: 10px;
@@ -2581,7 +2696,8 @@ a {
 }
 
 .copy {
-  margin-bottom: 90px;
+  padding-bottom: 590px;
+  background: url("../img/copy-bg.svg") left bottom/contain no-repeat;
 }
 
 .copy__body {
@@ -2594,10 +2710,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 575px;
   margin: 0 auto;
   padding: 0 15px;
-  gap: 0 55px;
+  gap: 0 50px;
 }
 
 .copy__item {
@@ -2613,18 +2728,15 @@ a {
           align-items: center;
 }
 
-.copy__text {
-  margin-right: 4px;
+.copy__line {
+  height: 12px;
+  width: 4px;
+  background: #685CA8;
+  border-radius: 10px;
 }
 
-@media (max-width: 575px) {
-  .copy__body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 20px 0;
-  }
+.copy__text {
+  margin-right: 4px;
 }
 
 .wrapper {

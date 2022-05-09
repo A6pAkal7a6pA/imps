@@ -1,0 +1,29 @@
+.schema {
+	background: url('../img/schema-bg.svg') right bottom / contain no-repeat;
+
+	&__inner {
+		max-width: 1330px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+	&__subtitle {
+		font-family: $fontfamilyRoboto;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 30px;
+		text-align: center;
+		color: #010038;
+		margin-bottom: 50px;
+	}
+
+	&__content {
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+}

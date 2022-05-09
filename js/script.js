@@ -30,7 +30,7 @@ var lootboxSlider = $('.lootbox__slider').slick({
 	slidesToScroll: 1,
 	fade: true,
 	dots: true,
-	autoplay: false,
+	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
 	pauseOnHover: false,
@@ -97,23 +97,7 @@ let center = elementAfter.getBoundingClientRect().width / 2;
 let line = document.querySelector('.road__line');
 line.style.marginLeft = center + left + 'px';
 
-function switchYears() {
-	let allSlides = document.querySelectorAll('.road-slider__slide');
-	for (let i = 1; i <= 5; i++) {
-		let currentElements = document.querySelectorAll('.twenty-' + i);
-		let currentElement = currentElements[0]
-		let dates = document.querySelectorAll('.road__date')
-		if (currentElement.getBoundingClientRect().left <= left) {
-			Array.from(allSlides)
-				.filter(element => !element.classList.contains('twenty-' + i))
-				.forEach((element) => element.classList.remove('active'));
-			currentElements
-				.forEach((currentElement) => currentElement.classList.add('active'));
-			getSiblings(dates[i - 1]).forEach(el => el.classList.remove('road__date_active'));
-			dates[i - 1].classList.add('road__date_active');
-		}
-	}
-}
+
 
 window.addEventListener('load', () => {
 	const top = $(window.location.hash).offset().top
@@ -184,6 +168,21 @@ const roadSwiper = new Swiper('.road-slider', {
 	}
 });
 
+function switchYears() {
+	for (let i = 1; i <= 5; i++) {
+		let currentElements = document.querySelectorAll('.twenty-' + i);
+		let currentElement = currentElements[0]
+		let dates = document.querySelectorAll('.road__date')
+		if (currentElement.getBoundingClientRect().left <= left) {
+			document.querySelectorAll('.road-slider__slide:not(.twenty-' + i + ')')
+				.forEach((element) => element.classList.remove('active'));
+			currentElements
+				.forEach((currentElement) => currentElement.classList.add('active'));
+			getSiblings(dates[i - 1]).forEach(el => el.classList.remove('road__date_active'));
+			dates[i - 1].classList.add('road__date_active');
+		}
+	}
+}
 roadSwiper.on('sliderMove', function (slider) {
 	switchYears()
 });
