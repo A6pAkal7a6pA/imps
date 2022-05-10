@@ -1,86 +1,104 @@
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`)
+// let vh = window.innerHeight * 0.01;
+// document.documentElement.style.setProperty('--vh', `${vh}px`)
+executeGameSlider();
+executeLootboxSlider();
+// executeReincarnationSlider();
 
-var gameSlider = $('.game__slider').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	fade: true,
-	dots: true,
-	autoplay: true,
-	autoplaySpeed: 5000,
-	pauseOnFocus: false,
-	pauseOnHover: false,
-	swipeToSlide: true,
-	appendDots: '.game__navigation',
-	responsive: [
-		{
-			breakpoint: 769,
-			settings: {
-				dots: false
-			}
-		}
-	]
-});
-gameSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-	document.querySelector('.game__digit-min').innerText = currentSlide + 1;
-});
+// function executeReincarnationSlider() {
+// 	const swiper = new Swiper('.reincarnation__items', {
+// 		speed: 1000,
+// 		slidesPerView: "auto",
+// 		initialSlide: 0,
+// 		centeredSlides: false,
+// 		slideToClickedSlide: false,
+// 		grabCursor: true,
+// 		spaceBetween: 20,
 
-var lootboxSlider = $('.lootbox__slider').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	fade: true,
-	dots: true,
-	autoplay: true,
-	autoplaySpeed: 5000,
-	pauseOnFocus: false,
-	pauseOnHover: false,
-	swipeToSlide: true,
-	appendDots: '.lootbox__navigation',
-	responsive: [
-		{
-			breakpoint: 769,
-			settings: {
-				dots: false
-			}
-		}
-	]
-});
-lootboxSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-	document.querySelector('.lootbox__digit-min').innerText = currentSlide + 1;
-});
-let gameActive = document.querySelector('.game .slick-dots li.slick-active');
-gameActive.classList.remove('slick-active');
+// 		touchEventsTarget: 'container',
+// 		// pagination: {
+// 		// 	el: '.main-slider__pagination',
+// 		// 	type: 'bullets',
+// 		// 	clickable: true
+// 		// },
+// 		breakpoints: {
+// 		}
+// 	});
+// }
 
-let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
-lootboxActive.classList.remove('slick-active');
-setTimeout(() => {
-	gameActive.classList.add('slick-active');
-	lootboxActive.classList.add('slick-active');
+
+
+let headerBurger = document.querySelector('.header__burger');
+
+headerBurger.addEventListener('click', () => {
+	let header = document.querySelector('.header');
+	if (header.classList.contains('active')) {
+		header.classList.remove('active');
+	} else {
+		header.classList.add('active');
+	}
 });
 
-var tokenSlider = $('.token__slider').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	fade: true,
-	dots: true,
-	autoplay: true,
-	autoplaySpeed: 5000,
-	pauseOnFocus: false,
-	pauseOnHover: false,
-	swipeToSlide: true,
-	responsive: [
-		{
-			breakpoint: 769,
-			settings: {
-				dots: false
-			}
-		}
-	]
-});
+function executeGameSlider() {
+	let gameSlider = $('.game__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		swipeToSlide: true,
+		appendDots: '.game__navigation',
+		responsive: [
+			// {
+			// 	breakpoint: 769,
+			// 	settings: {
+			// 		dots: false
+			// 	}
+			// }
+		]
+	});
+	gameSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+		document.querySelector('.game__digit-min').innerText = currentSlide + 1;
+	});
+	let gameActive = document.querySelector('.game .slick-dots li.slick-active');
+	gameActive.classList.remove('slick-active');
+	setTimeout(() => {
+		gameActive.classList.add('slick-active');
+	});
+}
 
-tokenSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-	document.querySelector('.token__digit-min').innerText = currentSlide + 1;
-});
+function executeLootboxSlider() {
+	let lootboxSlider = $('.lootbox__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		swipeToSlide: true,
+		appendDots: '.lootbox__navigation',
+		responsive: [
+			// {
+			// 	breakpoint: 769,
+			// 	settings: {
+			// 		dots: false
+			// 	}
+			// }
+		]
+	});
+	lootboxSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+		document.querySelector('.lootbox__digit-min').innerText = currentSlide + 1;
+	});
+	let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
+	lootboxActive.classList.remove('slick-active');
+	setTimeout(() => {
+		lootboxActive.classList.add('slick-active');
+	});
+}
 
 
 $(document).ready(function () {
@@ -92,21 +110,15 @@ $(document).ready(function () {
 	});
 });
 
-window.addEventListener('load', () => {
-	const top = $(window.location.hash).offset().top
-	if (!top) return
-	setTimeout(() => {
-		window.scrollTo({
-			top
-		})
-	}, 0)
-})
-
-// window.addEventListener("resize", function () {
-// 	canvas.width = window.innerWidth;
-// 	canvas.height = window.innerHeight;
-// }, true);
-// startConfetti();
+// window.addEventListener('load', () => {
+// 	const top = $(window.location.hash).offset().top
+// 	if (!top) return
+// 	setTimeout(() => {
+// 		window.scrollTo({
+// 			top
+// 		})
+// 	}, 0)
+// })
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
@@ -158,9 +170,10 @@ const roadSwiper = new Swiper('.road-slider', {
 	slidesPerView: "auto",
 	initialSlide: 0,
 	centeredSlides: false,
-	slideToClickedSlide: true,
+	slideToClickedSlide: false,
 	grabCursor: true,
 	spaceBetween: 20,
+	wrapperClass: 'swiper-wrapper',
 	// pagination: {
 	// 	el: '.main-slider__pagination',
 	// 	type: 'bullets',
@@ -169,8 +182,6 @@ const roadSwiper = new Swiper('.road-slider', {
 	breakpoints: {
 	}
 });
-
-
 
 let dates = document.querySelectorAll('.road__date');
 dates.forEach(date => {
@@ -206,7 +217,7 @@ roadSwiper.on('sliderMove', function (slider) {
 });
 
 roadSwiper.on('slideChange', function (slider) {
-	// switchYears()
+	switchYears()
 	if (slider.realIndex > 8) {
 		roadSwiper.slideTo(8, 1000, false)
 	}
@@ -243,46 +254,3 @@ function getSiblings(elem) {
 
 	return siblings;
 }
-
-
-
-function diffSubtract(date1, date2) {
-	return date2 - date1;
-}
-let day = document.querySelector('.main-counter__day');
-let hour = document.querySelector('.main-counter__hour');
-let minute = document.querySelector('.main-counter__min');
-let second = document.querySelector('.main-counter__sec');
-function executeTimer() {
-	end_date = {
-		"full_year": "2022", // Год
-		"month": "02", // Номер месяца
-		"day": "14", // День
-		"hours": "12", // Час
-		"minutes": "00", // Минуты
-		"seconds": "00" // Секунды
-	}
-
-	let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
-	timer = setInterval(() => {
-		let now = new Date();
-		let date = new Date(end_date_str);
-		let ms_left = diffSubtract(now, date);
-		if (ms_left <= 0) {
-			clearInterval(timer);
-		} else {
-			let res = new Date(ms_left);
-			day.innerText = `${addZero(res.getUTCDate() - 1)}`;
-			hour.innerText = `${addZero(res.getUTCHours())}`;
-			minute.innerText = `${addZero(res.getUTCMinutes())}`;
-			second.innerText = `${addZero(res.getUTCSeconds())}`;
-		}
-	}, 1000);
-}
-function addZero(time) {
-	if (time < 10) {
-		return '0' + time;
-	}
-	return time;
-}
-// executeTimer();

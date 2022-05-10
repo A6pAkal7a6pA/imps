@@ -33,9 +33,10 @@
 	&__compares {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
 		margin-bottom: 125px;
+		gap: 0 20px;
 	}
 
 	&__compare {
@@ -60,8 +61,9 @@
 	&__items {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
+		gap: 60px 20px;
 	}
 
 	&__item {
@@ -87,5 +89,11 @@
 		font-size: 22px;
 		line-height: 26px;
 		color: #010038;
+	}
+}
+
+@media (max-width: 600px) {
+	.reincarnation {
+		padding-top: 80px;
 	}
 }
