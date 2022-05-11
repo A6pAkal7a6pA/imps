@@ -50,6 +50,7 @@ function executeGameSlider() {
 		pauseOnHover: false,
 		swipeToSlide: true,
 		appendDots: '.game__navigation',
+		appendArrows: '.game__navigation',
 		responsive: [
 			// {
 			// 	breakpoint: 769,
@@ -64,9 +65,7 @@ function executeGameSlider() {
 	});
 	let gameActive = document.querySelector('.game .slick-dots li.slick-active');
 	gameActive.classList.remove('slick-active');
-	setTimeout(() => {
-		gameActive.classList.add('slick-active');
-	});
+
 }
 
 function executeLootboxSlider() {
@@ -95,11 +94,11 @@ function executeLootboxSlider() {
 	});
 	let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
 	lootboxActive.classList.remove('slick-active');
-	setTimeout(() => {
-		lootboxActive.classList.add('slick-active');
-	});
 }
-
+setTimeout(() => {
+	lootboxActive.classList.add('slick-active');
+	gameActive.classList.add('slick-active');
+});
 
 $(document).ready(function () {
 	$('a[href^="#"]').click(function () {
