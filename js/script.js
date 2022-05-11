@@ -1,32 +1,3 @@
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`)
-executeGameSlider();
-executeLootboxSlider();
-// executeReincarnationSlider();
-
-// function executeReincarnationSlider() {
-// 	const swiper = new Swiper('.reincarnation__items', {
-// 		speed: 1000,
-// 		slidesPerView: "auto",
-// 		initialSlide: 0,
-// 		centeredSlides: false,
-// 		slideToClickedSlide: false,
-// 		grabCursor: true,
-// 		spaceBetween: 20,
-
-// 		touchEventsTarget: 'container',
-// 		// pagination: {
-// 		// 	el: '.main-slider__pagination',
-// 		// 	type: 'bullets',
-// 		// 	clickable: true
-// 		// },
-// 		breakpoints: {
-// 		}
-// 	});
-// }
-
-
-
 let headerBurger = document.querySelector('.header__burger');
 
 headerBurger.addEventListener('click', () => {
@@ -38,67 +9,63 @@ headerBurger.addEventListener('click', () => {
 	}
 });
 
-function executeGameSlider() {
-	let gameSlider = $('.game__slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		fade: true,
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		swipeToSlide: true,
-		appendDots: '.game__navigation',
-		appendArrows: '.game__navigation',
-		responsive: [
-			// {
-			// 	breakpoint: 769,
-			// 	settings: {
-			// 		dots: false
-			// 	}
-			// }
-		]
-	});
-	gameSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-		document.querySelector('.game__digit-min').innerText = currentSlide + 1;
-	});
-	let gameActive = document.querySelector('.game .slick-dots li.slick-active');
-	gameActive.classList.remove('slick-active');
+let gameSlider = $('.game__slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	fade: true,
+	dots: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	pauseOnFocus: false,
+	pauseOnHover: false,
+	swipeToSlide: true,
+	appendDots: '.game__navigation',
 
-}
+	responsive: [
+		{
+			breakpoint: 962,
+			settings: {
+				appendArrows: '.game__navigation'
+			}
+		}
+	]
+});
+gameSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+	document.querySelector('.game__digit-min').innerText = currentSlide + 1;
+});
+let gameActive = document.querySelector('.game .slick-dots li.slick-active');
+gameActive.classList.remove('slick-active');
 
-function executeLootboxSlider() {
-	let lootboxSlider = $('.lootbox__slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		fade: true,
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		swipeToSlide: true,
-		appendDots: '.lootbox__navigation',
-		responsive: [
-			// {
-			// 	breakpoint: 769,
-			// 	settings: {
-			// 		dots: false
-			// 	}
-			// }
-		]
-	});
-	lootboxSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-		document.querySelector('.lootbox__digit-min').innerText = currentSlide + 1;
-	});
-	let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
-	lootboxActive.classList.remove('slick-active');
-}
+let lootboxSlider = $('.lootbox__slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	fade: true,
+	dots: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	pauseOnFocus: false,
+	pauseOnHover: false,
+	swipeToSlide: true,
+	appendDots: '.lootbox__navigation',
+	responsive: [
+		{
+			breakpoint: 1131,
+			settings: {
+				appendArrows: '.lootbox__navigation'
+			}
+		}
+	]
+});
+lootboxSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+	document.querySelector('.lootbox__digit-min').innerText = currentSlide + 1;
+});
+let lootboxActive = document.querySelector('.lootbox .slick-dots li.slick-active');
+lootboxActive.classList.remove('slick-active');
 setTimeout(() => {
 	lootboxActive.classList.add('slick-active');
 	gameActive.classList.add('slick-active');
-});
+	initCurrSlide.classList.add("swiper-pagination-bullet-active");
+}, 0);
 
 $(document).ready(function () {
 	$('a[href^="#"]').click(function () {
@@ -108,16 +75,6 @@ $(document).ready(function () {
 		}, 600);
 	});
 });
-
-// window.addEventListener('load', () => {
-// 	const top = $(window.location.hash).offset().top
-// 	if (!top) return
-// 	setTimeout(() => {
-// 		window.scrollTo({
-// 			top
-// 		})
-// 	}, 0)
-// })
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
@@ -173,11 +130,6 @@ const roadSwiper = new Swiper('.road-slider', {
 	grabCursor: true,
 	spaceBetween: 20,
 	wrapperClass: 'swiper-wrapper',
-	// pagination: {
-	// 	el: '.main-slider__pagination',
-	// 	type: 'bullets',
-	// 	clickable: true
-	// },
 	breakpoints: {
 	}
 });
@@ -232,10 +184,6 @@ swiper.on('slideChange', function (slider) {
 
 let initCurrSlide = document.querySelector('.swiper-pagination-bullet.swiper-pagination-bullet-active');
 initCurrSlide.classList.remove("swiper-pagination-bullet-active");
-setTimeout(() => {
-	initCurrSlide.classList.add("swiper-pagination-bullet-active");
-
-}, 0)
 
 function getSiblings(elem) {
 	var siblings = [];

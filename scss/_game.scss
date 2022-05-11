@@ -256,13 +256,13 @@
 	.game .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #010038;
 		&:hover {
-			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
+			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
 		}
 	}
 	.game .slick-next {
 		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #010038;
 		&:hover {
-			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
+			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
 		}
 	}
 	.game__arrows {

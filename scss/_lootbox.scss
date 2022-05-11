@@ -1,5 +1,5 @@
 .lootbox {
-	// padding: 29px 165px 120px 165px;
+	padding: 0 15px;
 	width: 100%;
 	height: 100%;
 	margin-top: -200px;
@@ -23,7 +23,7 @@
 	&__content {
 		width: 100%;
 		height: 100%;
-		margin-bottom: 54px;
+		margin-bottom: 100px;
 	}
 
 	&__slider {
@@ -40,7 +40,6 @@
 	&__navigation {
 		margin-top: 40px;
 		position: relative;
-		height: 14px;
 		width: 100%;
 	}
 
@@ -50,7 +49,8 @@
 	&__buttons {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		gap: 20px;
 		max-width: 860px;
 		margin: 0 auto;
 		flex-wrap: wrap;
@@ -203,8 +203,7 @@
 		font-size: 26px;
 		line-height: 30px;
 		color: #ffffff;
-		max-height: 224px;
-		height: 224px;
+		height: 300px;
 	}
 	&__subtitle {
 		font-weight: bold;
@@ -250,108 +249,71 @@
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1130px) {
 	.lootbox {
-		padding: 29px 140px 120px 140px;
-	}
-	.lootbox-item__inner {
-		padding: 60px 70px;
-	}
-	.lootbox .slick-dots li button {
-		width: 140px;
-	}
-}
-@media (max-width: 1195px) {
-	.lootbox-item__inner {
-		padding: 50px;
-	}
-	.lootbox .slick-dots li button {
-		width: 100px;
-		height: 4px;
-	}
-	.lootbox-item__text {
-		min-height: 234px;
-		max-height: 234px;
-		height: 100%;
-		overflow-y: auto;
-		&::-webkit-scrollbar-thumb {
-			background: #fff;
+		&__title {
+			margin-bottom: 20px;
 		}
-	}
-	// .slick-slide img {
-	// 	width: 200px;
-	// }
-}
-@media (max-width: 961px) {
-	// .slick-slide img {
-	// 	width: 160px;
-	// }
-}
+		&-item {
+			padding-top: 100px;
+			height: 100%;
+			&__inner {
+				height: 100%;
+				padding: 180px 30px 48px 30px;
+			}
 
-@media (max-width: 768px) {
-	.lootbox-item__image {
-		margin-right: 0;
-	}
-	.lootbox-item {
-		padding-top: 100px;
-		height: 100%;
-	}
-	.lootbox-item__image {
-		position: absolute;
-		top: 0;
-		// transform: translateY(-50%);
-	}
-	.lootbox__title {
-		margin-bottom: 20px;
-	}
-	.lootbox-item__inner {
-		padding-top: 70px;
-		height: 100%;
+			&__image {
+				margin-right: 0;
+				position: absolute;
+				top: 0;
+				z-index: -1;
+				video {
+					max-height: 300px;
+				}
+			}
+			&__text {
+				margin-bottom: 30px;
+				font-size: 22px;
+				line-height: 26px;
+				height: 224px;
+			}
+		}
+		&__content {
+			margin-bottom: 57px;
+		}
+		&__digits {
+			font-weight: 800;
+			font-size: 31px;
+			line-height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(100% - 270px);
+			margin: 0 auto;
+		}
 	}
 	.lootbox .slick-arrow {
 		width: 76px;
 		height: 56px;
 		bottom: 0;
-		transform: translateY(260px);
 	}
 	.lootbox .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
-		transform: translate(30px, 305px);
 		&:hover {
 			background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
 		}
 	}
 	.lootbox .slick-next {
 		background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
-		transform: translate(-30px, 305px);
 		&:hover {
 			background: url(../img/icons/arrow-right.svg) center / 50% no-repeat, #e465a3;
 		}
 	}
-	.lootbox__arrows {
-		display: block;
-		width: 100%;
-		height: 40px;
+	.lootbox .slick-arrow {
+		transform: translate(0, -50%);
 	}
 	.lootbox .slick-dots li button {
-		width: 32px;
-		height: 6px;
-	}
-	.lootbox-item__inner {
-		padding: 75px 30px 22px 30px;
-	}
-	.lootbox-item__text {
-		font-size: 22px;
-		line-height: 26px;
-	}
-	.lootbox__digits {
-		font-weight: 800;
-		font-size: 31px;
-		line-height: 42px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-top: 35px;
+		display: none !important;
 	}
 	.lootbox__digit-min {
 		color: #d05d9e;
@@ -364,33 +326,19 @@
 		color: #b8a6df;
 	}
 }
-@media (max-width: 651px) {
-	.lootbox {
-		padding: 29px 20px 50px 20px;
-	}
-}
 
-@media (max-width: 550px) {
-	.lootbox-item__title {
-		font-size: 25px;
-		line-height: 30px;
-		font-weight: 700;
+@media (max-width: 500px) {
+	.lootbox {
+		margin-top: 0;
 	}
 	.lootbox-item__text {
+		height: 350px;
+	}
+	.lootbox__inner {
+		padding: 0;
+	}
+	.lootbox-item__dis-item__subtext {
 		font-size: 22px;
 		line-height: 26px;
-	}
-	.lootbox-item__subtitle {
-		font-size: 28px;
-		line-height: 30px;
-	}
-	.lootbox-item__subtext {
-		font-size: 22px;
-		line-height: 26px;
-	}
-}
-@media (max-width: 375px) {
-	.lootbox-item__inner {
-		padding: 80px 30px 22px 30px;
 	}
 }
