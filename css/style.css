@@ -564,6 +564,9 @@ a {
   .main-page {
     padding-top: 110px;
   }
+  .main-page__buttons {
+    margin-bottom: 60px;
+  }
   .main-page__social img {
     height: 26px;
   }
@@ -588,6 +591,7 @@ a {
     z-index: 99;
     padding: 20px;
     gap: 0;
+    margin-bottom: 0;
   }
   .main-page .header__logo {
     display: block;
@@ -2626,7 +2630,7 @@ a {
     gap: 20px;
   }
   .follow__item {
-    max-width: calc(50% - 30px);
+    max-width: calc(50% - 10px);
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -2757,7 +2761,7 @@ a {
     gap: 20px;
   }
   .team-item {
-    max-width: calc(50% - 30px);
+    max-width: calc(50% - 10px);
     padding: 7px;
     height: 100px;
   }

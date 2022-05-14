@@ -1,7 +1,7 @@
 let headerBurger = document.querySelector('.header__burger');
+let header = document.querySelector('.header');
 
 headerBurger.addEventListener('click', () => {
-	let header = document.querySelector('.header');
 	if (header.classList.contains('active')) {
 		header.classList.remove('active');
 		document.body.classList.remove('active');
@@ -71,6 +71,8 @@ setTimeout(() => {
 
 $(document).ready(function () {
 	$('a[href^="#"]').click(function () {
+		header.classList.remove('active');
+		document.body.classList.remove('active');
 		let anchor = $(this).attr('href');
 		$('html, body').animate({
 			scrollTop: $(anchor).offset().top
@@ -139,7 +141,11 @@ const roadSwiper = new Swiper('.road-slider', {
 		}
 	}
 });
-
+if (document.documentElement.clientWidth > 500) {
+	roadSwiper.on('sliderMove', function (slider) {
+		switchYears()
+	});
+}
 let dates = document.querySelectorAll('.road__date');
 dates.forEach(date => {
 	date.addEventListener('click', () => {
@@ -169,9 +175,7 @@ function switchYears() {
 	}
 }
 
-roadSwiper.on('sliderMove', function (slider) {
-	switchYears()
-});
+
 
 roadSwiper.on('slideChange', function (slider) {
 	switchYears()
