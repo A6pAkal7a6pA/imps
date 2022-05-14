@@ -4,7 +4,7 @@
 	margin-top: -114px;
 	margin-bottom: 150px;
 	// margin-top: -77px;
-	background: url('../img/follow-bg.svg') right bottom / contain no-repeat;
+	background: url("../img/follow-bg.svg") right bottom / contain no-repeat;
 	position: relative;
 	z-index: 2;
 	&__inner {
@@ -78,32 +78,24 @@
 // }
 
 @media (max-width: 768px) {
+	.follow {
+		margin-bottom: 100px;
+	}
 	.follow__content {
 		justify-content: center;
+		gap: 20px;
 	}
 	.follow__item {
-		flex-direction: column;
+		max-width: calc(50% - 30px);
+		justify-content: flex-start;
+		padding: 15px;
 	}
 	.foll-item__image {
-		margin: 0 0 8px 0;
 	}
 }
 
-@media (max-width: 546px) {
-	.follow__content {
-		justify-content: center;
-		gap: 10px;
-	}
-	.follow__item {
-		width: 80px;
-		height: 68.08px;
-		padding: 10px 5px;
-	}
-	.foll-item__text {
-		font-size: 10px;
-		line-height: 12px;
-	}
-	.foll-item__image {
-		margin-bottom: 8px;
+@media(max-width: 500px) {
+	.follow {
+		margin-top: 0;
 	}
 }

@@ -102,10 +102,10 @@
 		padding-bottom: 50px;
 	}
 	.team__content {
-		gap: 9px;
+		gap: 20px;
 	}
 	.team-item {
-		max-width: 183px;
+		max-width: calc(50% - 30px);
 		padding: 7px;
 		height: 100px;
 		&__image img {
@@ -124,5 +124,10 @@
 	.team-item__text {
 		font-size: 13px;
 		line-height: 13px;
+	}
+	.team {
+		padding-top: 100px;
+		margin-bottom: 0;
+		padding-bottom: 100px;
 	}
 }

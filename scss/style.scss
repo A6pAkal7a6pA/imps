@@ -86,3 +86,8 @@
 		background-size: cover;
 	}
 }
+body{
+	&.active {
+		overflow: hidden;
+	}
+}

@@ -333,3 +333,9 @@
 		height: 300px;
 	}
 }
+@media(max-width:500px) {
+	.game {
+		margin-top: 0;
+		padding-bottom: 100px;
+	}
+}

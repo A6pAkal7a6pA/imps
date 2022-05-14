@@ -358,6 +358,12 @@
 					height: 24px;
 				}
 			}
+			&__button-prev {
+				left: 0;
+			}
+			&__button-next {
+				right: 0;
+			}
 		}
 	}
 	.main-page .main-slider__navigation {
@@ -369,7 +375,7 @@
 	.main-page {
 		padding-top: 110px;
 		.main-slider {
-			margin: 0 -15px;
+			// margin: 0 -15px;
 		}
 		&__social img {
 			height: 26px;

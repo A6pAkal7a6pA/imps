@@ -1,6 +1,6 @@
 .reincarnation {
 	padding-top: 125px;
-	background: url('../img/reincarnation/reincarnation-bg.png') center / contain no-repeat;
+	background: url("../img/reincarnation/reincarnation-bg.png") center / contain no-repeat;
 	&__inner {
 		max-width: 1330px;
 		padding: 0 15px;
@@ -37,6 +37,9 @@
 		flex-wrap: wrap;
 		margin-bottom: 125px;
 		gap: 0 20px;
+	}
+	&__splitter {
+		display: none;
 	}
 
 	&__compare {
@@ -89,6 +92,85 @@
 		font-size: 22px;
 		line-height: 26px;
 		color: #010038;
+	}
+	img {
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.image-spliter,
+	img,
+	.mover {
+		overflow: hidden;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.image-spliter {
+		position: relative;
+	}
+
+	.img-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.mover {
+		position: absolute;
+		width: 200px;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+	.mover:before,
+	.mover:after {
+		position: absolute;
+		left: 50%;
+		content: "";
+		background: #fff;
+		cursor: -webkit-grab;
+		cursor: grab;
+	}
+
+	.mover:before {
+		top: 0;
+		transform: translateX(-50%);
+		width: 1px;
+		height: 100%;
+	}
+	.mover:after {
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 5px;
+		height: 33%;
+		border-radius: 5px;
+	}
+}
+
+@media (max-width: 1350px) {
+	.reincarnation {
+		&__splitter {
+			display: block;
+		}
+		&__titles {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 30px;
+
+			color: #010038;
+		}
+		&__compare {
+			display: none;
+		}
 	}
 }
 

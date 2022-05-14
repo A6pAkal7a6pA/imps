@@ -1,6 +1,6 @@
 .news {
 	margin-bottom: 150px;
-	background: url('../img/news-bg.svg') left bottom / contain no-repeat;
+	background: url("../img/news-bg.svg") left bottom / contain no-repeat;
 	&__inner {
 		max-width: 1330px;
 		padding: 0 15px;
@@ -14,7 +14,8 @@
 	&__content {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		gap: 20px;
 		flex-wrap: wrap;
 	}
 
@@ -28,8 +29,10 @@
 	}
 
 	&__image {
-		max-width: 100%;
-		object-fit: cover;
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__text {
@@ -37,5 +40,12 @@
 		font-size: 28px;
 		line-height: 38px;
 		color: #e465a3;
+		min-height: 115px;
+	}
+}
+
+@media(max-width: 500px) {
+	.news {
+		margin-bottom: 100px;
 	}
 }

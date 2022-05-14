@@ -4,8 +4,10 @@ headerBurger.addEventListener('click', () => {
 	let header = document.querySelector('.header');
 	if (header.classList.contains('active')) {
 		header.classList.remove('active');
+		document.body.classList.remove('active');
 	} else {
 		header.classList.add('active');
+		document.body.classList.add('active');
 	}
 });
 
@@ -130,7 +132,11 @@ const roadSwiper = new Swiper('.road-slider', {
 	grabCursor: true,
 	spaceBetween: 20,
 	wrapperClass: 'swiper-wrapper',
+	direction: 'vertical',
 	breakpoints: {
+		1100: {
+			direction: 'horizontal',
+		}
 	}
 });
 

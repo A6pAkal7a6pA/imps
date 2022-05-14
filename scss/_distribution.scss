@@ -55,7 +55,7 @@
 .dis-item {
 	display: flex;
 	align-items: center;
-	gap: 0 10px;
+	gap: 20px;
 	&__number {
 		font-family: $fontfamilyNunito;
 		font-weight: 800;
@@ -143,8 +143,25 @@
 		}
 	}
 }
-@media (max-width: 730px) {
+@media(max-width: 1000px) {
 	.distr__content {
-		max-width: 340px;
+		padding: 0 20px;
+	}
+	.dis-item {
+		max-width: 335px;
+	}
+}
+@media(max-width: 768px) {
+	.distr__buttons{
+		flex-direction: column;
+		gap: 30px;
+	}
+	.distr {
+		margin-bottom: 100px;
+	}
+}
+@media(max-width: 500px) {
+	.distr__content {
+		gap: 20px;
 	}
 }

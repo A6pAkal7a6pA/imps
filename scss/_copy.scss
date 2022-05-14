@@ -30,11 +30,14 @@
 	}
 }
 
-// @media (max-width:575px) {
-// 	.copy {
-// 		&__body {
-// 			flex-direction: column;
-// 			gap: 20px 0;
-// 		}
-// 	}
-// }
+@media (max-width: 768px) {
+	.copy {
+		&__body {
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__line {
+			display: none;
+		}
+	}
+}
