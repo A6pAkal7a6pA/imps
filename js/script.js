@@ -175,8 +175,6 @@ function switchYears() {
 	}
 }
 
-
-
 roadSwiper.on('slideChange', function (slider) {
 	switchYears()
 	if (slider.realIndex > 8) {
