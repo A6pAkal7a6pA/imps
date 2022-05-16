@@ -86,7 +86,7 @@ const swiper = new Swiper('.main-slider', {
 		delay: 5000,
 		disableOnInteraction: false
 	},
-	speed: 1000,
+	speed: 500,
 	effect: 'coverflow',
 	slidesPerView: "auto",
 	initialSlide: 0,

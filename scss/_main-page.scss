@@ -131,7 +131,7 @@
 			align-items: center;
 			justify-content: center;
 			opacity: 0.2;
-			transition: all 1s;
+			transition: all 0.5s;
 			&.swiper-slide-prev,
 			&.swiper-slide-next {
 				opacity: 0.4;
@@ -231,7 +231,7 @@
 				&-active {
 					position: relative;
 					&::after {
-						transition: width 5s linear;
+						transition: width 5.5s linear;
 						width: 100%;
 					}
 				}
@@ -378,7 +378,7 @@
 			margin-bottom: 60px;
 		}
 		.main-slider {
-			// margin: 0 -15px;
+			margin: 0 -15px;
 		}
 		&__social img {
 			height: 26px;
