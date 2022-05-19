@@ -4,14 +4,14 @@ $xml = simplexml_load_string($mediumContent, null, LIBXML_NOCDATA);
 $items = $xml->{"channel"}->{'item'};
 $array = [];
 for ($i = 0; $i < 3; $i++) {
-	$doc = new DOMDocument();
-	$doc->loadHTML($items[$i]->children("content", true)->encoded->__toString());
+	$doc = new DOMDocument('1.0', 'UTF-8');
+	// echo $items[$i]->children("content", true)->encoded->__toString();
+	$doc->loadHTML($items[$i]->children("content", true)->encoded->__toString(), LIBXML_NOERROR);
 	$xpath = new DOMXPath($doc);
 	$src = $xpath->evaluate("string(//img/@src)");
 		array_push($array, [
 		"title" => $items[$i]->{'title'}->__toString(), 
 		"link" => $items[$i]->{'link'}->__toString(), 
-		// "image" => $items[$i]->children("content", true)]);
 		"image" => $src]);
 }
 
