@@ -2736,6 +2736,9 @@ a {
   .follow {
     margin-top: 0;
   }
+  .foll-item {
+    height: 50px;
+  }
   .foll-item__image img {
     height: 19px;
   }
