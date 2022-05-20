@@ -136,7 +136,7 @@ const roadSwiper = new Swiper('.road-slider', {
 	wrapperClass: 'swiper-wrapper',
 	direction: 'vertical',
 	breakpoints: {
-		1100: {
+		600: {
 			direction: 'horizontal',
 		}
 	}
@@ -209,3 +209,16 @@ function getSiblings(elem) {
 
 	return siblings;
 }
+
+const reincarnationSlider = new Swiper('.reincarnation__items', {
+	slidesPerView: "auto",
+	initialSlide: 0,
+	centeredSlides: false,
+	slideToClickedSlide: true,
+	// autoHeight: true,
+	grabCursor: true,
+	spaceBetween: 20,
+	touchEventsTarget: 'container',
+	breakpoints: {
+	}
+});

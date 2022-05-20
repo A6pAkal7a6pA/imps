@@ -46,8 +46,17 @@
 	}
 }
 
+@media(max-width: 768px) {
+	.built {
+		margin-bottom: 0;
+	}
+}
+
 @media(max-width: 500px) {
 	.built {
 		margin-bottom: 100px;
+		&__item {
+			max-width: 100%;
+		}
 	}
 }

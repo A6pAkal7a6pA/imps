@@ -15,6 +15,7 @@
 		background: #ede9ff;
 		border-radius: 15px;
 		padding: 25px;
+		gap: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -47,7 +48,7 @@
 	}
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 600px) {
 	.details__content {
 		flex-direction: column;
 		gap: 50px;

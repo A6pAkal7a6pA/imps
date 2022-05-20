@@ -38,6 +38,11 @@
 		color: #010038;
 		max-width: 251px;
 		width: 100%;
+		&:not(.distr__button_active) {
+			&:hover {
+				text-decoration-line: underline;
+			}
+		}
 		&_active {
 			max-width: 420px;
 			padding: 20px;
@@ -48,6 +53,9 @@
 			font-size: 24px;
 			line-height: 29px;
 			color: #ffffff;
+			&:hover {
+				background: linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+			}
 		}
 	}
 }

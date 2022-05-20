@@ -94,8 +94,18 @@
 	}
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
 	.follow {
 		margin-top: 0;
+
+	}
+	.foll-item__image {
+		img {
+			height: 19px;
+		}
+	}
+	.foll-item__text {
+		font-size: 10px;
+		line-height: 12px;
 	}
 }

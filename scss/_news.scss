@@ -23,13 +23,15 @@
 		max-width: 420px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 		gap: 20px 0;
+
 	}
 
 	&__image {
 		img {
+			border-radius: 14px;
 			max-width: 100%;
 			object-fit: cover;
 		}
@@ -41,11 +43,20 @@
 		line-height: 38px;
 		color: #e465a3;
 		min-height: 115px;
+		&:hover {
+			color: #010038;
+		}
 	}
 }
 
 @media(max-width: 500px) {
 	.news {
 		margin-bottom: 100px;
+		&__content {
+			gap: 30px;
+		}
+		&__item {
+			gap: 10px;
+		}
 	}
 }
