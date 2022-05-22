@@ -25,7 +25,7 @@ let gameSlider = $('.game__slider').slick({
 
 	responsive: [
 		{
-			breakpoint: 962,
+			breakpoint: 768,
 			settings: {
 				appendArrows: '.game__navigation'
 			}
@@ -43,7 +43,7 @@ let lootboxSlider = $('.lootbox__slider').slick({
 	slidesToScroll: 1,
 	fade: true,
 	dots: true,
-	autoplay: true,
+	autoplay: false,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
 	pauseOnHover: false,
@@ -51,7 +51,7 @@ let lootboxSlider = $('.lootbox__slider').slick({
 	appendDots: '.lootbox__navigation',
 	responsive: [
 		{
-			breakpoint: 1131,
+			breakpoint: 768,
 			settings: {
 				appendArrows: '.lootbox__navigation'
 			}

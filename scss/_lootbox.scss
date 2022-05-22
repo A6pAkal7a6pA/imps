@@ -252,7 +252,19 @@
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
 
-@media (max-width: 1130px) {
+@media(max-width: 1130px) {
+	.lootbox-item__inner {
+		padding: 50px 30px 50px 20px;
+	}
+	.lootbox-item__image video {
+		max-height: 250px;
+	}
+	.lootbox-item__image {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 767px) {
 	.lootbox {
 		&__title {
 			margin-bottom: 20px;

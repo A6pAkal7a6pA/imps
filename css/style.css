@@ -1316,6 +1316,18 @@ a {
 }
 
 @media (max-width: 1130px) {
+  .lootbox-item__inner {
+    padding: 50px 30px 50px 20px;
+  }
+  .lootbox-item__image video {
+    max-height: 250px;
+  }
+  .lootbox-item__image {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
   .lootbox__title {
     margin-bottom: 20px;
   }
@@ -2054,7 +2066,16 @@ a {
   color: #ffffff;
 }
 
-@media (max-width: 961px) {
+@media (max-width: 963px) {
+  .game-item__image img {
+    max-height: 200px;
+  }
+  .game-item__text {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
   .game-item__image img {
     height: 161px;
   }
@@ -2088,15 +2109,13 @@ a {
     background: url(../img/icons/arrow-left.svg) center/50% no-repeat, #010038;
   }
   .game .slick-prev:hover {
-    background: url(../img/icons/arrow-left.svg) center/50% no-repeat, -webkit-gradient(linear, left top, right top, color-stop(2.35%, #110F75), color-stop(97.35%, #E465A3));
-    background: url(../img/icons/arrow-left.svg) center/50% no-repeat, linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+    background: url(../img/icons/arrow-left.svg) center/50% no-repeat, #010038;
   }
   .game .slick-next {
     background: url(../img/icons/arrow-right.svg) center/50% no-repeat, #010038;
   }
   .game .slick-next:hover {
-    background: url(../img/icons/arrow-right.svg) center/50% no-repeat, -webkit-gradient(linear, left top, right top, color-stop(2.35%, #110F75), color-stop(97.35%, #E465A3));
-    background: url(../img/icons/arrow-right.svg) center/50% no-repeat, linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+    background: url(../img/icons/arrow-right.svg) center/50% no-repeat, #010038;
   }
   .game__arrows {
     display: block;
