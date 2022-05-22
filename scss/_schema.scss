@@ -18,12 +18,15 @@
 		text-align: center;
 		color: #010038;
 		margin-bottom: 50px;
+				max-width: 1330px;
+		padding: 0 15px;
+		margin: 0 auto 50px auto;
 	}
 
 	&__content {
-		width: 2000px;
+		// width: 2000px;
 		img {
-			transform: translateX(-50%);
+			// transform: translateX(-50%);
 			max-width: 100%;
 			width: 100%;
 			object-fit: cover;
