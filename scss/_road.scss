@@ -54,8 +54,18 @@
 .road-slider {
 	padding: 9px 0;
 	user-select: none;
+	position: relative;
 	&__wrapper_top {
 		margin-left: 15%;
+		z-index: 30;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10000px;
+			height: 426px;
+		}
 	}
 
 	&__slide {
@@ -104,6 +114,7 @@
 	&__wrapper_bottom {
 		margin-left: 25%;
 		margin-top: -9px;
+		user-select: none;
 		.road-slider__slide {
 			display: flex;
 			align-items: flex-end;

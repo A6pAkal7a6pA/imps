@@ -69,6 +69,9 @@
 		line-height: 29px;
 		text-align: center;
 		color: #ffffff;
+		&:hover {
+			background: linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+		}
 		&.rarible {
 			background: #feda03;
 			color: #010038;

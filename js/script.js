@@ -222,3 +222,6 @@ const reincarnationSlider = new Swiper('.reincarnation__items', {
 	breakpoints: {
 	}
 });
+
+
+document.documentElement.style.setProperty("--after-size", )

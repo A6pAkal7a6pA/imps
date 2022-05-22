@@ -2,9 +2,9 @@
 	background: url('../img/schema-bg.svg') right bottom / contain no-repeat;
 
 	&__inner {
-		max-width: 1330px;
-		padding: 0 15px;
-		margin: 0 auto;
+		// max-width: 1330px;
+		// padding: 0 15px;
+		// margin: 0 auto;
 	}
 
 	&__title {
@@ -21,8 +21,11 @@
 	}
 
 	&__content {
+		width: 2000px;
 		img {
+			transform: translateX(-50%);
 			max-width: 100%;
+			width: 100%;
 			object-fit: cover;
 		}
 	}
