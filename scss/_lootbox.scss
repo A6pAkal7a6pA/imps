@@ -208,6 +208,14 @@
 		color: #ffffff;
 		height: 300px;
 	}
+	&:first-child {
+		.lootbox-item__subtitle {
+			opacity: 0;
+		}
+		.lootbox-item__dis-item__subtext {
+			opacity: 0;
+		}
+	}
 	&__subtitle {
 		font-weight: bold;
 		font-weight: 700;
@@ -216,6 +224,7 @@
 		text-align: center;
 		color: #ffffff;
 		margin: 0 auto;
+
 	}
 	&__dis-item__subtext {
 		display: flex;

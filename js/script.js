@@ -43,7 +43,7 @@ let lootboxSlider = $('.lootbox__slider').slick({
 	slidesToScroll: 1,
 	fade: true,
 	dots: true,
-	autoplay: false,
+	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
 	pauseOnHover: false,

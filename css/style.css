@@ -1262,6 +1262,14 @@ a {
   height: 300px;
 }
 
+.lootbox-item:first-child .lootbox-item__subtitle {
+  opacity: 0;
+}
+
+.lootbox-item:first-child .lootbox-item__dis-item__subtext {
+  opacity: 0;
+}
+
 .lootbox-item__subtitle {
   font-weight: bold;
   font-weight: 700;
