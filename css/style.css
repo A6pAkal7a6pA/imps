@@ -583,9 +583,13 @@ a {
   }
   .main-page__partners {
     gap: 25px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: auto;
+  }
+  .main-page__partners img {
+    max-width: none;
   }
   .main-page .main-slider__button-prev, .main-page .main-slider__button-next {
     width: 52px;
@@ -1604,6 +1608,7 @@ a {
     margin-bottom: 100px;
   }
   .built__item {
+    width: 100%;
     max-width: 100%;
   }
 }

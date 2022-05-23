@@ -370,6 +370,7 @@
 	}
 }
 
+
 @media (max-width: 1005px) {
 	.reincarnation .reincarnation__content {
 		margin: 0 40px 55px 40px;
@@ -392,7 +393,12 @@
 		}
 		&__partners {
 			gap: 25px;
-			justify-content: center;
+			justify-content: flex-start;
+			overflow-x: auto;
+
+			img {
+				max-width: none;
+			}
 		}
 		.main-slider {
 			&__button-prev,
