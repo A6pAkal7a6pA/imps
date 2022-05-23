@@ -48,6 +48,16 @@
 		}
 	}
 }
+@media(max-width: 1335px) {
+	.news__content {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		justify-content: flex-start;
+		img {
+			max-width: none;
+		}
+	}
+}
 
 @media(max-width: 500px) {
 	.news {
