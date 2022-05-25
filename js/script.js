@@ -82,10 +82,10 @@ $(document).ready(function () {
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	disableOnInteraction: false
+	// },
 	speed: 500,
 	effect: 'coverflow',
 	slidesPerView: "auto",
@@ -222,6 +222,3 @@ const reincarnationSlider = new Swiper('.reincarnation__items', {
 	breakpoints: {
 	}
 });
-
-
-document.documentElement.style.setProperty("--after-size", )
