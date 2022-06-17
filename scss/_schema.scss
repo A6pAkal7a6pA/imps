@@ -1,6 +1,8 @@
 .schema {
 	background: url("../img/schema-bg.svg") right bottom / contain no-repeat;
-
+	margin-bottom: -260px;
+	position: relative;
+	z-index: 7;
 	&__inner {
 		max-width: 1330px;
 		padding: 0 15px;

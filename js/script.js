@@ -43,7 +43,7 @@ let lootboxSlider = $('.lootbox__slider').slick({
 	slidesToScroll: 1,
 	fade: true,
 	dots: true,
-	autoplay: true,
+	autoplay: false,
 	autoplaySpeed: 5000,
 	pauseOnFocus: false,
 	pauseOnHover: false,
@@ -68,17 +68,6 @@ setTimeout(() => {
 	gameActive.classList.add('slick-active');
 	initCurrSlide.classList.add("swiper-pagination-bullet-active");
 }, 0);
-
-$(document).ready(function () {
-	$('a[href^="#"]').click(function () {
-		header.classList.remove('active');
-		document.body.classList.remove('active');
-		let anchor = $(this).attr('href');
-		$('html, body').animate({
-			scrollTop: $(anchor).offset().top
-		}, 600);
-	});
-});
 
 const swiper = new Swiper('.main-slider', {
 	loop: true,
@@ -222,7 +211,7 @@ const reincarnationSlider = new Swiper('.reincarnation__items', {
 	breakpoints: {
 	}
 });
-
+const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()

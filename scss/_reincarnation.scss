@@ -12,13 +12,14 @@
 	}
 
 	&__content {
-		max-width: 1080px;
+		max-width: 1330px;
 		margin: 0 auto 55px auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 25px 0;
+		gap: 10px;
+		padding: 0 15px;
 	}
 
 	&__paragraf {
@@ -26,8 +27,11 @@
 		font-weight: 400;
 		font-size: 26px;
 		line-height: 30px;
-		text-align: center;
 		color: #010038;
+		background: #ede9ff;
+		border-radius: 14px;
+		padding: 25px;
+		border: 3px solid rgba($color: #fff, $alpha: 0.5);
 	}
 
 	&__compares {
@@ -35,7 +39,6 @@
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-bottom: 125px;
 		gap: 0 20px;
 	}
 	&__splitter {
@@ -62,6 +65,7 @@
 	}
 
 	&__items {
+		margin-bottom: 100px;
 		&-wrapper {
 			padding-top: 60px;
 		}
@@ -125,7 +129,6 @@
 		top: 0;
 		left: 0;
 		z-index: 10;
-
 	}
 	.mover:before,
 	.mover:after {
@@ -148,7 +151,7 @@
 	.mover:after {
 		top: 50%;
 		transform: translate(-50%, -50%);
-		background: url('../img/mover-circle.svg') center / contain no-repeat;
+		background: url("../img/mover-circle.svg") center / contain no-repeat;
 		width: 30%;
 		height: 100%;
 		z-index: 99;

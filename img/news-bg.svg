@@ -1,3 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.3" x="29.8072" y="71.2004" width="159.932" height="159.932" transform="rotate(-15 29.8072 71.2004)" stroke="white" stroke-width="42.1389" stroke-linecap="round" stroke-linejoin="round"/>
+<g opacity="0.2">
+<rect x="29.8076" y="71.2004" width="159.932" height="159.932" transform="rotate(-15 29.8076 71.2004)" stroke="#010038" stroke-width="42.1389" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>

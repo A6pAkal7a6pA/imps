@@ -1,5 +1,8 @@
 .copy {
 	padding-bottom: 300px;
+	max-width: 1330px;
+	padding: 0 15px 300px 15px;
+	margin: 0 auto;
 	background: url('../img/copy-bg.svg') left bottom / contain no-repeat;
 	&__body {
 		display: flex;

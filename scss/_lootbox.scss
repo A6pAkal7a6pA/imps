@@ -12,12 +12,24 @@
 		margin: 0 auto;
 		text-align: center;
 	}
+	&__subtitle {
+		font-family: $fontfamilyRoboto;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 30px;
+		color: #010038;
+		padding: 25px;
+		background: #ede9ff;
+		border-radius: 14px;
+		border: 3px solid rgba($color: #fff, $alpha: 0.5);
+		margin-bottom: 50px;
+	}
 	&__arrows {
 		display: none;
 	}
 
 	&__title {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 
 	&__content {
@@ -36,6 +48,7 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		height: 476px;
 	}
 	&__navigation {
 		margin-top: 40px;
@@ -70,7 +83,7 @@
 		text-align: center;
 		color: #ffffff;
 		&:hover {
-			background: linear-gradient(90deg, #110F75 2.35%, #E465A3 97.35%);
+			background: linear-gradient(90deg, #110f75 2.35%, #e465a3 97.35%);
 		}
 		&.rarible {
 			background: #feda03;
@@ -172,12 +185,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 90px;
+		padding-right: 90px;
 	}
 	&__image {
-		margin-right: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		video {
-			max-height: 350px;
+			max-height: 470px;
 			height: 100%;
 			object-fit: cover;
 		}
@@ -206,7 +221,7 @@
 		font-size: 26px;
 		line-height: 30px;
 		color: #ffffff;
-		height: 300px;
+		margin-bottom: 35px;
 	}
 	&:first-child {
 		.lootbox-item__subtitle {
@@ -224,7 +239,7 @@
 		text-align: center;
 		color: #ffffff;
 		margin: 0 auto;
-
+		margin-bottom: 5px;
 	}
 	&__dis-item__subtext {
 		display: flex;
@@ -261,7 +276,7 @@
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
 
-@media(max-width: 1130px) {
+@media (max-width: 1130px) {
 	.lootbox-item__inner {
 		padding: 50px 30px 50px 20px;
 	}
