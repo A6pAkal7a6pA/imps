@@ -25,7 +25,7 @@ let gameSlider = $('.game__slider').slick({
 
 	responsive: [
 		{
-			breakpoint: 768,
+			breakpoint: 769,
 			settings: {
 				appendArrows: '.game__navigation'
 			}
@@ -51,7 +51,7 @@ let lootboxSlider = $('.lootbox__slider').slick({
 	appendDots: '.lootbox__navigation',
 	responsive: [
 		{
-			breakpoint: 768,
+			breakpoint: 769,
 			settings: {
 				appendArrows: '.lootbox__navigation'
 			}
@@ -69,12 +69,12 @@ setTimeout(() => {
 	initCurrSlide.classList.add("swiper-pagination-bullet-active");
 }, 0);
 
-const swiper = new Swiper('.main-slider', {
+let swiper = new Swiper('.main-slider', {
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false
-	// },
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
 	speed: 500,
 	effect: 'coverflow',
 	slidesPerView: "auto",
@@ -103,6 +103,43 @@ const swiper = new Swiper('.main-slider', {
 	},
 	breakpoints: {
 	}
+});
+window.addEventListener('load', () => {
+	swiper = new Swiper('.main-slider', {
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		speed: 500,
+		effect: 'coverflow',
+		slidesPerView: "auto",
+		initialSlide: 0,
+		centeredSlides: true,
+		slideToClickedSlide: true,
+		// autoHeight: true,
+		grabCursor: true,
+		spaceBetween: 0,
+		coverflowEffect: {
+			rotate: 0,
+			stretch: 0,
+			depth: 120,
+			modifier: 1,
+			scale: 0.9,
+			slideShadows: false,
+		},
+		pagination: {
+			el: '.main-slider__pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.main-slider__button-next',
+			prevEl: '.main-slider__button-prev',
+		},
+		breakpoints: {
+		}
+	});
 });
 
 let elementAfter = document.querySelector('.twenty-2:first-child');
@@ -156,6 +193,7 @@ function switchYears() {
 		if (currentElement.getBoundingClientRect().left <= centerViewport) {
 			document.querySelectorAll('.road-slider__slide:not(.twenty-' + i + ')')
 				.forEach((element) => element.classList.remove('active'));
+
 			currentElements
 				.forEach((currentElement) => currentElement.classList.add('active'));
 			getSiblings(dates[i - 2]).forEach(el => el.classList.remove('road__date_active'));
@@ -163,12 +201,22 @@ function switchYears() {
 		}
 	}
 }
+if (window.innerWidth <= 500) {
+	roadSwiper.disable()
+}
 
 roadSwiper.on('slideChange', function (slider) {
 	switchYears()
-	if (slider.realIndex > 8) {
-		roadSwiper.slideTo(8, 1000, false)
+	if (window.innerWidth <= 768) {
+		if (slider.realIndex > 10) {
+			roadSwiper.slideTo(10, 1000, false)
+		}
+	} else {
+		if (slider.realIndex > 8) {
+			roadSwiper.slideTo(8, 1000, false)
+		}
 	}
+
 })
 
 swiper.on('slideChange', function (slider) {
@@ -213,14 +261,28 @@ const reincarnationSlider = new Swiper('.reincarnation__items', {
 });
 const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
-    const blockID = anchor.getAttribute('href').substr(1)
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+
+		const blockID = anchor.getAttribute('href').substr(1)
+
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
 }
+if (window.innerWidth >= 600) {
+	window.addEventListener('scroll', e => {
+		if (window.scrollY >= 50) {
+			header.classList.add('fixed');
+		} else {
+			header.classList.remove('fixed');
+		}
+	});
+}
+
+
+document.querySelector('.reincarnation__more').addEventListener('click', () => {
+	document.querySelector('.reincarnation__content').classList.toggle('open');
+});

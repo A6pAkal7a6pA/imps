@@ -204,6 +204,7 @@
 		align-items: flex-start;
 		justify-content: center;
 		text-align: left;
+		padding: 30px 0;
 	}
 
 	&__title {
@@ -276,19 +277,32 @@
 	background: url("../img/icons/arrow-right.svg") center no-repeat, #e465a3;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1100px) {
+	.lootbox__slider {
+		height: auto;
+	}
 	.lootbox-item__inner {
-		padding: 50px 30px 50px 20px;
+		padding-right: 60px;
+	}
+	.lootbox-item {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.lootbox-item__image video {
-		max-height: 250px;
+		max-height: 40vw;
 	}
-	.lootbox-item__image {
-		margin-right: 0;
+	.lootbox-item__content {
+		padding: 0;
 	}
 }
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+	.lootbox .slick-arrow {
+		width: 76px;
+		height: 56px;
+		bottom: 0;
+	}
 	.lootbox {
 		&__title {
 			margin-bottom: 20px;
@@ -320,21 +334,6 @@
 		&__content {
 			margin-bottom: 57px;
 		}
-		&__digits {
-			font-weight: 800;
-			font-size: 31px;
-			line-height: 42px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: calc(100% - 270px);
-			margin: 0 auto;
-		}
-	}
-	.lootbox .slick-arrow {
-		width: 76px;
-		height: 56px;
-		bottom: 0;
 	}
 	.lootbox .slick-prev {
 		background: url(../img/icons/arrow-left.svg) center / 50% no-repeat, #e465a3;
@@ -351,9 +350,37 @@
 	.lootbox .slick-arrow {
 		transform: translate(0, -50%);
 	}
+
+	.lootbox__navigation {
+		height: 10px;
+		display: flex;
+		justify-content: center;
+	}
+	.lootbox .slick-dots {
+		max-width: calc(100% - 182px);
+		margin: 0 auto;
+
+		height: 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	.lootbox {
+		&__digits {
+			font-weight: 800;
+			font-size: 31px;
+			line-height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(100% - 270px);
+			margin: 0 auto;
+		}
+	}
 	.lootbox .slick-dots li button {
 		display: none !important;
 	}
+
 	.lootbox__digit-min {
 		color: #d05d9e;
 	}
@@ -372,7 +399,7 @@
 		margin-bottom: 100px;
 	}
 	.lootbox-item__text {
-		height: 350px;
+		height: 250px;
 	}
 	.lootbox__inner {
 		padding: 0;

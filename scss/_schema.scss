@@ -41,9 +41,13 @@
 		overflow-x: scroll;
 		// width: 738px;
 		width: 100%;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+		-ms-overflow-style: none;
+		overflow: -moz-scrollbars-none;
 	}
-	.schema__image{
+	.schema__image {
 		min-width: 738px;
-
 	}
 }

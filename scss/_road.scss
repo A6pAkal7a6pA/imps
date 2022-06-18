@@ -204,5 +204,14 @@
 	.road{
 		padding-top: 0;
 		padding-bottom: 0;
+		&-slider {
+			padding: 0 15px;
+		}
+		&-slider__slide {
+			max-width: none;
+		}
+		&-slider__text {
+			font-size: 21px;
+		}
 	}
 }

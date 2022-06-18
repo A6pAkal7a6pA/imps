@@ -53,9 +53,20 @@
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		justify-content: flex-start;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+		-ms-overflow-style: none;
+		overflow: -moz-scrollbars-none;
 		img {
 			max-width: none;
 		}
+	}
+}
+@media(max-width: 768px) {
+	.news__content {
+		margin: 0 -15px;
+		padding-left: 10px;
 	}
 }
 

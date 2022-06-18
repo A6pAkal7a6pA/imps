@@ -44,14 +44,12 @@
 		}
 	}
 }
-// @media (min-width: 1440px) {
-// 	.team {
-// 		background: url("../img/team-big-bg.png") top / cover no-repeat;
-// 	}
-// }
 @media (max-width: 768px) {
 	.team {
 		background: url("../img/team-bg.svg") center / cover no-repeat;
+	}
+	.team-item {
+		padding: 15px;
 	}
 }
 .team-item {
@@ -126,7 +124,7 @@
 		line-height: 13px;
 	}
 	.team {
-		padding-top: 100px;
+		padding-top: 350px;
 		margin-bottom: 0;
 		padding-bottom: 100px;
 	}
