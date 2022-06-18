@@ -274,7 +274,7 @@ for (let anchor of anchors) {
 }
 if (window.innerWidth >= 600) {
 	window.addEventListener('scroll', e => {
-		if (window.scrollY >= 50) {
+		if (window.scrollY >= 30) {
 			header.classList.add('fixed');
 		} else {
 			header.classList.remove('fixed');

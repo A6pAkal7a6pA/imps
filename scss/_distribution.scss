@@ -38,6 +38,7 @@
 		color: #010038;
 		max-width: 251px;
 		width: 100%;
+		opacity: 0.5;
 		&:not(.distr__button_active) {
 			&:hover {
 				text-decoration-line: underline;
