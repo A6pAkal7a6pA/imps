@@ -11,6 +11,9 @@ headerBurger.addEventListener('click', () => {
 	}
 });
 
+
+
+
 let gameSlider = $('.game__slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -285,4 +288,12 @@ if (window.innerWidth >= 600) {
 
 document.querySelector('.reincarnation__more').addEventListener('click', () => {
 	document.querySelector('.reincarnation__content').classList.toggle('open');
+});
+
+
+document.querySelectorAll('.header__item').forEach(item => {
+	item.addEventListener('click', () => {
+		header.classList.remove('active');
+		document.body.classList.remove('active');
+	});
 });
