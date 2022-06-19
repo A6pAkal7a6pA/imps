@@ -73,7 +73,12 @@
 		opacity: 0.4;
 		&.active {
 			opacity: 1;
+			
 		}
+		&.mob {
+			display: none;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -209,9 +214,16 @@
 		}
 		&-slider__slide {
 			max-width: none;
+			&.active.mob {
+				display: block;
+			}
 		}
 		&-slider__text {
 			font-size: 21px;
+		}
+	
+		&-slider__wrapper_bottom {
+			display: none;
 		}
 	}
 }

@@ -2821,6 +2821,10 @@ a {
   opacity: 1;
 }
 
+.road-slider__slide.mob {
+  display: none;
+}
+
 .road-slider__slide::after {
   content: "";
   position: absolute;
@@ -2991,8 +2995,14 @@ a {
   .road-slider__slide {
     max-width: none;
   }
+  .road-slider__slide.active.mob {
+    display: block;
+  }
   .road-slider__text {
     font-size: 21px;
+  }
+  .road-slider__wrapper_bottom {
+    display: none;
   }
 }
 
