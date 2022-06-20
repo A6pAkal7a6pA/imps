@@ -140,14 +140,15 @@ window.addEventListener('load', () => {
 			prevEl: '.main-slider__button-prev',
 		}
 	});
-	swiper.on('slideChange', function (slider) {
-		let currentIndex = slider.realIndex;
-		console.log(currentIndex);
-		let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
-		let currentSlide = content[currentIndex];
-		currentSlide.style.display = 'block';
-		getSiblings(currentSlide).forEach((slide) => slide.style.display = 'none');
-	});
+
+});
+swiper.on('slideChange', function (slider) {
+	let currentIndex = slider.realIndex;
+	console.log(currentIndex);
+	let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
+	let currentSlide = content[currentIndex];
+	currentSlide.style.display = 'block';
+	getSiblings(currentSlide).forEach((slide) => slide.style.display = 'none');
 });
 
 let elementAfter = document.querySelector('.twenty-2:first-child');
