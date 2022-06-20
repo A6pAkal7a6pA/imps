@@ -143,6 +143,15 @@ window.addEventListener('load', () => {
 		breakpoints: {
 		}
 	});
+	swiper.on('slideChange', function (slider) {
+
+		let currentIndex = slider.realIndex;
+		console.log(currentIndex);
+		let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
+		let currentSlide = content[currentIndex];
+		currentSlide.style.display = 'block';
+		getSiblings(currentSlide).forEach((slide) => slide.style.display = 'none');
+	});
 });
 
 let elementAfter = document.querySelector('.twenty-2:first-child');
@@ -222,13 +231,7 @@ roadSwiper.on('slideChange', function (slider) {
 
 })
 
-swiper.on('slideChange', function (slider) {
-	let currentIndex = slider.realIndex;
-	let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
-	let currentSlide = content[currentIndex];
-	currentSlide.style.display = 'block';
-	getSiblings(currentSlide).forEach((slide) => slide.style.display = 'none');
-});
+
 
 let initCurrSlide = document.querySelector('.swiper-pagination-bullet.swiper-pagination-bullet-active');
 initCurrSlide.classList.remove("swiper-pagination-bullet-active");
