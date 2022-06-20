@@ -74,10 +74,10 @@ setTimeout(() => {
 
 let swiper = new Swiper('.main-slider', {
 	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	disableOnInteraction: false
+	// },
 	speed: 500,
 	effect: 'coverflow',
 	slidesPerView: "auto",
@@ -108,19 +108,18 @@ let swiper = new Swiper('.main-slider', {
 	}
 });
 window.addEventListener('load', () => {
-	swiper = new Swiper('.main-slider', {
+	let swiper = new Swiper('.main-slider', {
 		loop: true,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false
 		},
-		speed: 500,
+		speed: 1000,
 		effect: 'coverflow',
 		slidesPerView: "auto",
 		initialSlide: 0,
 		centeredSlides: true,
 		slideToClickedSlide: true,
-		// autoHeight: true,
 		grabCursor: true,
 		spaceBetween: 0,
 		coverflowEffect: {
@@ -139,12 +138,9 @@ window.addEventListener('load', () => {
 		navigation: {
 			nextEl: '.main-slider__button-next',
 			prevEl: '.main-slider__button-prev',
-		},
-		breakpoints: {
 		}
 	});
 	swiper.on('slideChange', function (slider) {
-
 		let currentIndex = slider.realIndex;
 		console.log(currentIndex);
 		let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
