@@ -5,7 +5,6 @@ $items = $xml->{"channel"}->{'item'};
 $array = [];
 for ($i = 0; $i < 3; $i++) {
 	$doc = new DOMDocument('1.0', 'UTF-8');
-	// echo $items[$i]->children("content", true)->encoded->__toString();
 	$doc->loadHTML($items[$i]->children("content", true)->encoded->__toString(), LIBXML_NOERROR);
 	$xpath = new DOMXPath($doc);
 	$src = $xpath->evaluate("string(//img/@src)");

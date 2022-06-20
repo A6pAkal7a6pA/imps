@@ -1,6 +1,5 @@
 
 fetch('../php/medium-parser.php').then(function (response) {
-	// The API call was successful!
 	return response.text();
 }).then(function (json) {
 	let parsedJson = JSON.parse(json);

@@ -74,17 +74,12 @@ setTimeout(() => {
 
 let swiper = new Swiper('.main-slider', {
 	loop: true,
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false
-	// },
 	speed: 500,
 	effect: 'coverflow',
 	slidesPerView: "auto",
 	initialSlide: 0,
 	centeredSlides: true,
 	slideToClickedSlide: true,
-	// autoHeight: true,
 	grabCursor: true,
 	spaceBetween: 0,
 	coverflowEffect: {
@@ -108,7 +103,7 @@ let swiper = new Swiper('.main-slider', {
 	}
 });
 window.addEventListener('load', () => {
-	let swiper = new Swiper('.main-slider', {
+	swiper = new Swiper('.main-slider', {
 		loop: true,
 		autoplay: {
 			delay: 5000,
@@ -185,7 +180,13 @@ let dates = document.querySelectorAll('.road__date');
 dates.forEach(date => {
 	date.addEventListener('click', () => {
 		let currentTwenty = 'twenty-' + (+$(".road__date").index(date) + 2)
-		roadSwiper.slideTo(roadSwiper.slides.indexOf(roadSwiper.slides.filter((el) => el.classList.contains(currentTwenty))[0]), 1000, false);
+		console.log(roadSwiper.slides);
+		roadSwiper.slideTo(
+			roadSwiper.slides
+				.filter(el => !el.classList.contains('mob'))
+				.indexOf(roadSwiper.slides.filter((el) => el.classList.contains(currentTwenty) && !el.classList.contains('mob'))[0]),
+			1000, false);
+
 		getSiblings(date).forEach(date => date.classList.remove('road__date_active'));
 		date.classList.add('road__date_active');
 		let twentys = document.querySelectorAll('.road-slider__slide.' + currentTwenty);
@@ -255,7 +256,6 @@ const reincarnationSlider = new Swiper('.reincarnation__items', {
 	initialSlide: 0,
 	centeredSlides: false,
 	slideToClickedSlide: true,
-	// autoHeight: true,
 	grabCursor: true,
 	spaceBetween: 20,
 	touchEventsTarget: 'container',

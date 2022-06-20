@@ -645,7 +645,7 @@ a {
     right: 0;
   }
   .main-page .main-slider__navigation {
-    width: calc(100% - 145px);
+    width: calc(100% - 155px);
   }
 }
 
@@ -857,19 +857,22 @@ a {
             transform: translateY(40%);
   }
   .main-page .main-slider__button-prev {
-    left: 15px;
+    left: 20px;
   }
   .main-page .main-slider__button-next {
-    right: 15px;
+    right: 20px;
   }
   .main-page .main-slider__text {
     font-size: 22px;
   }
+  .main-page .main-slider__item {
+    padding: 0 20px;
+  }
   .main-page__inner {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   .main-page .main-slider {
-    margin: 0 -24px;
+    margin: 0 -20px;
   }
   .main-page .header__item {
     border-bottom: 1px solid transparent;
@@ -912,7 +915,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  padding: 0 15px;
 }
 
 .reincarnation__paragraf {
@@ -1017,6 +1019,7 @@ a {
 }
 
 .reincarnation .image-spliter {
+  border-radius: 14px;
   position: relative;
 }
 
@@ -1157,6 +1160,9 @@ a {
 @media (max-width: 500px) {
   .reincarnation .mover:after {
     width: 30%;
+  }
+  .reincarnation__title {
+    margin-bottom: 45px;
   }
 }
 
@@ -1652,6 +1658,9 @@ a {
     font-size: 22px;
     line-height: 26px;
   }
+  .lootbox__title {
+    margin-bottom: 45px;
+  }
 }
 
 .news {
@@ -1753,6 +1762,12 @@ a {
   }
   .news__content {
     gap: 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .news__content img {
+    max-width: 335px;
   }
   .news__item {
     gap: 10px;
@@ -1858,6 +1873,9 @@ a {
     padding-top: 0;
     margin-bottom: 60px;
     padding-bottom: 0;
+  }
+  .built__item {
+    height: 100px;
   }
 }
 
@@ -1987,6 +2005,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .schema__inner {
+    padding: 0;
+  }
   .schema__content {
     overflow-x: scroll;
     width: 100%;
@@ -2515,7 +2536,14 @@ a {
 @media (max-width: 500px) {
   .game {
     margin-top: 0;
+    padding: 100px 20px 275px 20px;
     padding-bottom: 100px;
+  }
+  .game__inner {
+    padding: 0;
+  }
+  .game__title {
+    margin-bottom: 45px;
   }
 }
 
@@ -2591,6 +2619,10 @@ a {
   max-width: 251px;
   width: 100%;
   opacity: 0.5;
+}
+
+.distr__button:not(.distr__button_active) {
+  opacity: 1;
 }
 
 .distr__button:not(.distr__button_active):hover {
@@ -2760,7 +2792,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 50px;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 .road__date {
@@ -3265,7 +3297,7 @@ a {
     line-height: 13px;
   }
   .team {
-    padding-top: 350px;
+    padding-top: 290px;
     margin-bottom: 0;
     padding-bottom: 100px;
   }
@@ -3421,4 +3453,8 @@ a {
 
 body.active {
   overflow: hidden;
+}
+
+.slick-dots {
+  display: none !important;
 }

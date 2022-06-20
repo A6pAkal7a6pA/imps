@@ -19,7 +19,6 @@
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
-		padding: 0 15px;
 	}
 
 	&__paragraf {
@@ -117,6 +116,7 @@
 	}
 
 	.image-spliter {
+		border-radius: 14px;
 		position: relative;
 	}
 
@@ -176,7 +176,6 @@
 			font-weight: 700;
 			font-size: 28px;
 			line-height: 30px;
-			// padding: 0 15px;
 			color: #010038;
 			margin-bottom: 20px;
 		}
@@ -248,10 +247,12 @@
 		color: #010038;
 		gap: 10px;
 	}
-
 }
 @media (max-width: 500px) {
 	.reincarnation .mover:after {
 		width: 30%;
+	}
+	.reincarnation__title {
+		margin-bottom: 45px;
 	}
 }

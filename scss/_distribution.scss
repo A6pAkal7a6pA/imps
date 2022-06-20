@@ -40,6 +40,7 @@
 		width: 100%;
 		opacity: 0.5;
 		&:not(.distr__button_active) {
+			opacity: 1;
 			&:hover {
 				text-decoration-line: underline;
 			}

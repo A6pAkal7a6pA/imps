@@ -26,10 +26,7 @@
 	}
 
 	&__content {
-		// width: 2000px;
 		img {
-			// transform: translateX(-50%);
-			// max-width: 100%;
 			width: 100%;
 			object-fit: cover;
 		}
@@ -37,9 +34,11 @@
 }
 
 @media (max-width: 768px) {
+	.schema__inner {
+		padding: 0;
+	}
 	.schema__content {
 		overflow-x: scroll;
-		// width: 738px;
 		width: 100%;
 		&::-webkit-scrollbar {
 			width: 0;
