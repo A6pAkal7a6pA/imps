@@ -1,10 +1,18 @@
 .news {
 	margin-bottom: 150px;
-	background: url("../img/news-bg.svg") left bottom / contain no-repeat;
 	&__inner {
 		max-width: 1330px;
 		padding: 0 15px;
 		margin: 0 auto;
+		position: relative;
+	}
+	img.figure__left {
+		max-width: 193px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		animation: 1.5s infinite animation-left linear;
 	}
 
 	&__title {
@@ -12,6 +20,8 @@
 	}
 
 	&__content {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		align-items: center;
 		justify-content: center;

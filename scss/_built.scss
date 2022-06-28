@@ -1,4 +1,6 @@
 .built {
+	position: relative;
+	z-index: 1;
 	margin-bottom: 150px;
 	&__inner {
 		max-width: 1330px;
@@ -70,6 +72,20 @@
 	padding-bottom: 40px;
 	margin-bottom: 124px;
 	background: url('../img/road-bg.png') center / cover no-repeat;
+	position: relative;
+	img.figure__right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateY(-100%);
+		animation: 1.5s infinite animation-right linear;
+	}
+	img.figure__left {
+		position: absolute;
+		left: 0;
+		bottom: 40px;
+		animation: 1.5s infinite animation-left linear;
+	}
 }
 
 @media(max-width: 500px) {

@@ -1,7 +1,24 @@
 .reincarnation {
 	padding-top: 125px;
-	background: url("../img/reincarnation/reincarnation-bg.png") center / contain no-repeat;
+	// background: url("../img/reincarnation/reincarnation-bg.png") center / contain no-repeat;
+	img.figure__right {
+		max-width: 183px;
+		position: absolute;
+		right: 0;
+		top: 0%;
+		animation: 1.5s infinite animation-right linear;
+		z-index: 0;
+	}
+	img.figure__left {
+		max-width: 193px;
+		position: absolute;
+		left: 0;
+		bottom: 20%;
+		z-index: 0;
+		animation: 1.5s infinite animation-left linear;
+	}
 	&__inner {
+	position: relative;
 		max-width: 1330px;
 		padding: 0 15px;
 		margin: 0 auto;
@@ -12,6 +29,8 @@
 	}
 
 	&__content {
+		position: relative;
+		z-index: 1;
 		max-width: 1330px;
 		margin: 0 auto 55px auto;
 		display: flex;

@@ -102,10 +102,26 @@ a {
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  background: url("../img/main-bg.svg") center bottom/contain no-repeat, -webkit-gradient(linear, left bottom, left top, from(#810c8a), to(#000000));
-  background: url("../img/main-bg.svg") center bottom/contain no-repeat, linear-gradient(360deg, #810c8a 0%, #000000 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#810c8a), to(#000000));
+  background: linear-gradient(360deg, #810c8a 0%, #000000 100%);
   padding: 30px 0 70px 0;
   position: relative;
+}
+
+.main-page img.figure__right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.main-page img.figure__left {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  -webkit-animation: 1.5s infinite animation-left linear;
+          animation: 1.5s infinite animation-left linear;
 }
 
 .main-page__inner {
@@ -885,10 +901,30 @@ a {
 
 .reincarnation {
   padding-top: 125px;
-  background: url("../img/reincarnation/reincarnation-bg.png") center/contain no-repeat;
+}
+
+.reincarnation img.figure__right {
+  max-width: 183px;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  -webkit-animation: 1.5s infinite animation-right linear;
+          animation: 1.5s infinite animation-right linear;
+  z-index: 0;
+}
+
+.reincarnation img.figure__left {
+  max-width: 193px;
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  z-index: 0;
+  -webkit-animation: 1.5s infinite animation-left linear;
+          animation: 1.5s infinite animation-left linear;
 }
 
 .reincarnation__inner {
+  position: relative;
   max-width: 1330px;
   padding: 0 15px;
   margin: 0 auto;
@@ -899,6 +935,8 @@ a {
 }
 
 .reincarnation__content {
+  position: relative;
+  z-index: 1;
   max-width: 1330px;
   margin: 0 auto 55px auto;
   display: -webkit-box;
@@ -1665,13 +1703,23 @@ a {
 
 .news {
   margin-bottom: 150px;
-  background: url("../img/news-bg.svg") left bottom/contain no-repeat;
 }
 
 .news__inner {
   max-width: 1330px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
+}
+
+.news img.figure__left {
+  max-width: 193px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  -webkit-animation: 1.5s infinite animation-left linear;
+          animation: 1.5s infinite animation-left linear;
 }
 
 .news__title {
@@ -1679,6 +1727,8 @@ a {
 }
 
 .news__content {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1775,6 +1825,8 @@ a {
 }
 
 .built {
+  position: relative;
+  z-index: 1;
   margin-bottom: 150px;
 }
 
@@ -1866,6 +1918,25 @@ a {
   padding-bottom: 40px;
   margin-bottom: 124px;
   background: url("../img/road-bg.png") center/cover no-repeat;
+  position: relative;
+}
+
+.build-and-road img.figure__right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: 1.5s infinite animation-right linear;
+          animation: 1.5s infinite animation-right linear;
+}
+
+.build-and-road img.figure__left {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  -webkit-animation: 1.5s infinite animation-left linear;
+          animation: 1.5s infinite animation-left linear;
 }
 
 @media (max-width: 500px) {
@@ -1969,10 +2040,17 @@ a {
 }
 
 .schema {
-  background: url("../img/schema-bg.svg") right bottom/contain no-repeat;
   margin-bottom: -260px;
   position: relative;
   z-index: 7;
+}
+
+.schema img.figure__right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-animation: 1.5s infinite animation-right linear;
+          animation: 1.5s infinite animation-right linear;
 }
 
 .schema__inner {
@@ -3042,9 +3120,16 @@ a {
   width: 100%;
   height: 100%;
   margin-bottom: 150px;
-  background: url("../img/follow-bg.svg") right bottom/contain no-repeat;
   position: relative;
   z-index: 2;
+}
+
+.follow img.figure__right {
+  position: absolute;
+  right: 0;
+  top: 0%;
+  -webkit-animation: 1.5s infinite animation-right linear;
+          animation: 1.5s infinite animation-right linear;
 }
 
 .follow__inner {
@@ -3308,7 +3393,7 @@ a {
   max-width: 1330px;
   padding: 0 15px 150px 15px;
   margin: 0 auto;
-  background: url("../img/copy-bg.svg") left bottom/contain no-repeat;
+  position: relative;
 }
 
 .copy__body {
@@ -3324,6 +3409,17 @@ a {
   margin: 0 auto;
   padding: 0 15px;
   gap: 0 50px;
+  position: relative;
+}
+
+.copy img.figure__left {
+  max-width: 193px;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  z-index: 0;
+  -webkit-animation: 1.5s infinite animation-left linear;
+          animation: 1.5s infinite animation-left linear;
 }
 
 .copy__item {
@@ -3457,4 +3553,48 @@ body.active {
 
 .slick-dots {
   display: none !important;
+}
+
+@-webkit-keyframes animation-left {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-left {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animation-right {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes animation-right {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }

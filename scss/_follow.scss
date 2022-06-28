@@ -2,8 +2,13 @@
 	width: 100%;
 	height: 100%;
 	margin-bottom: 150px;
-	background: url("../img/follow-bg.svg") right bottom / contain no-repeat;
 	position: relative;
+	img.figure__right {
+		position: absolute;
+		right: 0;
+		top: 0%;
+		animation: 1.5s infinite animation-right linear;
+	}
 	z-index: 2;
 	&__inner {
 		width: 100%;

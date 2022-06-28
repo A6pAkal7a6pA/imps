@@ -3,7 +3,7 @@
 	max-width: 1330px;
 	padding: 0 15px 150px 15px;
 	margin: 0 auto;
-	background: url('../img/copy-bg.svg') left bottom / contain no-repeat;
+	position: relative;
 	&__body {
 		display: flex;
 		align-items: center;
@@ -11,8 +11,17 @@
 		margin: 0 auto;
 		padding: 0 15px;
 		gap: 0 50px;
+		position: relative;
+		
 	}
-
+	img.figure__left {
+		max-width: 193px;
+		position: absolute;
+		left: 0;
+		bottom: -100%;
+		z-index: 0;
+		animation: 1.5s infinite animation-left linear;
+	}
 	&__item {
 		font-family: $fontfamilyRoboto;
 		font-size: 16px;

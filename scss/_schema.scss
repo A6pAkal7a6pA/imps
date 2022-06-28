@@ -1,7 +1,13 @@
 .schema {
-	background: url("../img/schema-bg.svg") right bottom / contain no-repeat;
+	// background: url("../img/schema-bg.svg") right bottom / contain no-repeat;
 	margin-bottom: -260px;
 	position: relative;
+	img.figure__right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		animation: 1.5s infinite animation-right linear;
+	}
 	z-index: 7;
 	&__inner {
 		max-width: 1330px;
