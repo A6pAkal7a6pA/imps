@@ -350,6 +350,9 @@
 		line-height: 29px;
 		text-align: center;
 		color: #ffffff;
+		&_red {
+			background: #fb037b;
+		}
 		&:hover {
 			background: #685ca8;
 		}
@@ -525,6 +528,7 @@
 				&.bin {
 					height: 35px;
 					margin-bottom: 100px;
+					display: none;
 				}
 				img {
 					max-height: 51px;

@@ -552,6 +552,10 @@ a {
   color: #ffffff;
 }
 
+.main-page__button_red {
+  background: #fb037b;
+}
+
 .main-page__button:hover {
   background: #685ca8;
 }
@@ -776,6 +780,7 @@ a {
   .main-page .header__award.bin {
     height: 35px;
     margin-bottom: 100px;
+    display: none;
   }
   .main-page .header__award img {
     max-height: 51px;
@@ -1851,6 +1856,10 @@ a {
   text-align: center;
 }
 
+.built__logo img {
+  max-width: 100%;
+}
+
 .built__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2630,14 +2639,28 @@ a {
   margin-bottom: 100px;
 }
 
-.partners.advisors {
-  margin-bottom: 210px;
+.partners .token__title {
+  margin-bottom: 55px;
 }
 
-@media (max-width: 500px) {
-  .partners {
-    padding-bottom: 100px;
-  }
+.partners .main-page__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 20px 50px;
+}
+
+.partners .main-page__item a img {
+  max-height: 49px;
 }
 
 .distr {

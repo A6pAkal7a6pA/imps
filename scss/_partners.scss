@@ -1,13 +1,26 @@
 .partners {
 	padding-bottom: 0px;
 	margin-bottom: 100px;
-	&.advisors {
-		margin-bottom: 210px;
+	.token {
+		&__title {
+			margin-bottom: 55px;
+		}
 	}
-}
-
-@media (max-width: 500px) {
-	.partners {
-		padding-bottom: 100px;
+	.main-page {
+		&__row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 100%;
+			gap: 20px 50px;
+		}
+		&__item {
+			a {
+				img {
+					max-height: 49px;
+				}
+			}
+		}
 	}
 }

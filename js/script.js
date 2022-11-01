@@ -11,9 +11,6 @@ headerBurger.addEventListener('click', () => {
 	}
 });
 
-
-
-
 let gameSlider = $('.game__slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -139,7 +136,6 @@ window.addEventListener('load', () => {
 });
 swiper.on('slideChange', function (slider) {
 	let currentIndex = slider.realIndex;
-	console.log(currentIndex);
 	let content = document.querySelectorAll('.main-slider__content-inner .main-slider__item');
 	let currentSlide = content[currentIndex];
 	currentSlide.style.display = 'block';
@@ -180,7 +176,6 @@ let dates = document.querySelectorAll('.road__date');
 dates.forEach(date => {
 	date.addEventListener('click', () => {
 		let currentTwenty = 'twenty-' + (+$(".road__date").index(date) + 2)
-		console.log(roadSwiper.slides);
 		roadSwiper.slideTo(
 			roadSwiper.slides
 				.filter(el => !el.classList.contains('mob'))
@@ -198,12 +193,11 @@ dates.forEach(date => {
 
 function switchYears() {
 	for (let i = 2; i <= 5; i++) {
-		let currentElements = document.querySelectorAll('.twenty-' + i);
+		let currentElements = document.querySelectorAll('.twenty-' + i + ':not(.mob)');
 		let currentElement = currentElements[0]
 		if (currentElement.getBoundingClientRect().left <= centerViewport) {
 			document.querySelectorAll('.road-slider__slide:not(.twenty-' + i + ')')
 				.forEach((element) => element.classList.remove('active'));
-
 			currentElements
 				.forEach((currentElement) => currentElement.classList.add('active'));
 			getSiblings(dates[i - 2]).forEach(el => el.classList.remove('road__date_active'));
@@ -228,8 +222,6 @@ roadSwiper.on('slideChange', function (slider) {
 	}
 
 })
-
-
 
 let initCurrSlide = document.querySelector('.swiper-pagination-bullet.swiper-pagination-bullet-active');
 initCurrSlide.classList.remove("swiper-pagination-bullet-active");
@@ -285,11 +277,9 @@ if (window.innerWidth >= 600) {
 	});
 }
 
-
 document.querySelector('.reincarnation__more').addEventListener('click', () => {
 	document.querySelector('.reincarnation__content').classList.toggle('open');
 });
-
 
 document.querySelectorAll('.header__item').forEach(item => {
 	item.addEventListener('click', () => {
